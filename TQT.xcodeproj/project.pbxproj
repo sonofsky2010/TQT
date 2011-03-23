@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46F610411339BD92005B2D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F610401339BD92005B2D29 /* Cocoa.framework */; };
+		46F6104B1339BD92005B2D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46F610491339BD92005B2D29 /* InfoPlist.strings */; };
+		46F6104E1339BD92005B2D29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F6104D1339BD92005B2D29 /* main.m */; };
+		46F610511339BD92005B2D29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46F6104F1339BD92005B2D29 /* Credits.rtf */; };
+		46F610541339BD92005B2D29 /* TQTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610531339BD92005B2D29 /* TQTAppDelegate.m */; };
+		46F610571339BD93005B2D29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F610551339BD93005B2D29 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46F6103C1339BD92005B2D29 /* TQT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TQT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F610401339BD92005B2D29 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		46F610431339BD92005B2D29 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		46F610441339BD92005B2D29 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		46F610451339BD92005B2D29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		46F610481339BD92005B2D29 /* TQT-Info.plist */ = {isa = PBXFileReference; path = "TQT-Info.plist"; sourceTree = "<group>"; };
+		46F6104A1339BD92005B2D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46F6104C1339BD92005B2D29 /* TQT-Prefix.pch */ = {isa = PBXFileReference; path = "TQT-Prefix.pch"; sourceTree = "<group>"; };
+		46F6104D1339BD92005B2D29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46F610501339BD92005B2D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		46F610521339BD92005B2D29 /* TQTAppDelegate.h */ = {isa = PBXFileReference; path = TQTAppDelegate.h; sourceTree = "<group>"; };
+		46F610531339BD92005B2D29 /* TQTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQTAppDelegate.m; sourceTree = "<group>"; };
+		46F610561339BD93005B2D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46F610391339BD92005B2D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F610411339BD92005B2D29 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46F610311339BD92005B2D29 = {
+			isa = PBXGroup;
+			children = (
+				46F610461339BD92005B2D29 /* TQT */,
+				46F6103F1339BD92005B2D29 /* Frameworks */,
+				46F6103D1339BD92005B2D29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46F6103D1339BD92005B2D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46F6103C1339BD92005B2D29 /* TQT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46F6103F1339BD92005B2D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46F610401339BD92005B2D29 /* Cocoa.framework */,
+				46F610421339BD92005B2D29 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46F610421339BD92005B2D29 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46F610431339BD92005B2D29 /* AppKit.framework */,
+				46F610441339BD92005B2D29 /* CoreData.framework */,
+				46F610451339BD92005B2D29 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		46F610461339BD92005B2D29 /* TQT */ = {
+			isa = PBXGroup;
+			children = (
+				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
+				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
+				46F610551339BD93005B2D29 /* MainMenu.xib */,
+				46F610471339BD92005B2D29 /* Supporting Files */,
+			);
+			path = TQT;
+			sourceTree = "<group>";
+		};
+		46F610471339BD92005B2D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46F610481339BD92005B2D29 /* TQT-Info.plist */,
+				46F610491339BD92005B2D29 /* InfoPlist.strings */,
+				46F6104C1339BD92005B2D29 /* TQT-Prefix.pch */,
+				46F6104D1339BD92005B2D29 /* main.m */,
+				46F6104F1339BD92005B2D29 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46F6103B1339BD92005B2D29 /* TQT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46F6105A1339BD93005B2D29 /* Build configuration list for PBXNativeTarget "TQT" */;
+			buildPhases = (
+				46F610381339BD92005B2D29 /* Sources */,
+				46F610391339BD92005B2D29 /* Frameworks */,
+				46F6103A1339BD92005B2D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TQT;
+			productName = TQT;
+			productReference = 46F6103C1339BD92005B2D29 /* TQT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F610331339BD92005B2D29 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 46F610361339BD92005B2D29 /* Build configuration list for PBXProject "TQT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 46F610311339BD92005B2D29;
+			productRefGroup = 46F6103D1339BD92005B2D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46F6103B1339BD92005B2D29 /* TQT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46F6103A1339BD92005B2D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F6104B1339BD92005B2D29 /* InfoPlist.strings in Resources */,
+				46F610511339BD92005B2D29 /* Credits.rtf in Resources */,
+				46F610571339BD93005B2D29 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46F610381339BD92005B2D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F6104E1339BD92005B2D29 /* main.m in Sources */,
+				46F610541339BD92005B2D29 /* TQTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46F610491339BD92005B2D29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46F6104A1339BD92005B2D29 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46F6104F1339BD92005B2D29 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46F610501339BD92005B2D29 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		46F610551339BD93005B2D29 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46F610561339BD93005B2D29 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46F610581339BD93005B2D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		46F610591339BD93005B2D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		46F6105B1339BD93005B2D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TQT/TQT-Prefix.pch";
+				INFOPLIST_FILE = "TQT/TQT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		46F6105C1339BD93005B2D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TQT/TQT-Prefix.pch";
+				INFOPLIST_FILE = "TQT/TQT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46F610361339BD92005B2D29 /* Build configuration list for PBXProject "TQT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F610581339BD93005B2D29 /* Debug */,
+				46F610591339BD93005B2D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46F6105A1339BD93005B2D29 /* Build configuration list for PBXNativeTarget "TQT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F6105B1339BD93005B2D29 /* Debug */,
+				46F6105C1339BD93005B2D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F610331339BD92005B2D29 /* Project object */;
+}
