@@ -16,6 +16,9 @@
 		460F6600133AE515001F7BF3 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F5133AE514001F7BF3 /* SBJsonStreamWriterState.m */; };
 		460F6601133AE515001F7BF3 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */; };
 		460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F9133AE514001F7BF3 /* SBJsonWriter.m */; };
+		4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */; };
+		46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C11B06133C9C0E00315B6C /* TQTWeiBo.m */; };
+		46D3B192134EFB150045F492 /* TQTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B191134EFB150045F492 /* TQTUser.m */; };
 		46F610411339BD92005B2D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F610401339BD92005B2D29 /* Cocoa.framework */; };
 		46F6104B1339BD92005B2D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46F610491339BD92005B2D29 /* InfoPlist.strings */; };
 		46F6104E1339BD92005B2D29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F6104D1339BD92005B2D29 /* main.m */; };
@@ -54,6 +57,13 @@
 		460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
 		460F65F8133AE514001F7BF3 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		460F65F9133AE514001F7BF3 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTLoginRequest.h; sourceTree = "<group>"; };
+		4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTLoginRequest.m; sourceTree = "<group>"; };
+		46C11B05133C9C0E00315B6C /* TQTWeiBo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTWeiBo.h; path = TQT/TQTWeiBo.h; sourceTree = "<group>"; };
+		46C11B06133C9C0E00315B6C /* TQTWeiBo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTWeiBo.m; path = TQT/TQTWeiBo.m; sourceTree = "<group>"; };
+		46D3B190134EFB150045F492 /* TQTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTUser.h; path = TQT/TQTUser.h; sourceTree = "<group>"; };
+		46D3B191134EFB150045F492 /* TQTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTUser.m; path = TQT/TQTUser.m; sourceTree = "<group>"; };
+		46D3B193134F0A2E0045F492 /* TQTApiUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTApiUrl.h; sourceTree = "<group>"; };
 		46F6103C1339BD92005B2D29 /* TQT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TQT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F610401339BD92005B2D29 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		46F610431339BD92005B2D29 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,9 +137,31 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		4612C2CC13C46D0500F40230 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */,
+				4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		46DF2A1C13C2D7F500EA8736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46D3B190134EFB150045F492 /* TQTUser.h */,
+				46D3B191134EFB150045F492 /* TQTUser.m */,
+				46C11B05133C9C0E00315B6C /* TQTWeiBo.h */,
+				46C11B06133C9C0E00315B6C /* TQTWeiBo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		46F610311339BD92005B2D29 = {
 			isa = PBXGroup;
 			children = (
+				4612C2CC13C46D0500F40230 /* Request */,
+				46DF2A1C13C2D7F500EA8736 /* Model */,
 				460F65E6133AE514001F7BF3 /* Json */,
 				46F610D61339BE25005B2D29 /* Oauth */,
 				46F610461339BD92005B2D29 /* TQT */,
@@ -169,6 +201,7 @@
 		46F610461339BD92005B2D29 /* TQT */ = {
 			isa = PBXGroup;
 			children = (
+				46D3B193134F0A2E0045F492 /* TQTApiUrl.h */,
 				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
 				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
 				46F610551339BD93005B2D29 /* MainMenu.xib */,
@@ -294,6 +327,9 @@
 				460F6600133AE515001F7BF3 /* SBJsonStreamWriterState.m in Sources */,
 				460F6601133AE515001F7BF3 /* SBJsonTokeniser.m in Sources */,
 				460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */,
+				46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */,
+				46D3B192134EFB150045F492 /* TQTUser.m in Sources */,
+				4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

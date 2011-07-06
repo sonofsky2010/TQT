@@ -13,9 +13,12 @@
     NSWindow *window;
     BOOL loadLogin;
     QOauthKey *oauthKey;
+    IBOutlet NSTextField *textFiled;
 }
 
 @property (assign) IBOutlet NSWindow *window;
 
 - (void)loadWeibo;
+
+- (IBAction)postVerfy:(id)sender;
 @end
