@@ -8,17 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 #import "QOauthKey.h"
+
+@class TQTRootWindowController;
 @interface TQTAppDelegate : NSObject <NSApplicationDelegate> {
 @private
     NSWindow *window;
     BOOL loadLogin;
-    QOauthKey *oauthKey;
     IBOutlet NSTextField *textFiled;
+    TQTRootWindowController *rootWindowController;
 }
 
 @property (assign) IBOutlet NSWindow *window;
-
 - (void)loadWeibo;
-
 - (IBAction)postVerfy:(id)sender;
+- (IBAction)login:(id)sender;
 @end

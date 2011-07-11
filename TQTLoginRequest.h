@@ -11,7 +11,8 @@
 @class QOauthKey;
 @interface TQTLoginRequest : NSObject {
 @private
-    QOauthKey *oauthKey;
 }
 
++ (NSURL *)authorizeRequestUrl;
++ (BOOL)setAccessOauthkeyWithVerify:(NSString *)aVerify;
 @end

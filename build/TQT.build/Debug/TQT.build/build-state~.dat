@@ -1,0 +1,844 @@
+TTQT
+v7
+r0
+t323917515.762242
+cCheck dependencies
+cProcessInfoPlistFile /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Info.plist TQT/TQT-Info.plist
+cProcessPCH /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch.pth TQT/TQT-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/main.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTAppDelegate.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauth.o /Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauthKey.o /Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSData+QBase64.o /Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSString+QEncoding.o /Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSURL+QAdditions.o /Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QAsyncHttp.o /Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QMutableURLRequest.o /Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QSyncHttp.o /Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QWeiboRequest.o /Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSObject+JSON.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonParser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserState.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriterState.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonTokeniser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonWriter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTWeiBo.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCopyStringsFile /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/InfoPlist.strings TQT/en.lproj/InfoPlist.strings
+cCpResource build/Debug/TQT.app/Contents/Resources/en.lproj/Credits.rtf TQT/en.lproj/Credits.rtf
+cCompileXIB /Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004CAA74040000000000003430
+t1286239236
+s13360
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C23AA0400000000000013E6
+t1277405700
+s5094
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.h
+c000000004C23CD6E0000000000000957
+t1277414766
+s2391
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/WebKit.framework/WebKit
+c000000004CAA7406000000000008DF08
+t1286239238
+s581384
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004A11E8210000000000000DE2
+t1242687521
+s3554
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
+c000000004BBD2CE90000000000002DF5
+t1270689001
+s11765
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.h
+c000000004D89C77E0000000000000899
+t1300875134
+s2201
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m
+c000000004D89C77E00000000000008C2
+t1300875134
+s2242
+i"NSObject+JSON.h"
+i"SBJsonWriter.h"
+i"SBJsonParser.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.h
+c000000004D89C77E0000000000000FCC
+t1300875134
+s4044
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m
+c000000004D89C77E0000000000000D75
+t1300875134
+s3445
+i"SBJsonParser.h"
+i"SBJsonStreamParser.h"
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.h
+c000000004D89C77E0000000000001177
+t1300875134
+s4471
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m
+c000000004D89C77E00000000000023C2
+t1300875134
+s9154
+i"SBJsonStreamParser.h"
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParserState.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.h
+c000000004D89C77E0000000000000C4E
+t1300875134
+s3150
+i<Foundation/Foundation.h>
+i"SBJsonStreamParser.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m
+c000000004D89C77E000000000000128C
+t1300875134
+s4748
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.h
+c000000004D89C77E0000000000000C6F
+t1300875134
+s3183
+i<Foundation/Foundation.h>
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParser.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m
+c000000004D89C77E0000000000002754
+t1300875134
+s10068
+i"SBJsonStreamParserState.h"
+i"SBJsonStreamParser.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.h
+c000000004D89C77E00000000000015C3
+t1300875134
+s5571
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m
+c000000004D89C77E000000000000283A
+t1300875134
+s10298
+i"SBJsonStreamWriter.h"
+i"SBJsonStreamWriterState.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.h
+c000000004D89C77E0000000000000B5D
+t1300875134
+s2909
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m
+c000000004D89C77E000000000000136F
+t1300875134
+s4975
+i"SBJsonStreamWriterState.h"
+i"SBJsonStreamWriter.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.h
+c000000004D89C77E0000000000000949
+t1300875134
+s2377
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m
+c000000004D89C77E0000000000002BC1
+t1300875134
+s11201
+i"SBJsonTokeniser.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.h
+c000000004D89C77E00000000000012F9
+t1300875134
+s4857
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m
+c000000004D89C77E0000000000000C90
+t1300875134
+s3216
+i"SBJsonWriter.h"
+i"SBJsonStreamWriter.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.h
+c000000004D37D47B00000000000000B9
+t1295504507
+s185
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m
+c000000004D37D47B000000000000067D
+t1295504507
+s1661
+i"NSData+QBase64.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.h
+c000000004D37D47B00000000000000DF
+t1295504507
+s223
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m
+c000000004D37D47B00000000000003CF
+t1295504507
+s975
+i"NSString+QEncoding.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.h
+c000000004D37D47B0000000000000107
+t1295504507
+s263
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m
+c000000004D37D47B0000000000000711
+t1295504507
+s1809
+i"NSURL+QAdditions.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.h
+c000000004D37D47B00000000000002D6
+t1295504507
+s726
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m
+c000000004D37D47B0000000000000432
+t1295504507
+s1074
+i"QAsyncHttp.h"
+i"QMutableURLRequest.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.h
+c000000004D37D47B0000000000000260
+t1295504507
+s608
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m
+c000000004D37D47B0000000000000D03
+t1295504507
+s3331
+i"QMutableURLRequest.h"
+i"NSURL+QAdditions.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QOauth.h
+c000000004D37D47B00000000000005AD
+t1295504507
+s1453
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m
+c000000004D37D5620000000000001BB2
+t1295504738
+s7090
+i<stdlib.h>
+i<CommonCrypto/CommonHMAC.h>
+i"QOauth.h"
+i"NSString+QEncoding.h"
+i"NSData+QBase64.h"
+i"NSURL+QAdditions.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.h
+c000000004D37D47B0000000000000254
+t1295504507
+s596
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m
+c000000004D37D47B0000000000000141
+t1295504507
+s321
+i"QOauthKey.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.h
+c000000004D37D47B0000000000000247
+t1295504507
+s583
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m
+c000000004D37D47B00000000000005BF
+t1295504507
+s1471
+i"QSyncHttp.h"
+i"QMutableURLRequest.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.h
+c000000004D37D47B0000000000000634
+t1295504507
+s1588
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m
+c000000004D37D5850000000000000B5B
+t1295504773
+s2907
+i"QWeiboRequest.h"
+i"QOauth.h"
+i"QOauthKey.h"
+i"QSyncHttp.h"
+i"QAsyncHttp.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQT-Prefix.pch
+c000000004D8986120000000000000089
+t1300858386
+s137
+i<Cocoa/Cocoa.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.h
+c000000004D89C662000000000000018E
+t1300874850
+s398
+i<Cocoa/Cocoa.h>
+i"QOauthKey.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m
+c000000004D8C74E70000000000001693
+t1301050599
+s5779
+i"TQTAppDelegate.h"
+i"QOauthKey.h"
+i"QOauth.h"
+i"QWeiboRequest.h"
+i"NSURL+QAdditions.h"
+i"SBJsonParser.h"
+i<WebKit/WebKit.h>
+i<stdio.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.h
+c000000004D8C74E70000000000000140
+t1301050599
+s320
+i<Foundation/Foundation.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m
+c000000004D8C648D000000000000015F
+t1301046413
+s351
+i"TQTWeiBo.h"
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/Credits.rtf
+c000000004D89861200000000000001B4
+t1300858386
+s436
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/InfoPlist.strings
+c000000004D898612000000000000002D
+t1300858386
+s45
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib
+c000000004D898613000000000002BB3F
+t1300858387
+s179007
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m
+c000000004D89861200000000000000F8
+t1300858386
+s248
+i<Cocoa/Cocoa.h>
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app
+t2
+s0
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Info.plist
+t1302224714
+s862
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/MacOS/TQT
+t2
+s0
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/PkgInfo
+t1302224714
+s8
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/Credits.rtf
+t1302224715
+s436
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/InfoPlist.strings
+t1302224715
+s92
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/MainMenu.nib
+t1302224715
+s34315
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSData+QBase64.o
+t1302224715
+s7604
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSObject+JSON.o
+t1302224715
+s6984
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSString+QEncoding.o
+t1302224715
+s5216
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSURL+QAdditions.o
+t1302224715
+s10984
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QAsyncHttp.o
+t1302224715
+s7364
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QMutableURLRequest.o
+t1302224715
+s16456
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauth.o
+t1302224715
+s23800
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauthKey.o
+t1302224715
+s12412
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QSyncHttp.o
+t1302224715
+s9172
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QWeiboRequest.o
+t1302224715
+s12020
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonParser.o
+t1302224715
+s20644
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParser.o
+t1302224715
+s36480
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o
+t1302224715
+s30880
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserState.o
+t1302224715
+s51808
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriter.o
+t1302224715
+s47616
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriterState.o
+t1302224715
+s27216
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonTokeniser.o
+t1302224715
+s37128
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonWriter.o
+t1302224715
+s18876
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQT.LinkFileList
+c000000004D9E5F4A000000000000099D
+t1302224714
+s2461
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTAppDelegate.o
+t2
+s0
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTWeiBo.o
+t1302224715
+s6108
+
+N/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/main.o
+t1302224715
+s2464
+
+N/var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch.pth
+t1302224714
+s9005268
+
+NTQT/TQT-Info.plist
+c000000004D89861200000000000003DE
+t1300858386
+s990
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies323917514#323917514#0(0"0(0#1#0"8247620834010738688#0"0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSData+QBase64.o /Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.153015
+e323917515.233415
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSData+QBase64.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@70"Compile /Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m323917515#323917515#0(0"0(0#0#62"/Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m8633874560#1511"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/NSData+QBase64.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSData+QBase64.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSObject+JSON.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.311015
+e323917515.350950
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSObject+JSON.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@74"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m323917515#323917515#0(0"0(0#0#66"/Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m8634144736#1514"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/NSObject+JSON.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSObject+JSON.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSString+QEncoding.o /Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.155080
+e323917515.210121
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSString+QEncoding.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@74"Compile /Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m323917515#323917515#0(0"0(0#0#66"/Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m8633782944#1519"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/NSString+QEncoding.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSString+QEncoding.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSURL+QAdditions.o /Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.158037
+e323917515.246644
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSURL+QAdditions.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@72"Compile /Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m323917515#323917515#0(0"0(0#0#64"/Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m8633487520#1515"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/NSURL+QAdditions.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/NSURL+QAdditions.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QAsyncHttp.o /Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.210252
+e323917515.265403
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QAsyncHttp.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@66"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m323917515#323917515#0(0"0(0#0#58"/Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m8633354112#1503"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QAsyncHttp.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QAsyncHttp.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QMutableURLRequest.o /Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.233561
+e323917515.308309
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QMutableURLRequest.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@74"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m323917515#323917515#0(0"0(0#0#66"/Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m8634144928#1519"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QMutableURLRequest.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QMutableURLRequest.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauth.o /Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917514.938972
+e323917515.157924
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauth.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@62"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m323917514#323917515#0(0"0(0#0#54"/Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m8633113824#1495"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QOauth.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauth.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauthKey.o /Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917514.939847
+e323917515.154962
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauthKey.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@65"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m323917514#323917515#0(0"0(0#0#57"/Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m8633074624#1501"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QOauthKey.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QOauthKey.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QSyncHttp.o /Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.246771
+e323917515.312882
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QSyncHttp.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m:25:25:{25:24-25:26}{25:39-25:62}: warning: conversion specifies type 'int' but the argument has type 'NSInteger' (aka 'long') [-Wformat]
+o         NSLog(@"response code:%d string:%@", httpResponse.statusCode, retString);
+o                               ~^             ~~~~~~~~~~~~~~~~~~~~~~~
+o                               %ld
+o1 warning generated.
+lSLF07#2@65"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m323917515#323917515#0(404"/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m:25:25:{25:24-25:26}{25:39-25:62}: warning: conversion specifies type 'int' but the argument has type 'NSInteger' (aka 'long') [-Wformat]         NSLog(@"response code:%d string:%@", httpResponse.statusCode, retString);                               ~^             ~~~~~~~~~~~~~~~~~~~~~~~                               %ld1 warning generated.1(22@82"Conversion specifies type 'int' but the argument has type 'NSInteger' (aka 'long')323917515#0#195#0(6@57"/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m317197307#25#25#0#0#55"conversion specifies type * but the argument has type *2(6@57"/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m317197307#25#24#25#26#6@57"/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m317197307#25#39#25#62#0#0#57"/Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m8629551840#1501"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QSyncHttp.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QSyncHttp.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QWeiboRequest.o /Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.265559
+e323917515.315022
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QWeiboRequest.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@69"Compile /Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m323917515#323917515#0(0"0(0#0#61"/Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m8633115520#1509"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/QWeiboRequest.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/QWeiboRequest.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonParser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.312999
+e323917515.367943
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonParser.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@73"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m323917515#323917515#0(0"0(0#0#65"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m8633919776#1512"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonParser.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonParser.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.313919
+e323917515.404709
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParser.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@79"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m323917515#323917515#0(0"0(0#0#71"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m8633738080#1524"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParser.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParser.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.315128
+e323917515.379666
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@86"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m323917515#323917515#0(0"0(0#0#78"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m8633348000#1538"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserAdapter.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserAdapter.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserState.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.351073
+e323917515.436255
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserState.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@84"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m323917515#323917515#0(0"0(0#0#76"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m8633043456#1534"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamParserState.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamParserState.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.368068
+e323917515.475201
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriter.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@79"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m323917515#323917515#0(0"0(0#0#71"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m8630428096#1524"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriter.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriter.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriterState.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.379814
+e323917515.434534
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriterState.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@84"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m323917515#323917515#0(0"0(0#0#76"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m8632660928#1534"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonStreamWriterState.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonStreamWriterState.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonTokeniser.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.404848
+e323917515.504012
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonTokeniser.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@76"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m323917515#323917515#0(0"0(0#0#68"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m8632170240#1518"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonTokeniser.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonTokeniser.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonWriter.o /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.434672
+e323917515.493151
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonWriter.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@73"Compile /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m323917515#323917515#0(0"0(0#0#65"/Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m8630298464#1512"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/Json/SBJsonWriter.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/SBJsonWriter.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTAppDelegate.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917514.938254
+e323917515.312694
+r0
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTAppDelegate.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m:75:9: error: use of undeclared identifier 'vsn'
+o         vsn
+o         ^
+o1 error generated.
+lSLF07#2@74"Compile /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m323917514#323917515#0(158"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m:75:9: error: use of undeclared identifier 'vsn'         vsn         ^1 error generated.1(4@34"Use of undeclared identifier 'vsn'323917515#0#115#0(6@66"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m322743399#75#9#0#0#30"use of undeclared identifier *0(0#0#66"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m8633307264#1515"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTAppDelegate.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTAppDelegate.o1#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTWeiBo.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917515.436381
+e323917515.478945
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTWeiBo.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@68"Compile /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m323917515#323917515#0(0"0(0#0#60"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m8629939776#1503"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQTWeiBo.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/TQTWeiBo.o0#
+
+CCompileC build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/main.o /Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917514.937410
+e323917515.152881
+r1
+xCompileC
+xbuild/TQT.build/Debug/TQT.build/Objects-normal/x86_64/main.o
+x/Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@64"Compile /Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m323917514#323917515#0(0"0(0#0#56"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m8633347680#1495"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -include /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch -c /Users/MacDeveloper11/Documents/workspace/TQT/TQT/main.m -o /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib
+s323917515.505400
+e323917515.762142
+r1
+xCompileXIB
+x/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib
+lSLF07#2@36"CompileXIB TQT/en.lproj/MainMenu.xib323917515#323917515#0(0"0(0#0#71"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib8627452704#375"    cd /Users/MacDeveloper11/Documents/workspace/TQT    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/MainMenu.nib /Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+
+CCopyStringsFile /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/InfoPlist.strings TQT/en.lproj/InfoPlist.strings
+s323917515.504087
+e323917515.708907
+r1
+xCopyStringsFile
+x/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj/InfoPlist.strings
+xTQT/en.lproj/InfoPlist.strings
+o/Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings:125: warning: Insecure world writable dir /opt in PATH, mode 040777
+lSLF07#2@35"Copy TQT/en.lproj/InfoPlist.strings323917515#323917515#0(157"/Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings:125: warning: Insecure world writable dir /opt in PATH, mode 0407770(0#0#76"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/InfoPlist.strings8629366048#369"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 TQT/en.lproj/InfoPlist.strings --outdir /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj0#
+
+CCpResource build/Debug/TQT.app/Contents/Resources/en.lproj/Credits.rtf TQT/en.lproj/Credits.rtf
+s323917515.504781
+e323917515.554011
+r1
+xCpResource
+xbuild/Debug/TQT.app/Contents/Resources/en.lproj/Credits.rtf
+xTQT/en.lproj/Credits.rtf
+lSLF07#2@29"Copy TQT/en.lproj/Credits.rtf323917515#323917515#0(0"0(0#0#70"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/Credits.rtf8628649696#380"    cd /Users/MacDeveloper11/Documents/workspace/TQT    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/MacDeveloper11/Documents/workspace/TQT/TQT/en.lproj/Credits.rtf /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Resources/en.lproj0#
+
+CLd /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/MacOS/TQT normal x86_64
+r0
+
+CProcessInfoPlistFile /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Info.plist TQT/TQT-Info.plist
+s323917514.201092
+e323917514.228560
+r1
+xProcessInfoPlistFile
+x/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Info.plist
+xTQT/TQT-Info.plist
+lSLF07#2@26"Process TQT/TQT-Info.plist323917514#323917514#0(0"0(0#0#64"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQT-Info.plist27303270314934352#323"    cd /Users/MacDeveloper11/Documents/workspace/TQT    builtin-infoPlistUtility TQT/TQT-Info.plist -genpkginfo /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch.pth TQT/TQT-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s323917514.228710
+e323917514.937315
+r1
+xProcessPCH
+x/var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch.pth
+xTQT/TQT-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF07#2@29"Precompile TQT/TQT-Prefix.pch323917514#323917514#0(0"0(0#0#64"/Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQT-Prefix.pch8633770080#1398"    cd /Users/MacDeveloper11/Documents/workspace/TQT    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -Wshorten-64-to-32 -DDEBUG -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-generated-files.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-own-target-headers.hmap -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-all-target-headers.hmap -iquote /Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/TQT-project-headers.hmap -F/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug -I/Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/include -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources/x86_64 -I/Users/MacDeveloper11/Documents/workspace/TQT/build/TQT.build/Debug/TQT.build/DerivedSources -c /Users/MacDeveloper11/Documents/workspace/TQT/TQT/TQT-Prefix.pch -o /var/folders/EH/EHMTZ+tZFv8GB2mMY+-ITE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TQT-Prefix-cpszjbevqsyrzcbprwkgkknfuqxy/TQT-Prefix.pch.pth0#
+
+CTouch /Users/MacDeveloper11/Documents/workspace/TQT/build/Debug/TQT.app
+r0
+

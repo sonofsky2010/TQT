@@ -17,6 +17,9 @@
 		460F6601133AE515001F7BF3 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */; };
 		460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F9133AE514001F7BF3 /* SBJsonWriter.m */; };
 		4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */; };
+		46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46367A1413CA99B5007C0C69 /* TQTUserRequest.m */; };
+		46955D9013CB02190016F079 /* TQTRootWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46955D8F13CB02190016F079 /* TQTRootWindowController.xib */; };
+		46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46955D9213CB02820016F079 /* TQTRootWindowController.m */; };
 		46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C11B06133C9C0E00315B6C /* TQTWeiBo.m */; };
 		46D3B192134EFB150045F492 /* TQTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B191134EFB150045F492 /* TQTUser.m */; };
 		46F610411339BD92005B2D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F610401339BD92005B2D29 /* Cocoa.framework */; };
@@ -59,6 +62,11 @@
 		460F65F9133AE514001F7BF3 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTLoginRequest.h; sourceTree = "<group>"; };
 		4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTLoginRequest.m; sourceTree = "<group>"; };
+		46367A1313CA99B5007C0C69 /* TQTUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTUserRequest.h; sourceTree = "<group>"; };
+		46367A1413CA99B5007C0C69 /* TQTUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTUserRequest.m; sourceTree = "<group>"; };
+		46955D8F13CB02190016F079 /* TQTRootWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTRootWindowController.xib; sourceTree = "<group>"; };
+		46955D9113CB02810016F079 /* TQTRootWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTRootWindowController.h; sourceTree = "<group>"; };
+		46955D9213CB02820016F079 /* TQTRootWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTRootWindowController.m; sourceTree = "<group>"; };
 		46C11B05133C9C0E00315B6C /* TQTWeiBo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTWeiBo.h; path = TQT/TQTWeiBo.h; sourceTree = "<group>"; };
 		46C11B06133C9C0E00315B6C /* TQTWeiBo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTWeiBo.m; path = TQT/TQTWeiBo.m; sourceTree = "<group>"; };
 		46D3B190134EFB150045F492 /* TQTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTUser.h; path = TQT/TQTUser.h; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 			children = (
 				4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */,
 				4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */,
+				46367A1313CA99B5007C0C69 /* TQTUserRequest.h */,
+				46367A1413CA99B5007C0C69 /* TQTUserRequest.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -205,6 +215,9 @@
 				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
 				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
 				46F610551339BD93005B2D29 /* MainMenu.xib */,
+				46955D8F13CB02190016F079 /* TQTRootWindowController.xib */,
+				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
+				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
 				46F610471339BD92005B2D29 /* Supporting Files */,
 			);
 			path = TQT;
@@ -297,6 +310,7 @@
 				46F6104B1339BD92005B2D29 /* InfoPlist.strings in Resources */,
 				46F610511339BD92005B2D29 /* Credits.rtf in Resources */,
 				46F610571339BD93005B2D29 /* MainMenu.xib in Resources */,
+				46955D9013CB02190016F079 /* TQTRootWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,8 @@
 				46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */,
 				46D3B192134EFB150045F492 /* TQTUser.m in Sources */,
 				4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */,
+				46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */,
+				46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
