@@ -22,6 +22,11 @@
 		46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46955D9213CB02820016F079 /* TQTRootWindowController.m */; };
 		46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C11B06133C9C0E00315B6C /* TQTWeiBo.m */; };
 		46D3B192134EFB150045F492 /* TQTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B191134EFB150045F492 /* TQTUser.m */; };
+		46DACB4613CD8208004EC2D4 /* TQTWeiBoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */; };
+		46DACB4713CD8208004EC2D4 /* TQTWeiBoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */; };
+		46DACB4A13CD8327004EC2D4 /* TQTWeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */; };
+		46DACB4C13CD843E004EC2D4 /* TQTWeiboCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */; };
+		46DACB4F13CD8701004EC2D4 /* TQTWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */; };
 		46F610411339BD92005B2D29 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F610401339BD92005B2D29 /* Cocoa.framework */; };
 		46F6104B1339BD92005B2D29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46F610491339BD92005B2D29 /* InfoPlist.strings */; };
 		46F6104E1339BD92005B2D29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F6104D1339BD92005B2D29 /* main.m */; };
@@ -72,6 +77,14 @@
 		46D3B190134EFB150045F492 /* TQTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTUser.h; path = TQT/TQTUser.h; sourceTree = "<group>"; };
 		46D3B191134EFB150045F492 /* TQTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTUser.m; path = TQT/TQTUser.m; sourceTree = "<group>"; };
 		46D3B193134F0A2E0045F492 /* TQTApiUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTApiUrl.h; sourceTree = "<group>"; };
+		46DACB4313CD8208004EC2D4 /* TQTWeiBoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiBoTableViewController.h; sourceTree = "<group>"; };
+		46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiBoTableViewController.m; sourceTree = "<group>"; };
+		46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTWeiBoTableViewController.xib; sourceTree = "<group>"; };
+		46DACB4813CD8327004EC2D4 /* TQTWeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboCell.h; sourceTree = "<group>"; };
+		46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboCell.m; sourceTree = "<group>"; };
+		46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTWeiboCell.xib; sourceTree = "<group>"; };
+		46DACB4D13CD8701004EC2D4 /* TQTWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboRequest.h; sourceTree = "<group>"; };
+		46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboRequest.m; sourceTree = "<group>"; };
 		46F6103C1339BD92005B2D29 /* TQT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TQT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F610401339BD92005B2D29 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		46F610431339BD92005B2D29 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -152,6 +165,8 @@
 				4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */,
 				46367A1313CA99B5007C0C69 /* TQTUserRequest.h */,
 				46367A1413CA99B5007C0C69 /* TQTUserRequest.m */,
+				46DACB4D13CD8701004EC2D4 /* TQTWeiboRequest.h */,
+				46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */,
 			);
 			name = Request;
 			sourceTree = "<group>";
@@ -211,11 +226,17 @@
 		46F610461339BD92005B2D29 /* TQT */ = {
 			isa = PBXGroup;
 			children = (
+				46DACB4813CD8327004EC2D4 /* TQTWeiboCell.h */,
+				46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */,
 				46D3B193134F0A2E0045F492 /* TQTApiUrl.h */,
 				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
 				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
 				46F610551339BD93005B2D29 /* MainMenu.xib */,
 				46955D8F13CB02190016F079 /* TQTRootWindowController.xib */,
+				46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */,
+				46DACB4313CD8208004EC2D4 /* TQTWeiBoTableViewController.h */,
+				46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */,
+				46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */,
 				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
 				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
 				46F610471339BD92005B2D29 /* Supporting Files */,
@@ -311,6 +332,8 @@
 				46F610511339BD92005B2D29 /* Credits.rtf in Resources */,
 				46F610571339BD93005B2D29 /* MainMenu.xib in Resources */,
 				46955D9013CB02190016F079 /* TQTRootWindowController.xib in Resources */,
+				46DACB4713CD8208004EC2D4 /* TQTWeiBoTableViewController.xib in Resources */,
+				46DACB4C13CD843E004EC2D4 /* TQTWeiboCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +369,9 @@
 				4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */,
 				46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */,
 				46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */,
+				46DACB4613CD8208004EC2D4 /* TQTWeiBoTableViewController.m in Sources */,
+				46DACB4A13CD8327004EC2D4 /* TQTWeiboCell.m in Sources */,
+				46DACB4F13CD8701004EC2D4 /* TQTWeiboRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "QOauthKey.h"
+#import "TQTWeiBoTableViewController.h"
 
 @class TQTRootWindowController;
 @interface TQTAppDelegate : NSObject <NSApplicationDelegate> {
@@ -16,6 +17,7 @@
     BOOL loadLogin;
     IBOutlet NSTextField *textFiled;
     TQTRootWindowController *rootWindowController;
+    TQTWeiBoTableViewController *tableViewController;
 }
 
 @property (assign) IBOutlet NSWindow *window;

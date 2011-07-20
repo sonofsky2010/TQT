@@ -12,7 +12,9 @@
 @interface TQTRootWindowController : NSWindowController {
 @private
     IBOutlet NSImageView *userImgView_;
+    IBOutlet NSView* tableView_;
 }
 
 @property (assign, readonly) NSImageView *userImgView;
+@property (assign, readonly) NSView *tableView;
 @end

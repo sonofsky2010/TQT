@@ -72,7 +72,7 @@
 	QOauth *oauth = [[QOauth alloc] init];
 	
 	NSString *queryString = nil;
-	NSString *oauthUrl = [oauth	getOauthUrl:aUrl 
+    NSString *oauthUrl = [oauth	getOauthUrl:aUrl 
 								 httpMethod:aHttpMethod 
 								consumerKey:aOauthKey.consumerKey 
 							 consumerSecret:aOauthKey.consumerSecret 

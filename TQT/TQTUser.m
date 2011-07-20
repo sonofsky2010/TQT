@@ -7,6 +7,7 @@
 //
 
 #import "TQTUser.h"
+#import "SBJsonWriter.h"
 
 @implementation TQTUser
 
@@ -73,4 +74,35 @@
     [super dealloc];
 }
 
+- (NSDictionary *)dictionary
+{
+	NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:name_, @"name",
+                          nick_, @"nick",
+                          uid_, @"uid_",
+                          head_, @"head_",
+                          location_, @"location",
+						  [NSNumber numberWithInt:countryCode_], @"country_code",
+						  [NSNumber numberWithInt:cityCode_], @"city_code",
+						  [NSNumber numberWithInt:provinceCode_], @"province_code",
+						  [NSNumber numberWithBool:isVip_], @"isvip",
+						  [NSNumber numberWithBool:isSent_], @"isent",
+						  introduction_, @"introduction",
+						  verifyInfo_, @"verifyinfo",
+						  [NSNumber numberWithInt:birthYear_], @"birth_year",
+						  [NSNumber numberWithInt:birthMonth_], @"birth_month",
+						  [NSNumber numberWithInt:birthDay_], @"birth_day",
+						  [NSNumber numberWithBool:sex_], @"sex",
+						  [NSNumber numberWithLong:fansNum_], @"fansnum",
+						  [NSNumber numberWithLong:idolNum_], @"idolnum",
+						  [NSNumber numberWithLong:tweetNum_], @"tweetnum",
+						  nil];
+	return dict;
+}
+
+- (NSString *)jsonString
+{
+	SBJsonWriter *jsonWriter = [[[SBJsonWriter alloc] init] autorelease];
+	NSDictionary *dict = [self dictionary];
+	return [jsonWriter stringWithObject:dict];
+}
 @end

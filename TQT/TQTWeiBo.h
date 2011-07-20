@@ -54,4 +54,6 @@
 
 - (id)initWithDict:(NSDictionary *)dict;
 + (TQTWeiBo *)weiBoFromDict:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
+- (NSString *)jsonString;
 @end

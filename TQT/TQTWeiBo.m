@@ -7,7 +7,7 @@
 //
 
 #import "TQTWeiBo.h"
-
+#import "SBJsonWriter.h"
 
 @implementation TQTWeiBo
 @synthesize text = text_;
@@ -51,10 +51,15 @@
         self.count = [dict objectForKey:@"count"];
         self.mCount = [dict objectForKey:@"mcount"];
         self.from = [dict objectForKey:@"from"];
-        self.images = [dict objectForKey:@"images"];
+        if (![[dict objectForKey:@"image"] isEqualTo:[NSNull null]]) {
+            self.images = [dict objectForKey:@"image"];
+        }
+//        self.images = [dict objectForKey:@"image"];
         self.name = [dict objectForKey:@"name"];
         self.nick = [dict objectForKey:@"nick"];
-        self.source = [TQTWeiBo weiBoFromDict:[dict objectForKey:@"source"]];
+        if ([dict objectForKey:@"source"]) {
+            self.source = [TQTWeiBo weiBoFromDict:[dict objectForKey:@"source"]];
+        }
         self.timeStamp = [[dict objectForKey:@"timestamp"] longValue];
         self.isSelf = [[dict objectForKey:@"self"] boolValue];
         self.type = [[dict objectForKey:@"type"] intValue];
@@ -80,4 +85,33 @@
     return weibo;
 }
 
+- (NSDictionary *)dictionary
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:text_, @"text",
+                          origtext_, @"origtext",
+                          count_, @"count",
+                          from_, @"from",
+                          images_, @"image",
+                          name_, @"name",
+                          nick_, @"nick",
+                          [source_ dictionary], @"source",
+                          timeStamp_, @"timestamp",
+                          [NSNumber numberWithBool:isSelf_], @"self",
+                          [NSNumber numberWithInt:type_], @"type",
+                          head_, @"head",
+                          location_, @"location",
+                          [NSNumber numberWithInt:countryCode_], @"country_code",
+                          [NSNumber numberWithInt:provinceCode_], @"province_code",
+                          [NSNumber numberWithInt:cityCode_], @"city_code",
+                          [NSNumber numberWithBool:isVip_], @"isvip",
+                          nil];
+    return dict;
+}
+
+- (NSString *)jsonString
+{
+    NSDictionary *dict = [self dictionary];
+    SBJsonWriter *jsonWriter = [[[SBJsonWriter alloc] init] autorelease];
+    return [jsonWriter stringWithObject:dict];
+}
 @end

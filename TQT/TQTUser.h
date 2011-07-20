@@ -55,4 +55,6 @@
 @property (retain) NSMutableArray *tag;
 
 - (id)initWithDict:(NSDictionary *)dict;
+- (NSDictionary *)dictionary;
+- (NSString *)jsonString;
 @end

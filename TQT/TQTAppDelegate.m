@@ -17,6 +17,7 @@
 #import "TQTUserRequest.h"
 #import "TQTUser.h"
 #import "TQTRootWindowController.h"
+#import "TQTWeiboRequest.h"
 #import <WebKit/WebKit.h>
 
 
@@ -79,8 +80,14 @@ QOauthKey *oauthKey;
     [rootWindowController.userImgView setImage:image];
     [rootWindowController.window makeKeyAndOrderFront:nil];
     [window orderOut:nil];
-    NSLog(@"%@", user);  
+    NSLog(@"%@", user);
+    TQTWeiboRequest *request = [[TQTWeiboRequest alloc] init];
+    tableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
+                                                                        bundle:nil];
+    tableViewController.weibos = [request homeTimeLines];
+    [rootWindowController.tableView addSubview:tableViewController.view];
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
+    return;
     
 ERROR:
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
