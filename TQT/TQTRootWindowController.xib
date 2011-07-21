@@ -12,11 +12,13 @@
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>NSCustomView</string>
-			<string>NSImageView</string>
-			<string>NSWindowTemplate</string>
 			<string>NSView</string>
+			<string>NSWindowTemplate</string>
+			<string>NSCustomView</string>
 			<string>NSImageCell</string>
+			<string>NSButtonCell</string>
+			<string>NSImageView</string>
+			<string>NSButton</string>
 			<string>NSCustomObject</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -58,6 +60,34 @@
 						<object class="NSCustomView" id="879514329">
 							<reference key="NSNextResponder" ref="976428782"/>
 							<int key="NSvFlags">268</int>
+							<object class="NSMutableArray" key="NSSubviews">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSButton" id="1062197298">
+									<reference key="NSNextResponder" ref="879514329"/>
+									<int key="NSvFlags">268</int>
+									<string key="NSFrame">{{-5, 4}, {96, 32}}</string>
+									<reference key="NSSuperview" ref="879514329"/>
+									<reference key="NSWindow"/>
+									<bool key="NSEnabled">YES</bool>
+									<object class="NSButtonCell" key="NSCell" id="913274840">
+										<int key="NSCellFlags">67239424</int>
+										<int key="NSCellFlags2">134217728</int>
+										<string key="NSContents">发表</string>
+										<object class="NSFont" key="NSSupport">
+											<string key="NSName">STHeitiSC-Light</string>
+											<double key="NSSize">13</double>
+											<int key="NSfFlags">16</int>
+										</object>
+										<reference key="NSControlView" ref="1062197298"/>
+										<int key="NSButtonFlags">-2038284033</int>
+										<int key="NSButtonFlags2">129</int>
+										<string key="NSAlternateContents"/>
+										<string key="NSKeyEquivalent"/>
+										<int key="NSPeriodicDelay">200</int>
+										<int key="NSPeriodicInterval">25</int>
+									</object>
+								</object>
+							</object>
 							<string key="NSFrameSize">{86, 504}</string>
 							<reference key="NSSuperview" ref="976428782"/>
 							<reference key="NSWindow"/>
@@ -96,7 +126,7 @@
 						</object>
 						<object class="NSCustomView" id="818064936">
 							<reference key="NSNextResponder" ref="976428782"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">286</int>
 							<string key="NSFrame">{{85, 0}, {290, 530}}</string>
 							<reference key="NSSuperview" ref="976428782"/>
 							<reference key="NSWindow"/>
@@ -139,6 +169,14 @@
 						<reference key="destination" ref="818064936"/>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">window_</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1015417336"/>
+					</object>
+					<int key="connectionID">21</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -208,12 +246,30 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
 						<reference key="object" ref="879514329"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1062197298"/>
+						</object>
 						<reference key="parent" ref="976428782"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
 						<reference key="object" ref="504694461"/>
 						<reference key="parent" ref="928290005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">22</int>
+						<reference key="object" ref="1062197298"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="913274840"/>
+						</object>
+						<reference key="parent" ref="879514329"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="913274840"/>
+						<reference key="parent" ref="1062197298"/>
 					</object>
 				</object>
 			</object>
@@ -224,6 +280,8 @@
 					<string>-1.IBPluginDependency</string>
 					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
+					<string>22.IBPluginDependency</string>
+					<string>23.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
 					<string>3.NSWindowTemplate.visibleAtLaunch</string>
 					<string>4.IBPluginDependency</string>
@@ -234,6 +292,8 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -258,7 +318,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -272,11 +332,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>tableView_</string>
 							<string>userImgView_</string>
+							<string>window_</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSView</string>
 							<string>NSImageView</string>
+							<string>NSWindow</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -285,6 +347,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>tableView_</string>
 							<string>userImgView_</string>
+							<string>window_</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -295,6 +358,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">userImgView_</string>
 								<string key="candidateClassName">NSImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">window_</string>
+								<string key="candidateClassName">NSWindow</string>
 							</object>
 						</object>
 					</object>

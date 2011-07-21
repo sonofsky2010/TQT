@@ -12,7 +12,9 @@
 @interface TQTWeiBoTableViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate> {
 @private
     NSMutableArray *weibos_;
+    IBOutlet NSTableView *tableView_;
 }
 
 @property (retain) NSMutableArray *weibos;
+@property (readonly) NSTableView *tableView;
 @end

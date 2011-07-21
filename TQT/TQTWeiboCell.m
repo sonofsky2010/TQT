@@ -59,7 +59,7 @@
     [attrs setObject:[NSFont systemFontOfSize:12.0f] forKey:NSFontAttributeName];
     NSSize textSize = [weibo_.text sizeWithAttributes:attrs];
     NSRect result = frame;
-    int lineNum = floor(textSize.width / frame.size.width) + 1;
+    int lineNum = ceil(textSize.width / frame.size.width);
     result.size.height = textSize.height * lineNum;
     result.origin.y += 20;
     return result;
@@ -108,7 +108,6 @@
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
     if (imageCell_) {
-        NSLog(@"%@", imageCell_);
         [imageCell_ drawWithFrame:[self _imageCellFrameForInteriorFrame:cellFrame] inView:controlView];
     }
     if (nickCell_) {
@@ -142,8 +141,16 @@
         [imageCell_ setBackgroundStyle:[self backgroundStyle]];
         NSString *imagePath = [[[aWeibo images] objectAtIndex:0] stringByAppendingString:@"/120"];
         NSURL *imgUrl = [NSURL URLWithString:imagePath];
-        NSImage *img = [[NSImage alloc] initWithContentsOfURL:imgUrl];
-        imageCell_.image = img;
+//        dispatch_queue_t network_queue;
+//        network_queue = dispatch_queue_create("TQTImage", NULL);
+//        dispatch_async(network_queue, ^{
+            NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+                imageCell_.image = image;
+//            });
+            [image release];
+//        });
+        [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];    
     }
     else
     {

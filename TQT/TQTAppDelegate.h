@@ -17,7 +17,7 @@
     BOOL loadLogin;
     IBOutlet NSTextField *textFiled;
     TQTRootWindowController *rootWindowController;
-    TQTWeiBoTableViewController *tableViewController;
+    IBOutlet NSButton *checkLogin;
 }
 
 @property (assign) IBOutlet NSWindow *window;

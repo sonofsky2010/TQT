@@ -7,14 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "TQTWeiBoTableViewController.h"
 
 @interface TQTRootWindowController : NSWindowController {
 @private
     IBOutlet NSImageView *userImgView_;
     IBOutlet NSView* tableView_;
+    IBOutlet NSWindow *window_;
+    TQTWeiBoTableViewController *tableViewController;
 }
 
 @property (assign, readonly) NSImageView *userImgView;
 @property (assign, readonly) NSView *tableView;
+
+- (IBAction)postWeibo:(id)sender;
+- (void)reloadData;
 @end

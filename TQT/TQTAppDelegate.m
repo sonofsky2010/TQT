@@ -19,12 +19,9 @@
 #import "TQTRootWindowController.h"
 #import "TQTWeiboRequest.h"
 #import <WebKit/WebKit.h>
+#import "TQTApiUrl.h"
 
 
-#define kAppKey @"14a6b38d5ffe47c7a9acd86902660cdd"
-#define kAppSecret @"3016f15bfcf6990f4fb71b4a368d950f"
-#define kRequestTokenUrl @"https://open.t.qq.com/cgi-bin/request_token"
-#define kAuthorizeUrl @"http://open.t.qq.com/cgi-bin/authorize?oauth_token="
 
 QOauthKey *oauthKey;
 
@@ -34,7 +31,22 @@ QOauthKey *oauthKey;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    oauthKey = [[QOauthKey alloc] init];  
+//    oauthKey = [[QOauthKey alloc] init];
+    NSData *keyData = [[NSUserDefaults standardUserDefaults] objectForKey:kAccessOauthKey];
+    if (keyData) {
+        oauthKey = [NSKeyedUnarchiver unarchiveObjectWithData:keyData];
+    }
+    if (oauthKey == nil) {
+        [self.window makeKeyAndOrderFront:nil];
+        oauthKey = [[QOauthKey alloc] init];
+    }
+    else
+    {
+        rootWindowController = [[TQTRootWindowController alloc] init];
+        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:rootWindowController];
+        [rootWindowController.window makeKeyAndOrderFront:nil];
+        [rootWindowController reloadData];
+    }
 }
 
 - (IBAction)login:(id)sender
@@ -63,34 +75,46 @@ QOauthKey *oauthKey;
         //TODO: handl error
         goto ERROR;
     }
-    TQTUser *user = nil;
-    if ([TQTLoginRequest setAccessOauthkeyWithVerify:verifier])
+//    TQTUser *user = nil;
+    if (![TQTLoginRequest setAccessOauthkeyWithVerify:verifier])
     {
-        TQTUserRequest *request = [[[TQTUserRequest alloc] init] autorelease];
-        user = [request infoOfSelf];      
+//        TQTUserRequest *request = [[[TQTUserRequest alloc] init] autorelease];
+//        user = [request infoOfSelf];      
+        goto ERROR;
+    }
+    
+    if ([checkLogin state] == NSOnState)
+    {
+        NSData *keyData = [NSKeyedArchiver archivedDataWithRootObject:oauthKey];
+        [[NSUserDefaults standardUserDefaults] setObject:keyData forKey:kAccessOauthKey];
+        if (![[NSUserDefaults standardUserDefaults] synchronize])
+        {
+            //handle error of save defautlts
+        }
     }
     else
     {
-        TQTUserRequest *request = [[[TQTUserRequest alloc] init] autorelease];
-        user = [request infoOfSelf]; 
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kAccessOauthKey];
     }
-    rootWindowController = [[TQTRootWindowController alloc] init];
-    [NSBundle loadNibNamed:@"TQTRootWindowController" owner:rootWindowController];
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:[user.head stringByAppendingString:@"/100"]]];
-    [rootWindowController.userImgView setImage:image];
-    [rootWindowController.window makeKeyAndOrderFront:nil];
-    [window orderOut:nil];
-    NSLog(@"%@", user);
-    TQTWeiboRequest *request = [[TQTWeiboRequest alloc] init];
-    tableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
-                                                                        bundle:nil];
-    tableViewController.weibos = [request homeTimeLines];
-    [rootWindowController.tableView addSubview:tableViewController.view];
+    
+    if (!rootWindowController) {
+        rootWindowController = [[TQTRootWindowController alloc] init];
+        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:rootWindowController];
+        [window orderOut:nil];
+        [rootWindowController.window makeKeyAndOrderFront:nil];
+    }
+    [rootWindowController reloadData];
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
     return;
     
 ERROR:
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
     return;
+}
+
+- (void)dealloc
+{
+    [oauthKey release];
+    [super dealloc];
 }
 @end

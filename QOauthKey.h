@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface QOauthKey : NSObject {
+@interface QOauthKey : NSObject<NSCoding> {
 	
 	NSString *consumerKey;
 	NSString *consumerSecret;

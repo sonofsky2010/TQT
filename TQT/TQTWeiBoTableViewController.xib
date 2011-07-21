@@ -35,7 +35,7 @@
 			</object>
 			<object class="NSScrollView" id="129748558">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
+				<int key="NSvFlags">284</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSClipView" id="127699650">
 						<reference key="NSNextResponder" ref="129748558"/>
@@ -43,7 +43,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSTableView" id="478650876">
 								<reference key="NSNextResponder" ref="127699650"/>
-								<int key="NSvFlags">4352</int>
+								<int key="NSvFlags">4388</int>
 								<string key="NSFrameSize">{290, 530}</string>
 								<reference key="NSSuperview" ref="127699650"/>
 								<reference key="NSWindow"/>
@@ -109,8 +109,8 @@
 									</object>
 									<object class="NSTableColumn" id="842887700">
 										<string key="NSIdentifier">TQTText</string>
-										<double key="NSWidth">219</double>
-										<double key="NSMinWidth">10</double>
+										<double key="NSWidth">204</double>
+										<double key="NSMinWidth">1</double>
 										<double key="NSMaxWidth">3.4028234663852886e+38</double>
 										<object class="NSTableHeaderCell" key="NSHeaderCell">
 											<int key="NSCellFlags">75628096</int>
@@ -160,12 +160,12 @@
 										<bytes key="NSWhite">MC41AA</bytes>
 									</object>
 								</object>
-								<double key="NSRowHeight">200</double>
-								<int key="NSTvFlags">1379926016</int>
+								<double key="NSRowHeight">100</double>
+								<int key="NSTvFlags">306184192</int>
 								<reference key="NSDelegate"/>
 								<reference key="NSDataSource"/>
 								<int key="NSGridStyleMask">2</int>
-								<int key="NSColumnAutoresizingStyle">4</int>
+								<int key="NSColumnAutoresizingStyle">0</int>
 								<int key="NSDraggingSourceMaskForLocal">15</int>
 								<int key="NSDraggingSourceMaskForNonLocal">0</int>
 								<bool key="NSAllowsTypeSelect">YES</bool>
@@ -186,7 +186,7 @@
 						<string key="NSFrame">{{274, 17}, {15, 497}}</string>
 						<reference key="NSSuperview" ref="129748558"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="238848734"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="NSTarget" ref="129748558"/>
 						<string key="NSAction">_doScroller:</string>
 						<double key="NSPercent">0.97169811320754718</double>
@@ -194,10 +194,10 @@
 					<object class="NSScroller" id="238848734">
 						<reference key="NSNextResponder" ref="129748558"/>
 						<int key="NSvFlags">-2147483392</int>
-						<string key="NSFrame">{{1, 514}, {288, 15}}</string>
+						<string key="NSFrame">{{-100, -100}, {288, 15}}</string>
 						<reference key="NSSuperview" ref="129748558"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="127699650"/>
 						<int key="NSsFlags">1</int>
 						<reference key="NSTarget" ref="129748558"/>
 						<string key="NSAction">_doScroller:</string>
@@ -207,12 +207,12 @@
 				<string key="NSFrameSize">{290, 530}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="127699650"/>
-				<int key="NSsFlags">560</int>
+				<reference key="NSNextKeyView" ref="238848734"/>
+				<int key="NSsFlags">528</int>
 				<reference key="NSVScroller" ref="42956503"/>
 				<reference key="NSHScroller" ref="238848734"/>
 				<reference key="NSContentView" ref="127699650"/>
-				<bytes key="NSScrollAmts">QSAAAEEgAABDSgAAQ0oAAA</bytes>
+				<bytes key="NSScrollAmts">QSAAAEEgAABCzAAAQswAAA</bytes>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -240,6 +240,14 @@
 						<reference key="destination" ref="1001"/>
 					</object>
 					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tableView_</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="478650876"/>
+					</object>
+					<int key="connectionID">22</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -277,6 +285,7 @@
 							<reference ref="478650876"/>
 						</array>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">Scroll View - Table View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
@@ -340,13 +349,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">22</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">TQTWeiBoTableViewController</string>
 					<string key="superclassName">NSViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">tableView_</string>
+						<string key="NS.object.0">NSTableView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">tableView_</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">tableView_</string>
+							<string key="candidateClassName">NSTableView</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/TQTWeiBoTableViewController.h</string>

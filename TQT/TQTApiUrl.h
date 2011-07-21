@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 //app key
+
 #define kAppKey @"14a6b38d5ffe47c7a9acd86902660cdd"
 #define kAppSecret @"3016f15bfcf6990f4fb71b4a368d950f"
-
+#define kRequestTokenUrl @"https://open.t.qq.com/cgi-bin/request_token"
+#define kAuthorizeUrl @"http://open.t.qq.com/cgi-bin/authorize?oauth_token="
 
 //oath url
 #define kRequestTokenUrl @"https://open.t.qq.com/cgi-bin/request_token"
@@ -44,3 +46,6 @@
 #define kUserInfoUpdateUrl @"http://open.t.qq.com/api/user/update"
 #define kUserHeadUpdateUrl @"http://open.t.qq.com/api/user/update_head"
 #define kUserOtherInfoUrl @"http://open.t.qq.com/api/user/other_info"
+
+//constant
+#define kAccessOauthKey @"TQTAccessOauthKey"

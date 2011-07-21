@@ -13,6 +13,7 @@
 
 @implementation TQTWeiBoTableViewController
 @synthesize weibos = weibos_;
+@synthesize tableView = tableView_;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,7 +40,7 @@
     if ([[tableColumn identifier] isEqualToString:@"TQTHead"]) {
         return [[[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:[[aWeibo head] stringByAppendingString:@"/50"]]] autorelease];
     }
-    return aWeibo.text;
+    return nil;
 }
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
@@ -52,6 +53,11 @@
     }
 }
 
+//- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
+//{
+//    return NO;
+//}
+
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
     TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
@@ -59,12 +65,15 @@
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     [attrs setObject:[NSFont systemFontOfSize:12] forKey:NSFontAttributeName];
     NSSize textSize = [aWeibo.text sizeWithAttributes:attrs];
-    int lineCount = ceil(textSize.width / [[tableView tableColumnWithIdentifier:@"TQTText"] width]);
-    height += lineCount * textSize.height;
+    CGFloat widht = [[tableView tableColumnWithIdentifier:@"TQTText"] width];
+    int lineCount = ceil(textSize.width / widht);
+    height = height + (lineCount * textSize.height);
     if ([aWeibo.images count] > 0) {
         height += 128;
     }
-    height = height<100 ? 100 : height;
+    if (height < 80) {
+        height = 80;
+    }
     height += 8;
     return height;
 }
