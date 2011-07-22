@@ -57,10 +57,17 @@
 {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     [attrs setObject:[NSFont systemFontOfSize:12.0f] forKey:NSFontAttributeName];
-    NSSize textSize = [weibo_.text sizeWithAttributes:attrs];
+    NSString *text = weibo_.origtext;
+    NSSize textSize = [text sizeWithAttributes:attrs];
+    int lineCount = ceil(textSize.width / frame.size.width);
+    if (weibo_.source && weibo_.type == 2) {
+        textSize = [weibo_.source.origtext sizeWithAttributes:attrs];
+        lineCount += ceil(textSize.width / frame.size.width);
+        lineCount ++;
+    }
+    lineCount ++;
     NSRect result = frame;
-    int lineNum = ceil(textSize.width / frame.size.width);
-    result.size.height = textSize.height * lineNum;
+    result.size.height = textSize.height * lineCount;
     result.origin.y += 20;
     return result;
 }
@@ -116,7 +123,11 @@
     if (timeCell_) {
         [timeCell_ drawWithFrame:[self _timeCellFrameForInteriorFrame:cellFrame] inView:controlView];
     }
-    [self setStringValue:weibo_.text];
+    NSString *text = weibo_.origtext;
+    if (weibo_.source && weibo_.type == 2) {
+        text = [text stringByAppendingFormat:@"\r\n--------------\r\n@%@:%@", weibo_.source.nick, weibo_.source.origtext];
+    }
+    [self setStringValue:text];
     [self setFont:[NSFont systemFontOfSize:12]];
     [self setTextColor:[NSColor darkGrayColor]];
     NSRect textFrame = [self _textCellFrameForInteriorFrame:cellFrame];
@@ -141,20 +152,25 @@
         [imageCell_ setBackgroundStyle:[self backgroundStyle]];
         NSString *imagePath = [[[aWeibo images] objectAtIndex:0] stringByAppendingString:@"/120"];
         NSURL *imgUrl = [NSURL URLWithString:imagePath];
-//        dispatch_queue_t network_queue;
-//        network_queue = dispatch_queue_create("TQTImage", NULL);
-//        dispatch_async(network_queue, ^{
-            NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
-//            dispatch_async(dispatch_get_main_queue(), ^{
-                imageCell_.image = image;
-//            });
-            [image release];
-//        });
+        NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
+        imageCell_.image = image;
+        [image release];
         [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];    
     }
     else
     {
         self.imageCell = nil;
+        if ([[aWeibo source] images] > 0) {
+            self.imageCell = [[[NSImageCell alloc] init] autorelease];
+            [imageCell_ setControlView:[self controlView]];
+            [imageCell_ setBackgroundStyle:[self backgroundStyle]];
+            NSString *imagePath = [[[[aWeibo source] images] objectAtIndex:0] stringByAppendingString:@"/120"];
+            NSURL *imgUrl = [NSURL URLWithString:imagePath];
+            NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
+            imageCell_.image = image;
+            [image release];
+            [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];   
+        }
     }
     if (aWeibo.nick) {
         self.nickCell = [[[NSTextFieldCell alloc] initTextCell:aWeibo.nick] autorelease];

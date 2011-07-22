@@ -15,7 +15,7 @@
 #import "SBJsonParser.h"
 #import "TQTWeiBo.h"
 #import "TQTAppDelegate.h"
-extern QOauthKey *oauthKey;
+
 @implementation TQTLoginRequest
 - (id)init
 {
@@ -34,10 +34,11 @@ extern QOauthKey *oauthKey;
 
 + (NSURL *)authorizeRequestUrl
 {
-    if (oauthKey) {
-        [oauthKey autorelease];
-        oauthKey = [[QOauthKey alloc] init];
+    TQTAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    if (appDelegate.oauthKey) {
+        appDelegate.oauthKey = [[[QOauthKey alloc] init] autorelease];
     }
+    QOauthKey *oauthKey = appDelegate.oauthKey;
     oauthKey.consumerKey = kAppKey;
     oauthKey.consumerSecret = kAppSecret;
     oauthKey.callbackUrl = @"TQT://www.qq.com/";
@@ -54,6 +55,8 @@ extern QOauthKey *oauthKey;
 
 + (BOOL)setAccessOauthkeyWithVerify:(NSString *)aVerify
 {
+    TQTAppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
+    QOauthKey *oauthKey = appDelegate.oauthKey;
     oauthKey.verify = aVerify;
     NSLog(@"%@", oauthKey.verify);
     QWeiboRequest *request = [[QWeiboRequest alloc] init];

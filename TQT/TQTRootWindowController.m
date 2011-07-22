@@ -11,6 +11,7 @@
 #import "TQTRootWindowController.h"
 #import "TQTWeiBoTableViewController.h"
 #import "TQTPostWeiboWindowController.h"
+#import "QOauthKey.h"
 
 @implementation TQTRootWindowController
 
@@ -64,8 +65,17 @@
 
 - (IBAction)postWeibo:(id)sender
 {
-    TQTPostWeiboWindowController *postWindowController = [[TQTPostWeiboWindowController alloc] init];
+    postWindowController = [[TQTPostWeiboWindowController alloc] init];
     [NSBundle loadNibNamed:@"TQTPostWeiboWindow" owner:postWindowController];
-    [NSApp beginSheet:[postWindowController.window] modalForWindow:window_ modalDelegate:self didEndSelector:@selector(endSheet) contextInfo:NULL];
+    [NSApp beginSheet:postWindowController.window modalForWindow:[sender window] modalDelegate:self didEndSelector:@selector(endSheet:returnCode:contextInfo:) contextInfo:NULL];
+}
+
+- (void)endSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+    if (returnCode == 1) {
+        [self reloadData];
+    }
+    [postWindowController release];
+    postWindowController = nil;
 }
 @end

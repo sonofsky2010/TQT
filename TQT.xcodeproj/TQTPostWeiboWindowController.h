@@ -11,9 +11,11 @@
 
 @interface TQTPostWeiboWindowController : NSWindowController {
 @private
-    IBOutlet NSTextView *weibo;
+    IBOutlet NSTextView *weiboTextView_;
+    IBOutlet NSWindow *window_;
 }
 
+@property (retain) NSWindow *window;
 - (IBAction)canclePost:(id)sender;
 - (IBAction)post:(id)sender;
 @end

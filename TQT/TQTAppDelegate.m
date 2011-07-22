@@ -22,19 +22,17 @@
 #import "TQTApiUrl.h"
 
 
-
-QOauthKey *oauthKey;
-
 @implementation TQTAppDelegate
 
 @synthesize window;
-
+@synthesize oauthKey;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 //    oauthKey = [[QOauthKey alloc] init];
     NSData *keyData = [[NSUserDefaults standardUserDefaults] objectForKey:kAccessOauthKey];
     if (keyData) {
-        oauthKey = [NSKeyedUnarchiver unarchiveObjectWithData:keyData];
+        oauthKey = (QOauthKey *)[NSKeyedUnarchiver unarchiveObjectWithData:keyData];
+        [oauthKey retain];
     }
     if (oauthKey == nil) {
         [self.window makeKeyAndOrderFront:nil];

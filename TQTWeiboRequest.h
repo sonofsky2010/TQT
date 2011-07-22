@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "TQTWeiBo.h"
-
+@class QOauthKey;
 @interface TQTWeiboRequest : NSObject {
 @private
-    
+//    QOauthKey *oauthKey;
 }
 
+//@property QOauthKey *oauthKey;
+
 - (NSMutableArray *)homeTimeLines;
+- (int)postWeiboText:(NSString *)text;
+- (NSString *)myIP;
+
 @end

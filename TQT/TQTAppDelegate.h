@@ -18,9 +18,11 @@
     IBOutlet NSTextField *textFiled;
     TQTRootWindowController *rootWindowController;
     IBOutlet NSButton *checkLogin;
+    QOauthKey *oauthKey;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (retain) QOauthKey *oauthKey;
 - (void)loadWeibo;
 - (IBAction)postVerfy:(id)sender;
 - (IBAction)login:(id)sender;

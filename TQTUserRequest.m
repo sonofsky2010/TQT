@@ -15,7 +15,7 @@
 #import "NSURL+QAdditions.h"
 #import "SBJsonParser.h"
 #import "TQTWeiBo.h"
-extern QOauthKey *oauthKey;
+#import "TQTAppDelegate.h"
 @implementation TQTUserRequest
 
 - (id)init
@@ -35,6 +35,7 @@ extern QOauthKey *oauthKey;
 
 - (TQTUser *)infoOfSelf
 {
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
     QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
     NSString *response = [request syncRequestWithUrl:kUserInfoUrl httpMethod:@"GET" oauthKey:oauthKey parameters:nil files:nil];
     SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];

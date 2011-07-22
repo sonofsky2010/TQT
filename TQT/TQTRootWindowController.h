@@ -8,13 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TQTWeiBoTableViewController.h"
-
+@class TQTPostWeiboWindowController;
 @interface TQTRootWindowController : NSWindowController {
 @private
     IBOutlet NSImageView *userImgView_;
     IBOutlet NSView* tableView_;
     IBOutlet NSWindow *window_;
     TQTWeiBoTableViewController *tableViewController;
+    TQTPostWeiboWindowController *postWindowController;
 }
 
 @property (assign, readonly) NSImageView *userImgView;
