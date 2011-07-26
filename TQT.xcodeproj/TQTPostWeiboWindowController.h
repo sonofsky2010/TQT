@@ -13,9 +13,13 @@
 @private
     IBOutlet NSTextView *weiboTextView_;
     IBOutlet NSWindow *window_;
+    IBOutlet NSTextField *fileNameLabel_;
+    NSString *picPath_;
 }
 
 @property (retain) NSWindow *window;
+@property (copy) NSString *picPath;
 - (IBAction)canclePost:(id)sender;
 - (IBAction)post:(id)sender;
+- (IBAction)addPicture:(id)sender;
 @end

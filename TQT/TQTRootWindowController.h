@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TQTWeiBoTableViewController.h"
+#import "TQTWeiboRequest.h"
 @class TQTPostWeiboWindowController;
 @interface TQTRootWindowController : NSWindowController {
 @private
@@ -16,11 +17,12 @@
     IBOutlet NSWindow *window_;
     TQTWeiBoTableViewController *tableViewController;
     TQTPostWeiboWindowController *postWindowController;
+    TQTWeiboRequest *weiboRequest_;
 }
 
 @property (assign, readonly) NSImageView *userImgView;
 @property (assign, readonly) NSView *tableView;
-
+@property (retain) TQTWeiboRequest *weiboRequest;
 - (IBAction)postWeibo:(id)sender;
 - (void)reloadData;
 @end

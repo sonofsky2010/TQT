@@ -26,6 +26,7 @@
 
 - (void)dealloc
 {
+    self.weibos = nil;
     [super dealloc];
 }
 
@@ -43,6 +44,9 @@
 {
     if (!weibos_ || [weibos_ count] <= 0) {
         return;
+    }
+    if (row == [weibos_ count] - 1) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ScrollToBottom" object:nil];
     }
     if ([[tableColumn identifier] isEqualToString:@"TQTText"]) {
         ((TQTWeiboCell *)cell).weibo = [weibos_ objectAtIndex:row];
@@ -84,7 +88,7 @@
     NSSize textSize = [text sizeWithAttributes:attrs];
     CGFloat widht = [[tableView tableColumnWithIdentifier:@"TQTText"] width];
     int lineCount = ceil(textSize.width / widht);
-    if (aWeibo.source && aWeibo.type == 2) {
+    if (aWeibo.source && (aWeibo.type == 2 || aWeibo.type == 4)) {
         text = aWeibo.source.origtext;
         textSize = [aWeibo.source.origtext sizeWithAttributes:attrs];
         lineCount += ceil(textSize.width / widht);
@@ -95,7 +99,9 @@
     if ([aWeibo.images count] > 0) {
         height += 128;
     }
-    if ([aWeibo source] &&aWeibo.type == 2 && [[[aWeibo source] images] count] > 0) {
+    if ([aWeibo source] &&
+        (aWeibo.type == 2 || aWeibo.type == 4) &&
+        [[[aWeibo source] images] count] > 0) {
         height += 128;
     }
     height = height < 80 ? 80 : height;

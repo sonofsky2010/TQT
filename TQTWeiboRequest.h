@@ -17,7 +17,9 @@
 //@property QOauthKey *oauthKey;
 
 - (NSMutableArray *)homeTimeLines;
+- (NSMutableArray *)homeTimeLinesWithType:(int)type OfTimeStamp:(long)timeStamp;
 - (int)postWeiboText:(NSString *)text;
+- (int)postWeiboText:(NSString *)text withPicture:(NSString *)picPath;
 - (NSString *)myIP;
 
 @end

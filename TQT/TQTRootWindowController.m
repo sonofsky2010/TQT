@@ -7,7 +7,6 @@
 //
 
 #import "TQTUserRequest.h"
-#import "TQTWeiboRequest.h"
 #import "TQTRootWindowController.h"
 #import "TQTWeiBoTableViewController.h"
 #import "TQTPostWeiboWindowController.h"
@@ -17,6 +16,7 @@
 
 @synthesize userImgView = userImgView_;
 @synthesize tableView = tableView_;
+@synthesize weiboRequest = weiboRequest_;
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -29,6 +29,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [tableViewController release];
     [super dealloc];
 }
@@ -48,18 +49,16 @@
     NSImage *image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:[user.head stringByAppendingString:@"/100"]]];
     [self.userImgView setImage:image];
     [image release];
-    TQTWeiboRequest *weiboRequest = [[TQTWeiboRequest alloc] init];
+    self.weiboRequest = [[[TQTWeiboRequest alloc] init] autorelease];
     if (tableViewController == nil)
     {
         tableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
                                                                         bundle:nil];
         [tableView_ addSubview:tableViewController.view];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
     }
-    tableViewController.weibos = [weiboRequest homeTimeLines];
-    [weiboRequest release];
+    tableViewController.weibos = [weiboRequest_ homeTimeLines];
     [tableViewController.tableView reloadData];
-//    [(NSTableView *)[tableViewController view] reloadData];
-//    [window_ setNeedDisplay:YES];
 }
 
 
@@ -77,5 +76,36 @@
     }
     [postWindowController release];
     postWindowController = nil;
+}
+
+- (void)scrollToBottom
+{
+    if (tableViewController) {
+        dispatch_queue_t network_queue = dispatch_queue_create("scroll to button", NULL);
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        dispatch_async(network_queue, ^(void){
+            long timeStamp = [(TQTWeiBo *)[tableViewController.weibos lastObject] timeStamp];
+            NSMutableArray *newWeibos = [weiboRequest_ homeTimeLinesWithType:1 OfTimeStamp:timeStamp];
+            NSUInteger nowWeibosCount = [tableViewController.weibos count];
+            if (newWeibos) {
+               dispatch_async(dispatch_get_main_queue(), ^(void){                                   
+                  [tableViewController.weibos addObjectsFromArray:newWeibos];
+                  NSPoint scrollPoint = [[(NSScrollView *)tableViewController.view contentView] bounds].origin;
+                  NSLog(@"%@", NSStringFromPoint(scrollPoint));
+                  [tableViewController.tableView noteNumberOfRowsChanged];
+                  //            dispatch_async(dispatch_get_main_queue(), ^(void){
+                  //                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
+                  //            });
+                  [[(NSScrollView *)tableViewController.view documentView] scrollPoint:scrollPoint];
+               });
+            }
+        });
+        [self performSelector:@selector(observeAgain) withObject:nil afterDelay:3];
+    }
+}
+
+- (void)observeAgain
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
 }
 @end

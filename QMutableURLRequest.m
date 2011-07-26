@@ -58,7 +58,7 @@
     CFRelease(uuidStr);
     CFRelease(uuid);
 	
-	NSData *boundaryBytes = [[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *boundaryBytes = [[NSString stringWithFormat:@"\r\n--%@", boundary] dataUsingEncoding:NSUTF8StringEncoding];
 	[request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary] forHTTPHeaderField:@"Content-Type"];
 	
 	NSMutableData *bodyData = [NSMutableData data];
@@ -72,8 +72,7 @@
 		[bodyData appendData:[formItem dataUsingEncoding:NSUTF8StringEncoding]];
 	}
 	[bodyData appendData:boundaryBytes];
-	 
-	NSString *headerTemplate = @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: \"application/octet-stream\"\r\n\r\n";
+	NSString *headerTemplate = @"\r\nContent-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\nContent-Type: \"application/octet-stream\"\r\n\r\n";
 	for (NSString *key in files) {
 		
 		NSString *filePath = [files objectForKey:key];
@@ -83,6 +82,8 @@
 		[bodyData appendData:fileData];
 		[bodyData appendData:boundaryBytes];
 	}
+    [bodyData appendData:[[NSString stringWithUTF8String:"--\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+//    NSLog(@"%@", [[[NSString alloc] initWithData:bodyData encoding:NSUTF8StringEncoding] autorelease]);
     [request setValue:[NSString stringWithFormat:@"%d", [bodyData length]] forHTTPHeaderField:@"Content-Length"];
 	[request setHTTPBody:bodyData];
 	

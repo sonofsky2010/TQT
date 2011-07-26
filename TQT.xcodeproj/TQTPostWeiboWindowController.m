@@ -26,6 +26,7 @@
 @implementation TQTPostWeiboWindowController
 
 @synthesize window = window_;
+@synthesize picPath = picPath_;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -58,7 +59,7 @@
 {
     TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
     NSString *weiBoText = [weiboTextView_ string];
-    if (!weiBoText || [weiBoText length] <= 0) {
+    if ((!weiBoText || [weiBoText length] <= 0) && !picPath_) {
         NSBeginAlertSheet(@"微博内容不能为空", 
                           @"确定",
                           nil,
@@ -85,7 +86,8 @@
                           @"您最多只能输入140个字符");
         return;
     }
-    int ret = [request postWeiboText:weiBoText];
+    
+    int ret = [request postWeiboText:weiBoText withPicture:picPath_];
     if (ret==0) {
         [NSApp endSheet:window_ returnCode:1];
         [window_ orderOut:nil];
@@ -94,5 +96,16 @@
     [self showErrorSheetWithCode:ret];
 }
 
+- (IBAction)addPicture:(id)sender
+{
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    NSArray *fileTypes = [NSArray arrayWithObjects:@"png", @"gif", @"jpeg", @"jpg", nil];
+    [panel setAllowedFileTypes:fileTypes];
+    [panel setAllowsMultipleSelection:NO];
+    [panel setTitle:@"选择图片"];
+    [panel runModal];
+    NSString *filePath = [panel filename];
+    self.picPath = filePath;
+}
 
 @end

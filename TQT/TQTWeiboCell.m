@@ -60,7 +60,7 @@
     NSString *text = weibo_.origtext;
     NSSize textSize = [text sizeWithAttributes:attrs];
     int lineCount = ceil(textSize.width / frame.size.width);
-    if (weibo_.source && weibo_.type == 2) {
+    if (weibo_.source && (weibo_.type == 2 || weibo_.type == 4)) {
         textSize = [weibo_.source.origtext sizeWithAttributes:attrs];
         lineCount += ceil(textSize.width / frame.size.width);
         lineCount ++;
@@ -124,7 +124,7 @@
         [timeCell_ drawWithFrame:[self _timeCellFrameForInteriorFrame:cellFrame] inView:controlView];
     }
     NSString *text = weibo_.origtext;
-    if (weibo_.source && weibo_.type == 2) {
+    if (weibo_.source && (weibo_.type == 2 || weibo_.type == 4)) {
         text = [text stringByAppendingFormat:@"\r\n--------------\r\n@%@:%@", weibo_.source.nick, weibo_.source.origtext];
     }
     [self setStringValue:text];

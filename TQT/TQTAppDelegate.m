@@ -115,4 +115,16 @@ ERROR:
     [oauthKey release];
     [super dealloc];
 }
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
+{
+    if (rootWindowController.window) {
+        [rootWindowController.window makeKeyAndOrderFront:nil];
+    }
+    else
+    {
+        [window makeKeyAndOrderFront:nil];
+    }
+    return YES;
+}
 @end
