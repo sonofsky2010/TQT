@@ -15,10 +15,12 @@
     NSTextFieldCell *nickCell_;
     NSTextFieldCell *timeCell_;
     TQTWeiBo *weibo_;
+    BOOL hasImage_;
 }
 
 @property (retain) TQTWeiBo *weibo;
 @property (retain) NSImageCell *imageCell;
 @property (retain) NSTextFieldCell *nickCell;
 @property (retain) NSTextFieldCell *timeCell;
+@property (assign) BOOL hasImage;
 @end

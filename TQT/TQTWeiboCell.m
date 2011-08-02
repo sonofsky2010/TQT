@@ -81,6 +81,7 @@
 @synthesize imageCell = imageCell_;
 @synthesize nickCell = nickCell_;
 @synthesize timeCell = timeCell_;
+@synthesize hasImage = hasImage_;
 
 - (id)copyWithZone:(NSZone *)zone
 {
@@ -114,7 +115,7 @@
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    if (imageCell_) {
+    if (hasImage_) {
         [imageCell_ drawWithFrame:[self _imageCellFrameForInteriorFrame:cellFrame] inView:controlView];
     }
     if (nickCell_) {
@@ -146,32 +147,6 @@
     }
     [weibo_ autorelease];
     weibo_ = [aWeibo retain];
-    if ([aWeibo.images count] > 0) {
-        self.imageCell = [[[NSImageCell alloc] init] autorelease];
-        [imageCell_ setControlView:[self controlView]];
-        [imageCell_ setBackgroundStyle:[self backgroundStyle]];
-        NSString *imagePath = [[[aWeibo images] objectAtIndex:0] stringByAppendingString:@"/120"];
-        NSURL *imgUrl = [NSURL URLWithString:imagePath];
-        NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
-        imageCell_.image = image;
-        [image release];
-        [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];    
-    }
-    else
-    {
-        self.imageCell = nil;
-        if ([[aWeibo source] images] > 0) {
-            self.imageCell = [[[NSImageCell alloc] init] autorelease];
-            [imageCell_ setControlView:[self controlView]];
-            [imageCell_ setBackgroundStyle:[self backgroundStyle]];
-            NSString *imagePath = [[[[aWeibo source] images] objectAtIndex:0] stringByAppendingString:@"/120"];
-            NSURL *imgUrl = [NSURL URLWithString:imagePath];
-            NSImage *image = [[NSImage alloc] initWithContentsOfURL:imgUrl];
-            imageCell_.image = image;
-            [image release];
-            [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];   
-        }
-    }
     if (aWeibo.nick) {
         self.nickCell = [[[NSTextFieldCell alloc] initTextCell:aWeibo.nick] autorelease];
         [nickCell_ setFont:[NSFont boldSystemFontOfSize:12]];
@@ -188,5 +163,17 @@
         [timeCell_ setFont:[NSFont systemFontOfSize:10.0f]];
         [timeCell_ setAlignment:NSRightTextAlignment];
     }
+}
+
+- (void)setImage:(NSImage *)image
+{
+    if (imageCell_ == nil) {
+        imageCell_ = [[NSImageCell alloc] init];
+        [imageCell_ setControlView:[self controlView]];
+        [imageCell_ setBackgroundStyle:[self backgroundStyle]];
+    }
+    hasImage_ = YES;
+    [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];
+    imageCell_.image = image;
 }
 @end

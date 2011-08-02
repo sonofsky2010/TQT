@@ -40,10 +40,10 @@
     }
     else
     {
-        rootWindowController = [[TQTRootWindowController alloc] init];
-        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:rootWindowController];
-        [rootWindowController.window makeKeyAndOrderFront:nil];
-        [rootWindowController reloadData];
+        homeListWindowController = [[TQTRootWindowController alloc] init];
+        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:homeListWindowController];
+        [homeListWindowController.window makeKeyAndOrderFront:nil];
+        [homeListWindowController reloadHomeTimeLines];
     }
 }
 
@@ -95,13 +95,13 @@
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:kAccessOauthKey];
     }
     
-    if (!rootWindowController) {
-        rootWindowController = [[TQTRootWindowController alloc] init];
-        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:rootWindowController];
+    if (!homeListWindowController) {
+        homeListWindowController = [[TQTRootWindowController alloc] init];
+        [NSBundle loadNibNamed:@"TQTRootWindowController" owner:homeListWindowController];
         [window orderOut:nil];
-        [rootWindowController.window makeKeyAndOrderFront:nil];
+        [homeListWindowController.window makeKeyAndOrderFront:nil];
     }
-    [rootWindowController reloadData];
+    [homeListWindowController reloadHomeTimeLines];
     [[NSAppleEventManager sharedAppleEventManager] removeEventHandlerForEventClass:kInternetEventClass andEventID:kAEGetURL];
     return;
     
@@ -118,8 +118,8 @@ ERROR:
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
-    if (rootWindowController.window) {
-        [rootWindowController.window makeKeyAndOrderFront:nil];
+    if (homeListWindowController.window) {
+        [homeListWindowController.window makeKeyAndOrderFront:nil];
     }
     else
     {

@@ -16,7 +16,8 @@
     NSWindow *window;
     BOOL loadLogin;
     IBOutlet NSTextField *textFiled;
-    TQTRootWindowController *rootWindowController;
+    TQTRootWindowController *homeListWindowController;
+    TQTRootWindowController *publicListWindowController;
     IBOutlet NSButton *checkLogin;
     QOauthKey *oauthKey;
 }

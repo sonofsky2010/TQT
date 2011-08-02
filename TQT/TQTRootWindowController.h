@@ -15,7 +15,8 @@
     IBOutlet NSImageView *userImgView_;
     IBOutlet NSView* tableView_;
     IBOutlet NSWindow *window_;
-    TQTWeiBoTableViewController *tableViewController;
+    TQTWeiBoTableViewController *homeTimeLinesTableViewController;
+    TQTWeiBoTableViewController *publicTimeLinesTableViewController;
     TQTPostWeiboWindowController *postWindowController;
     TQTWeiboRequest *weiboRequest_;
 }
@@ -24,5 +25,9 @@
 @property (assign, readonly) NSView *tableView;
 @property (retain) TQTWeiboRequest *weiboRequest;
 - (IBAction)postWeibo:(id)sender;
-- (void)reloadData;
+- (IBAction)clickSlider:(id)sender;
+- (IBAction)refresh:(id)sender;
+
+- (void)reloadHomeTimeLines;
+- (void)reloadPublicTimeLines;
 @end

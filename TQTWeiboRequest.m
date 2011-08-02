@@ -120,6 +120,11 @@
     return nil;
 }
 
+- (NSMutableArray *)publicTimeLinesWithType:(int)type ofTimeStamp:(long)timeStamp
+{
+    
+}
+
 - (NSString *)myIP
 {
     NSString *result = @"127.0.0.1";

@@ -11,6 +11,7 @@
 #import "TQTWeiBoTableViewController.h"
 #import "TQTPostWeiboWindowController.h"
 #import "QOauthKey.h"
+#import "NSImage+TQTMask.h"
 
 @implementation TQTRootWindowController
 
@@ -30,7 +31,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [tableViewController release];
+    [homeTimeLinesTableViewController release];
     [super dealloc];
 }
 
@@ -42,25 +43,62 @@
 //    [self reloadData];
 }
 
-- (void)reloadData
+- (IBAction)refresh:(id)sender
 {
-    TQTUserRequest *userRequest = [[[TQTUserRequest alloc] init] autorelease];
-    TQTUser *user = [userRequest infoOfSelf];
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:[user.head stringByAppendingString:@"/100"]]];
-    [self.userImgView setImage:image];
-    [image release];
-    self.weiboRequest = [[[TQTWeiboRequest alloc] init] autorelease];
-    if (tableViewController == nil)
-    {
-        tableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
-                                                                        bundle:nil];
-        [tableView_ addSubview:tableViewController.view];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
-    }
-    tableViewController.weibos = [weiboRequest_ homeTimeLines];
-    [tableViewController.tableView reloadData];
+	[self reloadHomeTimeLines];
 }
 
+- (IBAction)clickSlider:(id)sender
+{
+    NSMatrix *bars = (NSMatrix *)sender;
+    if ([bars selectedTag] == 1) {
+        [self reloadPublicTimeLines];
+    }
+}
+
+- (void)reloadHomeTimeLines
+{
+    TQTUserRequest *userRequest = [[[TQTUserRequest alloc] init] autorelease];
+    dispatch_queue_t network_queue = dispatch_queue_create("hometimes", NULL);
+    dispatch_async(network_queue, ^(void){
+        TQTUser *user = [userRequest infoOfSelf];
+        NSImage *image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:[user.head stringByAppendingString:@"/100"]]];
+        NSImage *headMaskImage = [NSImage imageNamed:@"headmask"];
+        NSImage *maskedImage = [image maskWithImage:headMaskImage];
+        [image release];
+        [self.userImgView setImage:maskedImage];
+        TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
+        if (homeTimeLinesTableViewController == nil) {
+            homeTimeLinesTableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
+                                                                                             bundle:nil];
+            for(NSView *aView in [tableView_ subviews]) {
+                [aView removeFromSuperview];
+            }
+            [tableView_ addSubview:homeTimeLinesTableViewController.view];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeTimeLineScrollToBottom) name:@"ScrollToBottom" object:nil];
+        }
+        homeTimeLinesTableViewController.weibos = [request homeTimeLines];
+        [homeTimeLinesTableViewController.tableView reloadData];
+    });
+}
+
+- (void)reloadPublicTimeLines
+{
+    dispatch_queue_t network_queue = dispatch_queue_create("public", NULL);
+    dispatch_async(network_queue, ^(void){
+        TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
+        if (publicTimeLinesTableViewController == nil) {
+            publicTimeLinesTableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController"
+                                                                                               bundle:nil];
+            for(NSView *aView in [tableView_ subviews]) {
+                [aView removeFromSuperview];
+            }
+            [tableView_ addSubview:publicTimeLinesTableViewController.view];
+        }
+        publicTimeLinesTableViewController.weibos = [request publicTimeLines];
+        [publicTimeLinesTableViewController.tableView reloadData];
+    });
+}
 
 - (IBAction)postWeibo:(id)sender
 {
@@ -72,40 +110,35 @@
 - (void)endSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
     if (returnCode == 1) {
-        [self reloadData];
+        [self reloadHomeTimeLines];
     }
     [postWindowController release];
     postWindowController = nil;
 }
 
-- (void)scrollToBottom
+- (void)homeTimeLineScrollToBottom
 {
-    if (tableViewController) {
+    if (homeTimeLinesTableViewController) {
         dispatch_queue_t network_queue = dispatch_queue_create("scroll to button", NULL);
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         dispatch_async(network_queue, ^(void){
-            long timeStamp = [(TQTWeiBo *)[tableViewController.weibos lastObject] timeStamp];
-            NSMutableArray *newWeibos = [weiboRequest_ homeTimeLinesWithType:1 OfTimeStamp:timeStamp];
-            NSUInteger nowWeibosCount = [tableViewController.weibos count];
+            long timeStamp = [(TQTWeiBo *)[homeTimeLinesTableViewController.weibos lastObject] timeStamp];
+            TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
+            NSMutableArray *newWeibos = [request homeTimeLinesWithType:1 OfTimeStamp:timeStamp];
             if (newWeibos) {
                dispatch_async(dispatch_get_main_queue(), ^(void){                                   
-                  [tableViewController.weibos addObjectsFromArray:newWeibos];
-                  NSPoint scrollPoint = [[(NSScrollView *)tableViewController.view contentView] bounds].origin;
-                  NSLog(@"%@", NSStringFromPoint(scrollPoint));
-                  [tableViewController.tableView noteNumberOfRowsChanged];
-                  //            dispatch_async(dispatch_get_main_queue(), ^(void){
-                  //                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
-                  //            });
-                  [[(NSScrollView *)tableViewController.view documentView] scrollPoint:scrollPoint];
+                   [homeTimeLinesTableViewController.weibos addObjectsFromArray:newWeibos];
+                   NSPoint scrollPoint = [[(NSScrollView *)homeTimeLinesTableViewController.view contentView] bounds].origin;
+                   [homeTimeLinesTableViewController.tableView noteNumberOfRowsChanged];
+                   [[(NSScrollView *)homeTimeLinesTableViewController.view documentView] scrollPoint:scrollPoint];
                });
             }
         });
-        [self performSelector:@selector(observeAgain) withObject:nil afterDelay:3];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3LL*NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeTimeLineScrollToBottom) name:@"ScrollToBottom" object:nil];
+        });
+
     }
 }
 
-- (void)observeAgain
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToBottom) name:@"ScrollToBottom" object:nil];
-}
 @end

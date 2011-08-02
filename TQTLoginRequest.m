@@ -42,7 +42,7 @@
     oauthKey.consumerKey = kAppKey;
     oauthKey.consumerSecret = kAppSecret;
     oauthKey.callbackUrl = @"TQT://www.qq.com/";
-    QWeiboRequest *request = [[QWeiboRequest alloc] init];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
     NSString *responString = [request syncRequestWithUrl:kRequestTokenUrl httpMethod:@"GET" oauthKey:oauthKey parameters:nil files:nil];
     NSDictionary *responDict = [NSURL parseURLQueryString:responString];
     oauthKey.tokenKey = [responDict objectForKey:@"oauth_token"];

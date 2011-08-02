@@ -17,4 +17,5 @@
 
 @property (retain) NSMutableArray *weibos;
 @property (readonly) NSTableView *tableView;
+- (NSImage *)maskImage:(NSImage *)headImage withMaskImage:(NSImage *)maskImage;
 @end
