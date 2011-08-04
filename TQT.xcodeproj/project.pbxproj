@@ -17,6 +17,10 @@
 		460F6601133AE515001F7BF3 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */; };
 		460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F9133AE514001F7BF3 /* SBJsonWriter.m */; };
 		4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */; };
+		461B961813E8F3AF003EB493 /* SideSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 461B961713E8F3AF003EB493 /* SideSearch.png */; };
+		461B961E13E91E08003EB493 /* TQTHeadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B961D13E91E08003EB493 /* TQTHeadImageCell.m */; };
+		461B962413E94495003EB493 /* TQTWeiboDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B962313E94495003EB493 /* TQTWeiboDetailController.m */; };
+		461B962613E944ED003EB493 /* TQTWeiboWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */; };
 		46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46367A1413CA99B5007C0C69 /* TQTUserRequest.m */; };
 		463E523C13E7FFD200BD8D45 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 463E523B13E7FFD200BD8D45 /* refresh.png */; };
 		46955D9013CB02190016F079 /* TQTRootWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46955D8F13CB02190016F079 /* TQTRootWindowController.xib */; };
@@ -75,6 +79,12 @@
 		460F65F9133AE514001F7BF3 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTLoginRequest.h; sourceTree = "<group>"; };
 		4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTLoginRequest.m; sourceTree = "<group>"; };
+		461B961713E8F3AF003EB493 /* SideSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideSearch.png; sourceTree = "<group>"; };
+		461B961C13E91E08003EB493 /* TQTHeadImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTHeadImageCell.h; sourceTree = "<group>"; };
+		461B961D13E91E08003EB493 /* TQTHeadImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTHeadImageCell.m; sourceTree = "<group>"; };
+		461B962213E94495003EB493 /* TQTWeiboDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboDetailController.h; sourceTree = "<group>"; };
+		461B962313E94495003EB493 /* TQTWeiboDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboDetailController.m; sourceTree = "<group>"; };
+		461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTWeiboWindowController.xib; sourceTree = "<group>"; };
 		46367A1313CA99B5007C0C69 /* TQTUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTUserRequest.h; sourceTree = "<group>"; };
 		46367A1413CA99B5007C0C69 /* TQTUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTUserRequest.m; sourceTree = "<group>"; };
 		463E523B13E7FFD200BD8D45 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
@@ -271,6 +281,11 @@
 				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
 				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
 				46F610471339BD92005B2D29 /* Supporting Files */,
+				461B961C13E91E08003EB493 /* TQTHeadImageCell.h */,
+				461B961D13E91E08003EB493 /* TQTHeadImageCell.m */,
+				461B962213E94495003EB493 /* TQTWeiboDetailController.h */,
+				461B962313E94495003EB493 /* TQTWeiboDetailController.m */,
+				461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */,
 			);
 			path = TQT;
 			sourceTree = "<group>";
@@ -278,6 +293,7 @@
 		46F610471339BD92005B2D29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				461B961713E8F3AF003EB493 /* SideSearch.png */,
 				463E523B13E7FFD200BD8D45 /* refresh.png */,
 				46DF1DFD13E7A40300E9362D /* newStatus.png */,
 				46DF1DFB13E7A37C00E9362D /* SideTweets.png */,
@@ -376,6 +392,8 @@
 				46DF1DFC13E7A37C00E9362D /* SideTweets.png in Resources */,
 				46DF1DFE13E7A40300E9362D /* newStatus.png in Resources */,
 				463E523C13E7FFD200BD8D45 /* refresh.png in Resources */,
+				461B961813E8F3AF003EB493 /* SideSearch.png in Resources */,
+				461B962613E944ED003EB493 /* TQTWeiboWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +434,8 @@
 				46DACB4F13CD8701004EC2D4 /* TQTWeiboRequest.m in Sources */,
 				46A0D7F013D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m in Sources */,
 				46DF1DFA13E7A07800E9362D /* NSImage+TQTMask.m in Sources */,
+				461B961E13E91E08003EB493 /* TQTHeadImageCell.m in Sources */,
+				461B962413E94495003EB493 /* TQTWeiboDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

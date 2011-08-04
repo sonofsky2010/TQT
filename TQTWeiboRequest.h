@@ -18,6 +18,8 @@
 
 - (NSMutableArray *)homeTimeLines;
 - (NSMutableArray *)homeTimeLinesWithType:(int)type OfTimeStamp:(long)timeStamp;
+- (NSMutableArray *)publicTimeLines;
+- (NSMutableArray *)publicTimeLinesWithType:(int)type ofTimeStamp:(long)timeStamp reqNum:(int)number;
 - (int)postWeiboText:(NSString *)text;
 - (int)postWeiboText:(NSString *)text withPicture:(NSString *)picPath;
 - (NSString *)myIP;

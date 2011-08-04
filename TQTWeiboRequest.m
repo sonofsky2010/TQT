@@ -103,7 +103,6 @@
     [parameters setObject:@"json" forKey:@"format"];
     [parameters setObject:[NSString stringWithFormat:@"%d", type] forKey:@"pageflag"];
     [parameters setObject:[NSString stringWithFormat:@"%ld", timeStamp] forKey:@"pagetime"];
-    NSLog(@"%@", parameters);
     NSString *response = [request syncRequestWithUrl:kHomeTimeLineUrl httpMethod:@"GET" oauthKey:oauthKey parameters:parameters files:nil];
     SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
     NSMutableDictionary *dict = [parser objectWithString:response];
@@ -120,9 +119,33 @@
     return nil;
 }
 
-- (NSMutableArray *)publicTimeLinesWithType:(int)type ofTimeStamp:(long)timeStamp
+- (NSMutableArray *)publicTimeLinesWithType:(int)type ofTimeStamp:(long)timeStamp reqNum:(int)number
 {
-    
+ 	QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:[NSString stringWithFormat:@"%ld", timeStamp] forKey:@"pos"];
+	[parameters setObject:[NSString stringWithFormat:@"%d", number] forKey:@"reqnum"];
+    NSString *response = [request syncRequestWithUrl:kPublicTimeLineUrl httpMethod:@"GET" oauthKey:oauthKey parameters:parameters files:nil];
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *dict = [parser objectWithString:response];
+    if (dict && [[dict objectForKey:@"msg"] isEqualToString:@"ok"])
+    {
+        NSArray *dicts = [[dict objectForKey:@"data"] objectForKey:@"info"];
+        NSMutableArray *weibos = [NSMutableArray arrayWithCapacity:[dicts count]];
+        for (id aDict in dicts)
+        {
+            [weibos addObject:[TQTWeiBo weiBoFromDict:aDict]];
+        }
+        return weibos;
+    }   
+	return nil;
+}
+
+- (NSMutableArray *)publicTimeLines
+{
+	return [self publicTimeLinesWithType:0 ofTimeStamp:0 reqNum:20];
 }
 
 - (NSString *)myIP

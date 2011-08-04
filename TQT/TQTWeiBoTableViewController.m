@@ -10,6 +10,7 @@
 #import "TQTWeiboRequest.h"
 #import "TQTWeiBoTableViewController.h"
 #import "TQTWeiboCell.h"
+#import "NSImage+TQTMask.h"
 
 @implementation TQTWeiBoTableViewController
 @synthesize weibos = weibos_;
@@ -19,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
+
     }
     
     return self;
@@ -46,7 +48,7 @@
         return;
     }
     if (row == [weibos_ count] - 1) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ScrollToBottom" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ScrollToBottom" object:self];
     }
     if ([[tableColumn identifier] isEqualToString:@"TQTText"]) {
         TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
@@ -110,12 +112,16 @@
         else
         {
             NSImage *headMaskImage = [NSImage imageNamed:@"headmask"];
-            img = [self maskImage:img withMaskImage:headMaskImage];
+            img = [img maskWithImage:headMaskImage];
         }
         [imgCell setImage:img];
     }
 }
 
+- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
+{
+    return NO;
+}
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
@@ -148,22 +154,9 @@
     return height;
 }
 
-- (NSImage *)maskImage:(NSImage *)headImage withMaskImage:(NSImage *)maskImage
+- (BOOL)tableView:(NSTableView *)tableView shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    NSImage *retImage = [[NSImage alloc] initWithSize:[headImage size]];
-    [retImage lockFocus];
-    [[NSColor whiteColor] set];
-    NSRect drawRect = NSZeroRect;
-    drawRect.size = [headImage size];
-    NSRectFill(drawRect);
-    NSRect headRect = NSInsetRect(drawRect, 3, 3);
-    [headImage drawInRect:headRect fromRect:drawRect operation:NSCompositeCopy fraction:1.0];
-    NSRect maskRect = drawRect;
-    maskRect.size = [maskImage size];
-    [maskImage drawInRect:drawRect fromRect:maskRect operation:NSCompositeSourceAtop fraction:1.0];
-    [retImage autorelease];
-    [retImage unlockFocus];
-    return retImage;
+    return YES;
 }
 
 @end

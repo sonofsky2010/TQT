@@ -45,14 +45,30 @@
 
 - (IBAction)refresh:(id)sender
 {
-	[self reloadHomeTimeLines];
+    switch ([silders_ selectedTag]) {
+        case 0:
+            [self reloadHomeTimeLines];
+            break;
+        case 1:
+            [self reloadPublicTimeLines];
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)clickSlider:(id)sender
 {
     NSMatrix *bars = (NSMatrix *)sender;
-    if ([bars selectedTag] == 1) {
-        [self reloadPublicTimeLines];
+    switch ([bars selectedTag]) {
+        case 0:
+            [self reloadHomeTimeLines];
+            break;
+        case 1:
+            [self reloadPublicTimeLines];
+            break;
+        default:
+            break;
     }
 }
 
@@ -75,7 +91,13 @@
                 [aView removeFromSuperview];
             }
             [tableView_ addSubview:homeTimeLinesTableViewController.view];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeTimeLineScrollToBottom) name:@"ScrollToBottom" object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeTimeLineScrollToBottom) name:@"ScrollToBottom" object:homeTimeLinesTableViewController];
+        }
+        if (![homeTimeLinesTableViewController.view superview]) {
+            for(NSView *aView in [tableView_ subviews]) {
+                [aView removeFromSuperview];
+            }
+            [tableView_ addSubview:homeTimeLinesTableViewController.view];
         }
         homeTimeLinesTableViewController.weibos = [request homeTimeLines];
         [homeTimeLinesTableViewController.tableView reloadData];
@@ -90,6 +112,12 @@
         if (publicTimeLinesTableViewController == nil) {
             publicTimeLinesTableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController"
                                                                                                bundle:nil];
+            for(NSView *aView in [tableView_ subviews]) {
+                [aView removeFromSuperview];
+            }
+            [tableView_ addSubview:publicTimeLinesTableViewController.view];
+        }
+        if (![publicTimeLinesTableViewController.view superview]) {
             for(NSView *aView in [tableView_ subviews]) {
                 [aView removeFromSuperview];
             }

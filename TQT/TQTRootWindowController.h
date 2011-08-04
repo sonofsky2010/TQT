@@ -15,6 +15,7 @@
     IBOutlet NSImageView *userImgView_;
     IBOutlet NSView* tableView_;
     IBOutlet NSWindow *window_;
+    IBOutlet NSMatrix *silders_;
     TQTWeiBoTableViewController *homeTimeLinesTableViewController;
     TQTWeiBoTableViewController *publicTimeLinesTableViewController;
     TQTPostWeiboWindowController *postWindowController;
