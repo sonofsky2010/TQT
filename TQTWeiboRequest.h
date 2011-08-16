@@ -23,5 +23,14 @@
 - (int)postWeiboText:(NSString *)text;
 - (int)postWeiboText:(NSString *)text withPicture:(NSString *)picPath;
 - (NSString *)myIP;
+- (NSMutableArray *)replyListOfWeiboId:(long long) weiboId 
+                                  type:(int)flag
+                              pageFlag:(int)pageFlag
+                              pageTime:(long)pageTime
+                                reqNum:(int)reqNum 
+                                   tId:(long long)tId;
 
+- (int)reply:(NSString *)content weiboId:(long long)weiboId;
+- (int)reAdd:(NSString *)content weiboId:(long long)weiboId;
+- (int)comment:(NSString *)content weiboId:(long long)weiboId;
 @end

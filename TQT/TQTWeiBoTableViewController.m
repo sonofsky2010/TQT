@@ -11,6 +11,8 @@
 #import "TQTWeiBoTableViewController.h"
 #import "TQTWeiboCell.h"
 #import "NSImage+TQTMask.h"
+#import "TQTWeiboDetailController.h"
+#import "TQTAppDelegate.h"
 
 @implementation TQTWeiBoTableViewController
 @synthesize weibos = weibos_;
@@ -120,6 +122,46 @@
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
 {
+//    TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
+//    TQTWeiboDetailController *winController = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] weiboWindowController];
+//    if (!winController) {
+//        winController = [[TQTWeiboDetailController alloc] initWithWindowNibName:@"TQTWeiboWindowController"];
+//        [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] setWeiboWindowController:winController];
+//        winController.rowNumber = -1;
+//    }
+//    if (![winController.window isVisible]) {
+//        NSRect frame = [[tableView window] frame];
+//        NSRect nowFrame = [winController.window frame];
+//        nowFrame.origin.x = frame.origin.x;
+//        nowFrame.origin.y = frame.origin.y + 20;
+//        [winController.window setFrame:nowFrame display:NO];
+//        [winController.window orderWindow:NSWindowBelow relativeTo:[[tableView window] windowNumber]];
+//        NSRect newFrame = nowFrame;
+//        newFrame.origin.x = NSMaxX(frame);
+//        [winController.window setFrame:newFrame display:NO animate:YES];
+//        [[tableView window] addChildWindow:winController.window ordered:NSWindowBelow];
+//        [winController.window makeKeyWindow];
+//
+//        [[NSNotificationCenter defaultCenter] addObserver:winController selector:@selector(changeSize:) name:NSWindowDidResizeNotification object:[tableView window]];
+//    }
+//    else
+//    {
+//        if (winController.rowNumber == row) {
+//            [winController closeWindow:nil];
+//            winController.rowNumber = (int)-1;
+//        }
+//        return NO;
+//    }
+//    
+//
+//    if (aWeibo.type == 2) {
+//        winController.showWeibo = aWeibo.source;
+//    }
+//    else
+//    {
+//        winController.showWeibo = aWeibo;
+//    }
+//    winController.rowNumber = (int)row;
     return NO;
 }
 
@@ -156,6 +198,7 @@
 
 - (BOOL)tableView:(NSTableView *)tableView shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    
     return YES;
 }
 

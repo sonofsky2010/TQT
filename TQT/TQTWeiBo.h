@@ -19,7 +19,7 @@
     NSMutableArray *images_;
     NSString *name_;
     NSString *nick_;
-    long weiboId_;
+    long long weiboId_;
     TQTWeiBo *source_;
     long timeStamp_;
     BOOL isSelf_;
@@ -40,7 +40,7 @@
 @property (retain) NSMutableArray *images;
 @property (copy) NSString *name;
 @property (copy) NSString *nick;
-@property (assign) long weiboId;
+@property (assign) long long weiboId;
 @property (retain) TQTWeiBo *source;
 @property (assign) long timeStamp;
 @property (assign) BOOL isSelf;

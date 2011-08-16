@@ -143,9 +143,167 @@
 	return nil;
 }
 
+- (int)reAdd:(NSString *)content weiboId:(long long)weiboId
+{
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:content forKey:@"content"];
+    [parameters setObject:[self myIP] forKey:@"clientip"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", weiboId] forKey:@"reid"];
+    NSString *response = [request syncRequestWithUrl:kReAddWeiboUrl
+                                          httpMethod:@"GET"
+                                            oauthKey:oauthKey 
+                                          parameters:parameters
+                                               files:nil];
+    if (!response) {
+        return -1;
+    }
+    
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *retDict = [parser objectWithString:response];
+    if (retDict && [[retDict objectForKey:@"ret"] intValue] == 0) {
+        return [[retDict objectForKey:@"errcode"] intValue];
+    }
+    return -1;
+}
+
+- (int)reply:(NSString *)content weiboId:(long long)weiboId
+{
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:content forKey:@"content"];
+    [parameters setObject:[self myIP] forKey:@"clientip"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", weiboId] forKey:@"reid"];
+    NSString *response = [request syncRequestWithUrl:kReplyWeiboUrl
+                                          httpMethod:@"POST"
+                                            oauthKey:oauthKey 
+                                          parameters:parameters
+                                               files:nil];
+    if (!response) {
+        return -1;
+    }
+    
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *retDict = [parser objectWithString:response];
+    if (retDict && [[retDict objectForKey:@"ret"] intValue] == 0) {
+        return [[retDict objectForKey:@"errcode"] intValue];
+    }
+    return -1;
+}
+
+- (int)comment:(NSString *)content weiboId:(long long)weiboId
+{
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:content forKey:@"content"];
+    [parameters setObject:[self myIP] forKey:@"clientip"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", weiboId] forKey:@"reid"];
+    NSString *response = [request syncRequestWithUrl:kCommentWeiboUrl
+                                          httpMethod:@"POST"
+                                            oauthKey:oauthKey 
+                                          parameters:parameters
+                                               files:nil];
+    if (!response) {
+        return -1;
+    }
+    
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *retDict = [parser objectWithString:response];
+    if (retDict && [[retDict objectForKey:@"ret"] intValue] == 0) {
+        return [[retDict objectForKey:@"errcode"] intValue];
+    }
+    return -1; 
+}
+
+- (NSMutableArray *)replyListOfWeiboId:(long long) weiboId 
+                                  type:(int)flag
+                              pageFlag:(int)pageFlag
+                              pageTime:(long)pageTime
+                                reqNum:(int)reqNum 
+                                   tId:(long long)tId
+{
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", weiboId] forKey:@"rootid"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", flag] forKey:@"flag"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", pageFlag] forKey:@"pageflag"];
+    [parameters setObject:[NSString stringWithFormat:@"%ld", pageTime] forKey:@"pagetime"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", reqNum] forKey:@"reqnum"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", tId] forKey:@"twitterid"];
+    NSString *response = [request syncRequestWithUrl:kReListUrl 
+                                          httpMethod:@"GET" 
+                                            oauthKey:oauthKey 
+                                          parameters:parameters 
+                                               files:nil];
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *dict = [parser objectWithString:response];
+    if (dict && [[dict objectForKey:@"msg"] isEqualToString:@"ok"])
+    {
+        NSArray *dicts = [[dict objectForKey:@"data"] objectForKey:@"info"];
+        NSMutableArray *weibos = [NSMutableArray arrayWithCapacity:[dicts count]];
+        for (id aDict in dicts)
+        {
+            [weibos addObject:[TQTWeiBo weiBoFromDict:aDict]];
+        }
+        return weibos;
+    }   
+	return nil;
+}
+
+
+
 - (NSMutableArray *)publicTimeLines
 {
 	return [self publicTimeLinesWithType:0 ofTimeStamp:0 reqNum:20];
+}
+
+- (NSMutableArray *)userTimeLinesOfName:(NSString *)userName 
+                               pageFlag:(int)pageFlag
+                               pageTime:(long)pageTime
+                                 reqNum:(int)reqNum 
+                                 lastId:(long long)lastId
+                               pullType:(int)pullType 
+                            contentType:(int)contentType
+                            accessLevel:(int)level
+{
+    QOauthKey *oauthKey = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] oauthKey];
+    QWeiboRequest *request = [[[QWeiboRequest alloc] init] autorelease];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    [parameters setObject:@"json" forKey:@"format"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", pageFlag] forKey:@"pageflag"];
+    [parameters setObject:[NSString stringWithFormat:@"%ld", pageTime] forKey:@"pagetime"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", reqNum] forKey:@"reqnum"];
+    [parameters setObject:[NSString stringWithFormat:@"%lld", lastId] forKey:@"lastid"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", pullType] forKey:@"type"];
+    [parameters setObject:userName forKey:@"name"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", contentType] forKey:@"contenttype"];
+    [parameters setObject:[NSString stringWithFormat:@"%d", level] forKey:@"accesslevel"];
+    NSString *response = [request syncRequestWithUrl:kUserTimeLineUrl 
+                                          httpMethod:@"POST" 
+                                            oauthKey:oauthKey 
+                                          parameters:parameters 
+                                               files:nil];
+    SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
+    NSMutableDictionary *dict = [parser objectWithString:response];
+    if (dict && [[dict objectForKey:@"msg"] isEqualToString:@"ok"])
+    {
+        NSArray *dicts = [[dict objectForKey:@"data"] objectForKey:@"info"];
+        NSMutableArray *weibos = [NSMutableArray arrayWithCapacity:[dicts count]];
+        for (id aDict in dicts)
+        {
+            [weibos addObject:[TQTWeiBo weiBoFromDict:aDict]];
+        }
+        return weibos;
+    }   
+	return nil;
 }
 
 - (NSString *)myIP

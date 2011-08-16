@@ -7,6 +7,8 @@
 //
 
 #import "TQTWeiboCell.h"
+#import "TQTWeiboDetailController.h"
+#import "TQTAppDelegate.h"
 
 #define kImageInset (4.0f)
 #define kImageCellHeight (120.0f)
@@ -175,5 +177,84 @@
     hasImage_ = YES;
     [imageCell_ setImageScaling:NSImageScaleProportionallyUpOrDown];
     imageCell_.image = image;
+}
+
+- (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag
+{
+    NSPoint mousePoint = [controlView convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSRect imgRect = [self _imageCellFrameForInteriorFrame:cellFrame];
+    if (([[weibo_ images] count] > 0 || [[[weibo_ source] images] count] > 0) && NSPointInRect(mousePoint, imgRect)) {            
+        dispatch_queue_t network_queue = dispatch_queue_create("image show", NULL);
+        dispatch_async(network_queue, ^(void){
+            NSString *imagePath = nil;
+            if ([[weibo_ images] count] > 0) {
+                imagePath = [[[weibo_ images] objectAtIndex:0] stringByAppendingPathComponent:@"2000"];
+
+            }
+            else if([[[weibo_ source] images] count] > 0) {
+                imagePath = [[[[weibo_ source] images] objectAtIndex:0] stringByAppendingPathComponent:@"2000"];
+            }
+            else
+                return;
+            NSString *imgTmpPath = [NSTemporaryDirectory() stringByAppendingFormat:@"/%d", [imagePath hash]];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:imgTmpPath])
+            {
+                [[NSWorkspace sharedWorkspace] openFile:imgTmpPath withApplication:@"Preview.app"];
+            }
+            else
+            {
+                NSURL *imageUrl = [NSURL URLWithString:imagePath];
+                NSData *data = [NSData dataWithContentsOfURL:imageUrl];
+                [data writeToFile:imgTmpPath atomically:YES];
+                [[NSWorkspace sharedWorkspace] openFile:imgTmpPath withApplication:@"Preview.app"];
+            }
+        });
+    }
+    else
+    {
+        TQTWeiBo *aWeibo = weibo_;
+        NSTableView *tableView = nil;
+        if ([controlView isKindOfClass:[NSTableView class]]) {
+            tableView = (NSTableView *)controlView;
+        }
+
+        TQTWeiboDetailController *winController = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] weiboWindowController];
+        if (!winController) {
+            winController = [[TQTWeiboDetailController alloc] initWithWindowNibName:@"TQTWeiboWindowController"];
+            [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] setWeiboWindowController:winController];
+            winController.rowNumber = -1;
+        }
+        if (![winController.window isVisible]) {
+            NSRect frame = [[tableView window] frame];
+            NSRect nowFrame = [winController.window frame];
+            nowFrame.origin.x = frame.origin.x;
+            nowFrame.origin.y = frame.origin.y + 20;
+            [winController.window setFrame:nowFrame display:NO];
+            [winController.window orderWindow:NSWindowBelow relativeTo:[[tableView window] windowNumber]];
+            NSRect newFrame = nowFrame;
+            newFrame.origin.x = NSMaxX(frame);
+            [winController.window setFrame:newFrame display:NO animate:YES];
+            [[tableView window] addChildWindow:winController.window ordered:NSWindowBelow];
+            [[NSNotificationCenter defaultCenter] addObserver:winController selector:@selector(changeSize:) name:NSWindowDidResizeNotification object:[tableView window]];
+        }
+        else
+        {
+            if (winController.showWeibo == aWeibo || (winController.showWeibo == aWeibo.source && aWeibo.type == 2)) {
+                [winController closeWindow:nil];
+//                winController.showWeibo = nil;
+                return NO;
+            }
+        }
+        
+        
+        if (aWeibo.type == 2) {
+            winController.showWeibo = aWeibo.source;
+        }
+        else
+        {
+            winController.showWeibo = aWeibo;
+        }
+    }
+    return YES;
 }
 @end

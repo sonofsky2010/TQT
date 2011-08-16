@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10K540</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1881</string>
 		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
@@ -50,7 +50,7 @@
 								<string key="NSFrameSize">{290, 530}</string>
 								<reference key="NSSuperview" ref="127699650"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="42956503"/>
+								<reference key="NSNextKeyView" ref="238848734"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="_NSCornerView" key="NSCornerView">
 									<nil key="NSNextResponder"/>
@@ -124,7 +124,7 @@
 											<reference key="NSTextColor" ref="761727740"/>
 										</object>
 										<object class="NSTextFieldCell" key="NSDataCell" id="697235329">
-											<int key="NSCellFlags">67239424</int>
+											<int key="NSCellFlags">69336577</int>
 											<int key="NSCellFlags2">1073741824</int>
 											<string key="NSContents">Text Cell</string>
 											<reference key="NSSupport" ref="853695679"/>
@@ -174,7 +174,7 @@
 								<int key="NSColumnAutoresizingStyle">0</int>
 								<int key="NSDraggingSourceMaskForLocal">15</int>
 								<int key="NSDraggingSourceMaskForNonLocal">0</int>
-								<bool key="NSAllowsTypeSelect">YES</bool>
+								<bool key="NSAllowsTypeSelect">NO</bool>
 								<int key="NSTableViewDraggingDestinationStyle">0</int>
 							</object>
 						</array>
@@ -192,7 +192,6 @@
 						<string key="NSFrame">{{274, 17}, {15, 497}}</string>
 						<reference key="NSSuperview" ref="129748558"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="NSTarget" ref="129748558"/>
 						<string key="NSAction">_doScroller:</string>
 						<double key="NSPercent">0.97169811320754718</double>
@@ -213,7 +212,7 @@
 				<string key="NSFrameSize">{290, 530}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="238848734"/>
+				<reference key="NSNextKeyView" ref="127699650"/>
 				<int key="NSsFlags">528</int>
 				<reference key="NSVScroller" ref="42956503"/>
 				<reference key="NSHScroller" ref="238848734"/>

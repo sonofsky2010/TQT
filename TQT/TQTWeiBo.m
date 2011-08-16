@@ -51,6 +51,7 @@
         self.count = [dict objectForKey:@"count"];
         self.mCount = [dict objectForKey:@"mcount"];
         self.from = [dict objectForKey:@"from"];
+        self.weiboId = [[dict objectForKey:@"id"] longLongValue];
         if (![[dict objectForKey:@"image"] isEqualTo:[NSNull null]]) {
             self.images = [dict objectForKey:@"image"];
         }

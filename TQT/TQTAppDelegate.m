@@ -26,6 +26,7 @@
 
 @synthesize window;
 @synthesize oauthKey;
+@synthesize weiboWindowController;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 //    oauthKey = [[QOauthKey alloc] init];
