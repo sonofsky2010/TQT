@@ -153,7 +153,7 @@
     [parameters setObject:[self myIP] forKey:@"clientip"];
     [parameters setObject:[NSString stringWithFormat:@"%lld", weiboId] forKey:@"reid"];
     NSString *response = [request syncRequestWithUrl:kReAddWeiboUrl
-                                          httpMethod:@"GET"
+                                          httpMethod:@"POST"
                                             oauthKey:oauthKey 
                                           parameters:parameters
                                                files:nil];

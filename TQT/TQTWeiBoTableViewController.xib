@@ -38,7 +38,7 @@
 			</object>
 			<object class="NSScrollView" id="129748558">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">284</int>
+				<int key="NSvFlags">4380</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSClipView" id="127699650">
 						<reference key="NSNextResponder" ref="129748558"/>
@@ -50,7 +50,7 @@
 								<string key="NSFrameSize">{290, 530}</string>
 								<reference key="NSSuperview" ref="127699650"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="238848734"/>
+								<reference key="NSNextKeyView" ref="42956503"/>
 								<bool key="NSEnabled">YES</bool>
 								<object class="_NSCornerView" key="NSCornerView">
 									<nil key="NSNextResponder"/>
@@ -145,9 +145,8 @@
 												<reference key="NSColor" ref="953365442"/>
 											</object>
 										</object>
-										<int key="NSResizingMask">3</int>
+										<int key="NSResizingMask">1</int>
 										<bool key="NSIsResizeable">YES</bool>
-										<bool key="NSIsEditable">YES</bool>
 										<reference key="NSTableView" ref="478650876"/>
 									</object>
 								</array>
@@ -192,6 +191,7 @@
 						<string key="NSFrame">{{274, 17}, {15, 497}}</string>
 						<reference key="NSSuperview" ref="129748558"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="NSTarget" ref="129748558"/>
 						<string key="NSAction">_doScroller:</string>
 						<double key="NSPercent">0.97169811320754718</double>
@@ -212,7 +212,7 @@
 				<string key="NSFrameSize">{290, 530}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="127699650"/>
+				<reference key="NSNextKeyView" ref="238848734"/>
 				<int key="NSsFlags">528</int>
 				<reference key="NSVScroller" ref="42956503"/>
 				<reference key="NSHScroller" ref="238848734"/>

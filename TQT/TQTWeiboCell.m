@@ -117,6 +117,14 @@
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
+    if ([self isHighlighted]) {
+        [[NSColor controlColor] set];
+        cellFrame.origin.x -= 1;
+        cellFrame.origin.y -= 1;
+        cellFrame.size.height += 2;
+        cellFrame.size.width += 3;
+        NSRectFill(cellFrame);
+    }
     if (hasImage_) {
         [imageCell_ drawWithFrame:[self _imageCellFrameForInteriorFrame:cellFrame] inView:controlView];
     }
@@ -229,11 +237,11 @@
             NSRect nowFrame = [winController.window frame];
             nowFrame.origin.x = frame.origin.x;
             nowFrame.origin.y = frame.origin.y + 20;
-            [winController.window setFrame:nowFrame display:NO];
+            [winController.window setFrame:nowFrame display:YES];
             [winController.window orderWindow:NSWindowBelow relativeTo:[[tableView window] windowNumber]];
             NSRect newFrame = nowFrame;
             newFrame.origin.x = NSMaxX(frame);
-            [winController.window setFrame:newFrame display:NO animate:YES];
+            [winController.window setFrame:newFrame display:YES animate:YES];
             [[tableView window] addChildWindow:winController.window ordered:NSWindowBelow];
             [[NSNotificationCenter defaultCenter] addObserver:winController selector:@selector(changeSize:) name:NSWindowDidResizeNotification object:[tableView window]];
         }
@@ -256,5 +264,10 @@
         }
     }
     return YES;
+}
+
+- (NSColor *)highlightColorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    return [NSColor controlColor];
 }
 @end

@@ -8,6 +8,6 @@
 
 #import <AppKit/AppKit.h>
 
-@interface TQTSliderWindow : NSWindow
+@interface TQTSliderWindow : NSPanel
 
 @end

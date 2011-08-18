@@ -170,7 +170,7 @@
     NSRect parentFrame = [self.window parentWindow].frame;
     NSRect selfFrame = [self.window frame];
     selfFrame.origin.x = parentFrame.origin.x;
-    [self.window setFrame:selfFrame display:NO animate:YES];
+    [self.window setFrame:selfFrame display:YES animate:YES];
     [[self.window parentWindow] removeChildWindow:self.window];
     [self.window orderOut:nil];
     

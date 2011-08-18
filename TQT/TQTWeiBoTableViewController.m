@@ -162,7 +162,7 @@
 //        winController.showWeibo = aWeibo;
 //    }
 //    winController.rowNumber = (int)row;
-    return NO;
+    return YES;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row

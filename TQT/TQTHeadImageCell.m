@@ -38,10 +38,6 @@
     return YES;
 }
 
-//+ (BOOL)prefersTrackingUntilMouseUp
-//{
-//    return YES;
-//}
 
 - (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag
 {
@@ -155,4 +151,21 @@
     
 }
 
+- (NSColor *)highlightColorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    return nil;
+}
+
+- (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    if ([self isHighlighted]) {
+        [[NSColor controlColor] set];
+        cellFrame.origin.x -= 1;
+        cellFrame.origin.y -= 1;
+        cellFrame.size.height += 2;
+        cellFrame.size.width += 3;
+        NSRectFill(cellFrame);
+    }
+    [super drawInteriorWithFrame:cellFrame inView:controlView];
+}
 @end

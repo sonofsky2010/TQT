@@ -25,4 +25,8 @@
     return YES;
 }
 
+- (BOOL)canBecomeMainWindow
+{
+    return NO;
+}
 @end

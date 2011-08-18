@@ -120,7 +120,7 @@
 										<object class="NSTableView" id="60038922">
 											<reference key="NSNextResponder" ref="992519564"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{320, 319}</string>
+											<string key="NSFrameSize">{320, 324}</string>
 											<reference key="NSSuperview" ref="992519564"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="328856854"/>
@@ -230,7 +230,7 @@
 											<int key="NSTableViewDraggingDestinationStyle">0</int>
 										</object>
 									</object>
-									<string key="NSFrameSize">{320, 319}</string>
+									<string key="NSFrameSize">{320, 324}</string>
 									<reference key="NSSuperview" ref="482901128"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="60038922"/>
@@ -270,7 +270,7 @@
 									<double key="NSPercent">0.99677419354838714</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{9, 25}, {320, 319}}</string>
+							<string key="NSFrame">{{9, 20}, {320, 324}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="992519564"/>
@@ -693,7 +693,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">TQTSliderWindow</string>
-					<string key="superclassName">NSWindow</string>
+					<string key="superclassName">NSPanel</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/TQTSliderWindow.h</string>
