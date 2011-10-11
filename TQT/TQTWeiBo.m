@@ -29,6 +29,7 @@
 @synthesize provinceCode = provinceCode_;
 @synthesize cityCode = cityCode_;
 @synthesize isVip = isVip_;
+@synthesize content = content_;
 - (id)init
 {
     self = [super init];
@@ -70,10 +71,35 @@
         self.provinceCode = [[dict objectForKey:@"province_code"] intValue];
         self.cityCode = [[dict objectForKey:@"city_code"] intValue];
         self.isVip = [[dict objectForKey:@"isvip"] boolValue];
+        
+        self.content = [self createContent];
     }
     return self;
 }
 
+- (NSMutableAttributedString *)createContent
+{
+    NSString *htmlbodyString = @"<html><body><div style=\"font-size:11px;line-height:150%%\"><div style=\"font-size:12px; font-weight:bold;\">%@</div>%@%@<div><br/></div>%@<div>foot</div></div></body></html>";
+    NSString *htmlSourceString = @"<div><br/></div><div><div style=\"padding-left:30px\"><b style=\"font-size:11px\">%@</b><br/>%@</div></div>";
+    NSString *htmlString = nil;
+    NSString *htmlImgString = @"<div><img src=\"%@/120\" height=\"120\"/></div>";
+    NSString *imgString = @"";
+    if ([self.images count] > 0)
+    {
+        imgString = [NSString stringWithFormat:htmlImgString, [self.images objectAtIndex:0]];
+    }
+    if (self.source) {
+        htmlString = [NSString stringWithFormat:htmlbodyString, self.nick, text_, [NSString stringWithFormat:htmlSourceString, source_.nick, source_.text], imgString];
+    }
+    else
+    {
+        htmlString = [NSString stringWithFormat:htmlbodyString, self.nick, text_, @"", imgString];
+    }
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:@"UTF-8", NSTextEncodingNameDocumentOption, nil];
+    return  [[[NSMutableAttributedString alloc] initWithHTML:[htmlString dataUsingEncoding:NSUTF8StringEncoding]
+                                                     options:options
+                                          documentAttributes:NULL] autorelease];
+}
 - (void)dealloc
 {
     [super dealloc];

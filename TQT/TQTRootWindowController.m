@@ -18,6 +18,7 @@
 @synthesize userImgView = userImgView_;
 @synthesize tableView = tableView_;
 @synthesize weiboRequest = weiboRequest_;
+@synthesize tabView = tabView_;
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -84,23 +85,11 @@
         [image release];
         [self.userImgView setImage:maskedImage];
         TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
-        if (homeTimeLinesTableViewController == nil) {
-            homeTimeLinesTableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController" 
-                                                                                             bundle:nil];
-            for(NSView *aView in [tableView_ subviews]) {
-                [aView removeFromSuperview];
-            }
-            [tableView_ addSubview:homeTimeLinesTableViewController.view];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeTimeLineScrollToBottom) name:@"ScrollToBottom" object:homeTimeLinesTableViewController];
-        }
-        if (![homeTimeLinesTableViewController.view superview]) {
-            for(NSView *aView in [tableView_ subviews]) {
-                [aView removeFromSuperview];
-            }
-            [tableView_ addSubview:homeTimeLinesTableViewController.view];
-        }
         homeTimeLinesTableViewController.weibos = [request homeTimeLines];
-        [homeTimeLinesTableViewController.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [homeTimeLinesTableViewController.tableView reloadData];
+        });
+        [tabView_ selectTabViewItemAtIndex:0];
     });
 }
 
@@ -109,22 +98,11 @@
     dispatch_queue_t network_queue = dispatch_queue_create("public", NULL);
     dispatch_async(network_queue, ^(void){
         TQTWeiboRequest *request = [[[TQTWeiboRequest alloc] init] autorelease];
-        if (publicTimeLinesTableViewController == nil) {
-            publicTimeLinesTableViewController = [[TQTWeiBoTableViewController alloc] initWithNibName:@"TQTWeiBoTableViewController"
-                                                                                               bundle:nil];
-            for(NSView *aView in [tableView_ subviews]) {
-                [aView removeFromSuperview];
-            }
-            [tableView_ addSubview:publicTimeLinesTableViewController.view];
-        }
-        if (![publicTimeLinesTableViewController.view superview]) {
-            for(NSView *aView in [tableView_ subviews]) {
-                [aView removeFromSuperview];
-            }
-            [tableView_ addSubview:publicTimeLinesTableViewController.view];
-        }
         publicTimeLinesTableViewController.weibos = [request publicTimeLines];
-        [publicTimeLinesTableViewController.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [publicTimeLinesTableViewController.tableView reloadData];
+        });
+        [tabView_ selectTabViewItemAtIndex:1];
     });
 }
 

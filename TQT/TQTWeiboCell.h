@@ -8,19 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "TQTWeiBo.h"
+#import "PXListViewCell.h"
 
-@interface TQTWeiboCell : NSTextFieldCell {
+@interface TQTWeiboCell : PXListViewCell<NSTextViewDelegate> {
 @private
-    NSImageCell *imageCell_;
-    NSTextFieldCell *nickCell_;
-    NSTextFieldCell *timeCell_;
+    IBOutlet NSImageView *headImagView_;
+    IBOutlet NSTextView *textView_;
+    IBOutlet NSTextField *timeLabel_;
     TQTWeiBo *weibo_;
     BOOL hasImage_;
 }
 
+@property (retain) NSImageView *headImagView;
+@property (retain) NSTextView *textView;
+@property (retain) NSTextField *timeLabel;
 @property (retain) TQTWeiBo *weibo;
-@property (retain) NSImageCell *imageCell;
-@property (retain) NSTextFieldCell *nickCell;
-@property (retain) NSTextFieldCell *timeCell;
 @property (assign) BOOL hasImage;
 @end

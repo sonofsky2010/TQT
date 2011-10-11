@@ -28,178 +28,81 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [tableView_ setCellSpacing:2.0f];
+    [tableView_ setUsesLiveResize:YES];
+}
 - (void)dealloc
 {
     self.weibos = nil;
     [super dealloc];
 }
 
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+- (NSUInteger)numberOfRowsInListView:(PXListView *)aListView
 {
     return [weibos_ count];
 }
 
-- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
-{
-    return nil;
-}
-
-- (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
-{
-    if (!weibos_ || [weibos_ count] <= 0) {
-        return;
-    }
-    if (row == [weibos_ count] - 1) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ScrollToBottom" object:self];
-    }
-    if ([[tableColumn identifier] isEqualToString:@"TQTText"]) {
-        TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
-        ((TQTWeiboCell *)cell).weibo = aWeibo;
-        NSString *imagePath = nil;
-        if ([aWeibo.images count] > 0) {
-            imagePath = [[[aWeibo images] objectAtIndex:0] stringByAppendingString:@"/120"];
-        }
-        else if ([[aWeibo source] images] > 0)
-        {
-            imagePath = [[[[aWeibo source] images] objectAtIndex:0] stringByAppendingString:@"/120"];
-        }
-        else
-        {
-            [((TQTWeiboCell *)cell) setHasImage:NO];
-            return;
-        }
-        NSString *imageCachePath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%d", [imagePath hash]]];
-        NSImage *image = [[[NSImage alloc] initWithContentsOfFile:imageCachePath] autorelease];
-        if (!image) {
-            dispatch_queue_t network_queue = dispatch_queue_create("weibo image", NULL);
-            dispatch_async(network_queue, ^(void){
-                NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imagePath]];
-                if (imgData) {
-                    if (![[NSFileManager defaultManager] fileExistsAtPath:imageCachePath]) {
-                        [imgData writeToFile:imageCachePath atomically:YES];
-                    }
-                }
-                dispatch_async(dispatch_get_main_queue(), ^(void){
-                    [[tableColumn tableView] reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:row] columnIndexes:[NSIndexSet indexSetWithIndex:1]];
-                });
-            });
-        }
-        else
-        {
-            [((TQTWeiboCell *)cell) setImage:image];
-        }
-    }
-    if ([[tableColumn identifier] isEqualToString:@"TQTHead"])
-    {
-        TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
-        NSImageCell *imgCell = (NSImageCell *)cell;
-        NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%d", [[aWeibo head] hash]]];
-        NSImage *img = [[[NSImage alloc] initWithContentsOfFile:headImgPath] autorelease];
-        if (!img) {
-            dispatch_queue_t network_queue = dispatch_queue_create("TQT", NULL);
-            dispatch_async(network_queue, ^(void){
-                TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
-                NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[aWeibo head] stringByAppendingString:@"/50"]]];
-                if (imgData) {
-                    dispatch_async(dispatch_get_main_queue(), ^(void){
-                        if (![[NSFileManager defaultManager] fileExistsAtPath:headImgPath]) {
-                            [imgData writeToFile:headImgPath atomically:YES];
-                        }
-                        [[tableColumn tableView] reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:row] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
-                    });
-                }
-            });
-            return;
-        }
-        else
-        {
-            NSImage *headMaskImage = [NSImage imageNamed:@"headmask"];
-            img = [img maskWithImage:headMaskImage];
-        }
-        [imgCell setImage:img];
-    }
-}
-
-- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
-{
-//    TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
-//    TQTWeiboDetailController *winController = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] weiboWindowController];
-//    if (!winController) {
-//        winController = [[TQTWeiboDetailController alloc] initWithWindowNibName:@"TQTWeiboWindowController"];
-//        [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] setWeiboWindowController:winController];
-//        winController.rowNumber = -1;
-//    }
-//    if (![winController.window isVisible]) {
-//        NSRect frame = [[tableView window] frame];
-//        NSRect nowFrame = [winController.window frame];
-//        nowFrame.origin.x = frame.origin.x;
-//        nowFrame.origin.y = frame.origin.y + 20;
-//        [winController.window setFrame:nowFrame display:NO];
-//        [winController.window orderWindow:NSWindowBelow relativeTo:[[tableView window] windowNumber]];
-//        NSRect newFrame = nowFrame;
-//        newFrame.origin.x = NSMaxX(frame);
-//        [winController.window setFrame:newFrame display:NO animate:YES];
-//        [[tableView window] addChildWindow:winController.window ordered:NSWindowBelow];
-//        [winController.window makeKeyWindow];
-//
-//        [[NSNotificationCenter defaultCenter] addObserver:winController selector:@selector(changeSize:) name:NSWindowDidResizeNotification object:[tableView window]];
-//    }
-//    else
-//    {
-//        if (winController.rowNumber == row) {
-//            [winController closeWindow:nil];
-//            winController.rowNumber = (int)-1;
-//        }
-//        return NO;
-//    }
-//    
-//
-//    if (aWeibo.type == 2) {
-//        winController.showWeibo = aWeibo.source;
-//    }
-//    else
-//    {
-//        winController.showWeibo = aWeibo;
-//    }
-//    winController.rowNumber = (int)row;
-    return YES;
-}
-
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
-{
-    TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
-    float height = 20.0f;
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    [attrs setObject:[NSFont systemFontOfSize:12] forKey:NSFontAttributeName];
-    NSString *text = aWeibo.origtext;
-    NSSize textSize = [text sizeWithAttributes:attrs];
-    CGFloat widht = [[tableView tableColumnWithIdentifier:@"TQTText"] width];
-    int lineCount = ceil(textSize.width / widht);
-    if (aWeibo.source && (aWeibo.type == 2 || aWeibo.type == 4)) {
-        text = aWeibo.source.origtext;
-        textSize = [aWeibo.source.origtext sizeWithAttributes:attrs];
-        lineCount += ceil(textSize.width / widht);
-        lineCount ++;
-    }
-    lineCount ++;
-    height = height + (lineCount * textSize.height);
-    if ([aWeibo.images count] > 0) {
-        height += 128;
-    }
-    if ([aWeibo source] &&
-        (aWeibo.type == 2 || aWeibo.type == 4) &&
-        [[[aWeibo source] images] count] > 0) {
-        height += 128;
-    }
-    height = height < 80 ? 80 : height;
-    height += 8;
-    return height;
-}
-
-- (BOOL)tableView:(NSTableView *)tableView shouldTrackCell:(NSCell *)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+- (PXListViewCell *)listView:(PXListView *)aListView cellForRow:(NSUInteger)row
 {
     
-    return YES;
+    TQTWeiboCell *weiboCell = (TQTWeiboCell *)[aListView dequeueCellWithReusableIdentifier:@"Weibo Cell"];
+    if (!weiboCell) {
+        weiboCell = [TQTWeiboCell cellLoadedFromNibNamed:@"TQTWeiboCell" reusableIdentifier:@"Weibo Cell"];
+    }
+    if (!weibos_ || [weibos_ count] <= 0) {
+        return weiboCell;
+    }
+    TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
+    [weiboCell setWeibo:aWeibo];
+    NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%d", [[aWeibo head] hash]]];
+    NSImage *img = [[[NSImage alloc] initWithContentsOfFile:headImgPath] autorelease];
+    if (!img) {
+        dispatch_queue_t network_queue = dispatch_queue_create("TQT", NULL);
+        dispatch_async(network_queue, ^(void){
+            TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
+            NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[aWeibo head] stringByAppendingString:@"/100"]]];
+            if (imgData) {
+                dispatch_async(dispatch_get_main_queue(), ^(void){
+                    if (![[NSFileManager defaultManager] fileExistsAtPath:headImgPath]) {
+                        [imgData writeToFile:headImgPath atomically:YES];
+                    }
+                    [[[aListView cellForRowAtIndex:row] headImagView] setImage:[[[NSImage alloc] initWithData:imgData] autorelease]];
+                    [[[aListView cellForRowAtIndex:row] headImagView] setNeedsDisplay:YES];
+                });
+            }
+        });
+    }
+    else
+    {
+        [weiboCell.headImagView setImage:img];
+        [weiboCell.headImagView setNeedsDisplay:YES];
+    }
+    return weiboCell;
+}
+
+- (CGFloat)listView:(PXListView *)aListView heightOfRow:(NSUInteger)row
+{
+    NSSize size = [aListView bounds].size;
+    size.width -= 97.f;
+//    size.width = 191.f;
+    TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
+    NSTextStorage *textStorage = [[[NSTextStorage alloc] initWithAttributedString:aWeibo.content] autorelease];
+    NSTextContainer *textContainer = [[[NSTextContainer alloc]
+                                       initWithContainerSize: NSMakeSize(size.width, FLT_MAX)] autorelease];
+    NSLayoutManager *layoutManager = [[[NSLayoutManager alloc] init]
+                                      autorelease];
+    [layoutManager addTextContainer:textContainer];
+    [textStorage addLayoutManager:layoutManager];
+    [textContainer setLineFragmentPadding:5.0];
+    [layoutManager glyphRangeForTextContainer:textContainer];
+    CGFloat height = [layoutManager usedRectForTextContainer:textContainer].size.height;
+    height += 20;
+    if (height < 80) {
+        return 80;
+    }
+    return height;
 }
 
 @end

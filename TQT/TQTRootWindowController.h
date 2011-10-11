@@ -16,14 +16,16 @@
     IBOutlet NSView* tableView_;
     IBOutlet NSWindow *window_;
     IBOutlet NSMatrix *silders_;
-    TQTWeiBoTableViewController *homeTimeLinesTableViewController;
-    TQTWeiBoTableViewController *publicTimeLinesTableViewController;
+    IBOutlet NSTabView *tabView_;
+    IBOutlet TQTWeiBoTableViewController *homeTimeLinesTableViewController;
+    IBOutlet TQTWeiBoTableViewController *publicTimeLinesTableViewController;
     TQTPostWeiboWindowController *postWindowController;
     TQTWeiboRequest *weiboRequest_;
 }
 
 @property (assign, readonly) NSImageView *userImgView;
 @property (assign, readonly) NSView *tableView;
+@property (retain, readonly) NSTabView *tabView;
 @property (retain) TQTWeiboRequest *weiboRequest;
 - (IBAction)postWeibo:(id)sender;
 - (IBAction)clickSlider:(id)sender;

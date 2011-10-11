@@ -29,6 +29,10 @@
 		46A0D7F013D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */; };
 		46A9D3C513E68514008E3FB3 /* headmask.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A9D3C313E68514008E3FB3 /* headmask.png */; };
 		46A9D3C613E68514008E3FB3 /* headmaskhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A9D3C413E68514008E3FB3 /* headmaskhi.png */; };
+		46BE229E14023DA200AC93AE /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE229914023DA200AC93AE /* PXListView.m */; };
+		46BE229F14023DA200AC93AE /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */; };
+		46BE22A414023DBA00AC93AE /* PXListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE22A214023DBA00AC93AE /* PXListViewCell.m */; };
+		46BE22A714023DC300AC93AE /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE22A614023DC300AC93AE /* PXListDocumentView.m */; };
 		46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C11B06133C9C0E00315B6C /* TQTWeiBo.m */; };
 		46D3B192134EFB150045F492 /* TQTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B191134EFB150045F492 /* TQTUser.m */; };
 		46DACB4613CD8208004EC2D4 /* TQTWeiBoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */; };
@@ -97,6 +101,18 @@
 		46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTPostWeiboWindowController.m; path = TQT.xcodeproj/TQTPostWeiboWindowController.m; sourceTree = SOURCE_ROOT; };
 		46A9D3C313E68514008E3FB3 /* headmask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headmask.png; sourceTree = "<group>"; };
 		46A9D3C413E68514008E3FB3 /* headmaskhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headmaskhi.png; sourceTree = "<group>"; };
+		46BE229814023DA200AC93AE /* PXListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListView.h; sourceTree = "<group>"; };
+		46BE229914023DA200AC93AE /* PXListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListView.m; sourceTree = "<group>"; };
+		46BE229A14023DA200AC93AE /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
+		46BE229B14023DA200AC93AE /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
+		46BE229C14023DA200AC93AE /* PXListView+UserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+UserInteraction.h"; sourceTree = "<group>"; };
+		46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXListView+UserInteraction.m"; sourceTree = "<group>"; };
+		46BE22A014023DBA00AC93AE /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDropHighlight.h; sourceTree = "<group>"; };
+		46BE22A114023DBA00AC93AE /* PXListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewCell.h; sourceTree = "<group>"; };
+		46BE22A214023DBA00AC93AE /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListViewCell.m; sourceTree = "<group>"; };
+		46BE22A314023DBA00AC93AE /* PXListViewCell+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListViewCell+Private.h"; sourceTree = "<group>"; };
+		46BE22A514023DC300AC93AE /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListDocumentView.h; sourceTree = "<group>"; };
+		46BE22A614023DC300AC93AE /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListDocumentView.m; sourceTree = "<group>"; };
 		46C11B05133C9C0E00315B6C /* TQTWeiBo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTWeiBo.h; path = TQT/TQTWeiBo.h; sourceTree = "<group>"; };
 		46C11B06133C9C0E00315B6C /* TQTWeiBo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTWeiBo.m; path = TQT/TQTWeiBo.m; sourceTree = "<group>"; };
 		46D3B190134EFB150045F492 /* TQTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTUser.h; path = TQT/TQTUser.h; sourceTree = "<group>"; };
@@ -202,6 +218,25 @@
 			name = Request;
 			sourceTree = "<group>";
 		};
+		46BE229714023D8300AC93AE /* PXListView */ = {
+			isa = PBXGroup;
+			children = (
+				46BE22A514023DC300AC93AE /* PXListDocumentView.h */,
+				46BE22A614023DC300AC93AE /* PXListDocumentView.m */,
+				46BE22A014023DBA00AC93AE /* PXListViewDropHighlight.h */,
+				46BE22A114023DBA00AC93AE /* PXListViewCell.h */,
+				46BE22A214023DBA00AC93AE /* PXListViewCell.m */,
+				46BE22A314023DBA00AC93AE /* PXListViewCell+Private.h */,
+				46BE229814023DA200AC93AE /* PXListView.h */,
+				46BE229914023DA200AC93AE /* PXListView.m */,
+				46BE229A14023DA200AC93AE /* PXListView+Private.h */,
+				46BE229B14023DA200AC93AE /* PXListViewDelegate.h */,
+				46BE229C14023DA200AC93AE /* PXListView+UserInteraction.h */,
+				46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */,
+			);
+			name = PXListView;
+			sourceTree = "<group>";
+		};
 		46DF1DF713E7A03000E9362D /* Catogry */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +260,7 @@
 		46F610311339BD92005B2D29 = {
 			isa = PBXGroup;
 			children = (
+				46BE229714023D8300AC93AE /* PXListView */,
 				46DF1DF713E7A03000E9362D /* Catogry */,
 				4612C2CC13C46D0500F40230 /* Request */,
 				46DF2A1C13C2D7F500EA8736 /* Model */,
@@ -369,6 +405,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 46F610311339BD92005B2D29;
 			productRefGroup = 46F6103D1339BD92005B2D29 /* Products */;
@@ -442,6 +479,10 @@
 				461B961E13E91E08003EB493 /* TQTHeadImageCell.m in Sources */,
 				461B962413E94495003EB493 /* TQTWeiboDetailController.m in Sources */,
 				46F26FEA13FA0CDD009CFB96 /* TQTSliderWindow.m in Sources */,
+				46BE229E14023DA200AC93AE /* PXListView.m in Sources */,
+				46BE229F14023DA200AC93AE /* PXListView+UserInteraction.m in Sources */,
+				46BE22A414023DBA00AC93AE /* PXListViewCell.m in Sources */,
+				46BE22A714023DC300AC93AE /* PXListDocumentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +528,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -502,6 +544,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};

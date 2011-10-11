@@ -30,6 +30,7 @@
     int provinceCode_;
     int cityCode_;
     BOOL isVip_;
+    NSMutableAttributedString *content_;
 }
 
 @property (copy) NSString *text;
@@ -51,9 +52,10 @@
 @property (assign) int provinceCode;
 @property (assign) int cityCode;
 @property (assign) BOOL isVip;
-
+@property (retain) NSMutableAttributedString *content;
 - (id)initWithDict:(NSDictionary *)dict;
 + (TQTWeiBo *)weiBoFromDict:(NSDictionary *)dict;
 - (NSDictionary *)dictionary;
 - (NSString *)jsonString;
+- (NSMutableAttributedString *)createContent;
 @end

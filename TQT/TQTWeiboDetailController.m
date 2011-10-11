@@ -61,7 +61,7 @@
     }
     if ([[tableColumn identifier] isEqualToString:@"TQTText"]) {
         TQTWeiBo *aWeibo = [replyList_ objectAtIndex:row];
-        ((TQTWeiboCell *)cell).image = nil;
+//        ((TQTWeiboCell *)cell).image = nil;
         ((TQTWeiboCell *)cell).weibo = aWeibo;
     }
     if ([[tableColumn identifier] isEqualToString:@"TQTHead"])

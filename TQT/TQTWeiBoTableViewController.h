@@ -7,15 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PXListView.h"
 
-
-@interface TQTWeiBoTableViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate> {
+@interface TQTWeiBoTableViewController : NSViewController<PXListViewDelegate> {
 @private
     NSMutableArray *weibos_;
-    IBOutlet NSTableView *tableView_;
+    IBOutlet PXListView *tableView_;
 }
 
 @property (retain) NSMutableArray *weibos;
-@property (readonly) NSTableView *tableView;
+@property (readonly) PXListView *tableView;
 - (NSImage *)maskImage:(NSImage *)headImage withMaskImage:(NSImage *)maskImage;
 @end
