@@ -9,13 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import "TQTWeiBo.h"
 
-@interface TQTWeiboDetailController : NSWindowController<NSTableViewDelegate, NSTableViewDataSource>{
+@interface TQTWeiboDetailController : NSObject<NSTableViewDelegate, NSTableViewDataSource, NSDrawerDelegate>{
     NSMutableArray *replyList_;
     IBOutlet NSTableView *replyTableView_;
     IBOutlet NSTextField *replyTextField_;
     TQTWeiBo *showWeibo_;
     int rowNumber_;
     BOOL isReAdd_;
+    IBOutlet NSDrawer *drawer_;
 }
 
 @property (retain) NSMutableArray *replyList;
@@ -23,6 +24,7 @@
 @property (retain) NSTextField *replyTextField;
 @property (assign) int rowNumber;
 @property (assign) BOOL isReAdd;
+@property (retain) NSDrawer *drawer;
 - (IBAction)closeWindow:(id)sender;
 - (IBAction)reply:(id)sender;
 @end

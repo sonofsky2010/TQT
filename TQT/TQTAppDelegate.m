@@ -37,6 +37,7 @@
     }
     if (oauthKey == nil) {
         [self.window makeKeyAndOrderFront:nil];
+        [self.window becomeMainWindow];
         oauthKey = [[QOauthKey alloc] init];
     }
     else
@@ -44,6 +45,7 @@
         homeListWindowController = [[TQTRootWindowController alloc] init];
         [NSBundle loadNibNamed:@"TQTRootWindowController" owner:homeListWindowController];
         [homeListWindowController.window makeKeyAndOrderFront:nil];
+        [homeListWindowController.window becomeMainWindow];
         [homeListWindowController reloadHomeTimeLines];
     }
 }

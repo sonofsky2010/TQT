@@ -16,6 +16,7 @@
 @synthesize rowNumber = rowNumber_;
 @synthesize isReAdd = isReAdd_;
 @synthesize replyTextField = replyTextField_;
+@synthesize drawer = drawer_;
 @dynamic showWeibo;
 
 - (id)initWithWindow:(NSWindow *)window
@@ -119,16 +120,6 @@
     return height;
 }
 
-- (void)changeSize:(NSNotification *)aNotification
-{
-    NSWindow *aWin = [self.window parentWindow];
-    NSRect frame = [aWin frame];
-    NSRect myFrame = [self.window frame];
-    myFrame.origin.x = NSMaxX(frame);
-    myFrame.origin.y = frame.origin.y + 20;
-    [self.window setFrame:myFrame display:NO];
-}
-
 - (void)reload
 {
     [replyTableView_ reloadData];
@@ -167,12 +158,7 @@
 
 - (IBAction)closeWindow:(id)sender
 {
-    NSRect parentFrame = [self.window parentWindow].frame;
-    NSRect selfFrame = [self.window frame];
-    selfFrame.origin.x = parentFrame.origin.x;
-    [self.window setFrame:selfFrame display:YES animate:YES];
-    [[self.window parentWindow] removeChildWindow:self.window];
-    [self.window orderOut:nil];
+    [drawer_ close];
     
 }
 
@@ -185,7 +171,7 @@
                           @"确定",
                           nil,
                           nil, 
-                          self.window, 
+                          [drawer_ parentWindow], 
                           nil, 
                           NULL, 
                           NULL, 
@@ -199,7 +185,7 @@
                           @"确定",
                           nil,
                           nil, 
-                          self.window, 
+                          [drawer_ parentWindow], 
                           nil, 
                           NULL, 
                           NULL, 

@@ -228,28 +228,20 @@
 
         TQTWeiboDetailController *winController = [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] weiboWindowController];
         if (!winController) {
-            winController = [[TQTWeiboDetailController alloc] initWithWindowNibName:@"TQTWeiboWindowController"];
+            winController = [[[TQTWeiboDetailController alloc] init] autorelease];
+            [NSBundle loadNibNamed:@"TQTWeiboWindowController" owner:winController];
             [(TQTAppDelegate *)[[NSApplication sharedApplication] delegate] setWeiboWindowController:winController];
             winController.rowNumber = -1;
+            [[winController drawer] setParentWindow:[tableView window]];
+            [winController.drawer setMinContentSize:CGSizeMake(350, 540)];
         }
-        if (![winController.window isVisible]) {
-            NSRect frame = [[tableView window] frame];
-            NSRect nowFrame = [winController.window frame];
-            nowFrame.origin.x = frame.origin.x;
-            nowFrame.origin.y = frame.origin.y + 20;
-            [winController.window setFrame:nowFrame display:YES];
-            [winController.window orderWindow:NSWindowBelow relativeTo:[[tableView window] windowNumber]];
-            NSRect newFrame = nowFrame;
-            newFrame.origin.x = NSMaxX(frame);
-            [winController.window setFrame:newFrame display:YES animate:YES];
-            [[tableView window] addChildWindow:winController.window ordered:NSWindowBelow];
-            [[NSNotificationCenter defaultCenter] addObserver:winController selector:@selector(changeSize:) name:NSWindowDidResizeNotification object:[tableView window]];
+        if ([winController.drawer state] == NSDrawerClosedState) {
+            [winController.drawer open];
         }
         else
         {
             if (winController.showWeibo == aWeibo || (winController.showWeibo == aWeibo.source && aWeibo.type == 2)) {
-                [winController closeWindow:nil];
-//                winController.showWeibo = nil;
+                [winController.drawer close];
                 return NO;
             }
         }
