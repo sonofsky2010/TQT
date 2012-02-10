@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385260C8149852AC0028CC61 /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260B7149852AC0028CC61 /* NSData+QBase64.m */; };
+		385260C9149852AC0028CC61 /* NSString+QEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260B9149852AC0028CC61 /* NSString+QEncoding.m */; };
+		385260CA149852AC0028CC61 /* NSURL+QAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260BB149852AC0028CC61 /* NSURL+QAdditions.m */; };
+		385260CB149852AC0028CC61 /* QAsyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260BD149852AC0028CC61 /* QAsyncHttp.m */; };
+		385260CC149852AC0028CC61 /* QMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260BF149852AC0028CC61 /* QMutableURLRequest.m */; };
+		385260CD149852AC0028CC61 /* QOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260C1149852AC0028CC61 /* QOauth.m */; };
+		385260CE149852AC0028CC61 /* QOauthKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260C3149852AC0028CC61 /* QOauthKey.m */; };
+		385260CF149852AC0028CC61 /* QSyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260C5149852AC0028CC61 /* QSyncHttp.m */; };
+		385260D0149852AC0028CC61 /* QWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260C7149852AC0028CC61 /* QWeiboRequest.m */; };
+		385260DE149852B80028CC61 /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260D3149852B80028CC61 /* PXListDocumentView.m */; };
+		385260DF149852B80028CC61 /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260D6149852B80028CC61 /* PXListView+UserInteraction.m */; };
+		385260E0149852B80028CC61 /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260D8149852B80028CC61 /* PXListView.m */; };
+		385260E1149852B80028CC61 /* PXListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260DB149852B80028CC61 /* PXListViewCell.m */; };
+		385260EA149852F10028CC61 /* NSImage+TQTMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260E3149852F10028CC61 /* NSImage+TQTMask.m */; };
+		385260EB149852F10028CC61 /* TQTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260E5149852F10028CC61 /* TQTLoginRequest.m */; };
+		385260EC149852F10028CC61 /* TQTUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260E7149852F10028CC61 /* TQTUserRequest.m */; };
+		385260ED149852F10028CC61 /* TQTWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260E9149852F10028CC61 /* TQTWeiboRequest.m */; };
 		460F65FA133AE515001F7BF3 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65E9133AE514001F7BF3 /* NSObject+JSON.m */; };
 		460F65FB133AE515001F7BF3 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65EB133AE514001F7BF3 /* SBJsonParser.m */; };
 		460F65FC133AE515001F7BF3 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65ED133AE514001F7BF3 /* SBJsonStreamParser.m */; };
@@ -16,12 +33,10 @@
 		460F6600133AE515001F7BF3 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F5133AE514001F7BF3 /* SBJsonStreamWriterState.m */; };
 		460F6601133AE515001F7BF3 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */; };
 		460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F65F9133AE514001F7BF3 /* SBJsonWriter.m */; };
-		4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */; };
 		461B961813E8F3AF003EB493 /* SideSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 461B961713E8F3AF003EB493 /* SideSearch.png */; };
 		461B961E13E91E08003EB493 /* TQTHeadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B961D13E91E08003EB493 /* TQTHeadImageCell.m */; };
 		461B962413E94495003EB493 /* TQTWeiboDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 461B962313E94495003EB493 /* TQTWeiboDetailController.m */; };
 		461B962613E944ED003EB493 /* TQTWeiboWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */; };
-		46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46367A1413CA99B5007C0C69 /* TQTUserRequest.m */; };
 		463E523C13E7FFD200BD8D45 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 463E523B13E7FFD200BD8D45 /* refresh.png */; };
 		46955D9013CB02190016F079 /* TQTRootWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46955D8F13CB02190016F079 /* TQTRootWindowController.xib */; };
 		46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46955D9213CB02820016F079 /* TQTRootWindowController.m */; };
@@ -29,18 +44,12 @@
 		46A0D7F013D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */; };
 		46A9D3C513E68514008E3FB3 /* headmask.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A9D3C313E68514008E3FB3 /* headmask.png */; };
 		46A9D3C613E68514008E3FB3 /* headmaskhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 46A9D3C413E68514008E3FB3 /* headmaskhi.png */; };
-		46BE229E14023DA200AC93AE /* PXListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE229914023DA200AC93AE /* PXListView.m */; };
-		46BE229F14023DA200AC93AE /* PXListView+UserInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */; };
-		46BE22A414023DBA00AC93AE /* PXListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE22A214023DBA00AC93AE /* PXListViewCell.m */; };
-		46BE22A714023DC300AC93AE /* PXListDocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BE22A614023DC300AC93AE /* PXListDocumentView.m */; };
 		46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C11B06133C9C0E00315B6C /* TQTWeiBo.m */; };
 		46D3B192134EFB150045F492 /* TQTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D3B191134EFB150045F492 /* TQTUser.m */; };
 		46DACB4613CD8208004EC2D4 /* TQTWeiBoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */; };
 		46DACB4713CD8208004EC2D4 /* TQTWeiBoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */; };
 		46DACB4A13CD8327004EC2D4 /* TQTWeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */; };
 		46DACB4C13CD843E004EC2D4 /* TQTWeiboCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */; };
-		46DACB4F13CD8701004EC2D4 /* TQTWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */; };
-		46DF1DFA13E7A07800E9362D /* NSImage+TQTMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DF1DF913E7A07800E9362D /* NSImage+TQTMask.m */; };
 		46DF1DFC13E7A37C00E9362D /* SideTweets.png in Resources */ = {isa = PBXBuildFile; fileRef = 46DF1DFB13E7A37C00E9362D /* SideTweets.png */; };
 		46DF1DFE13E7A40300E9362D /* newStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = 46DF1DFD13E7A40300E9362D /* newStatus.png */; };
 		46F26FEA13FA0CDD009CFB96 /* TQTSliderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F26FE913FA0CDD009CFB96 /* TQTSliderWindow.m */; };
@@ -50,19 +59,48 @@
 		46F610511339BD92005B2D29 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46F6104F1339BD92005B2D29 /* Credits.rtf */; };
 		46F610541339BD92005B2D29 /* TQTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610531339BD92005B2D29 /* TQTAppDelegate.m */; };
 		46F610571339BD93005B2D29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F610551339BD93005B2D29 /* MainMenu.xib */; };
-		46F610DB1339BE5B005B2D29 /* QOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610D81339BE5B005B2D29 /* QOauth.m */; };
-		46F610DC1339BE5B005B2D29 /* QOauthKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610DA1339BE5B005B2D29 /* QOauthKey.m */; };
-		46F610E31339BE77005B2D29 /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610DE1339BE77005B2D29 /* NSData+QBase64.m */; };
-		46F610E41339BE77005B2D29 /* NSString+QEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610E01339BE77005B2D29 /* NSString+QEncoding.m */; };
-		46F610E51339BE77005B2D29 /* NSURL+QAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610E21339BE77005B2D29 /* NSURL+QAdditions.m */; };
-		46F610EE1339BE82005B2D29 /* QAsyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610E71339BE82005B2D29 /* QAsyncHttp.m */; };
-		46F610EF1339BE82005B2D29 /* QMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610E91339BE82005B2D29 /* QMutableURLRequest.m */; };
-		46F610F01339BE82005B2D29 /* QSyncHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610EB1339BE82005B2D29 /* QSyncHttp.m */; };
-		46F610F11339BE82005B2D29 /* QWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F610ED1339BE82005B2D29 /* QWeiboRequest.m */; };
 		46F610F31339D297005B2D29 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F610F21339D297005B2D29 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		385260B6149852AC0028CC61 /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
+		385260B7149852AC0028CC61 /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
+		385260B8149852AC0028CC61 /* NSString+QEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QEncoding.h"; sourceTree = "<group>"; };
+		385260B9149852AC0028CC61 /* NSString+QEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QEncoding.m"; sourceTree = "<group>"; };
+		385260BA149852AC0028CC61 /* NSURL+QAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QAdditions.h"; sourceTree = "<group>"; };
+		385260BB149852AC0028CC61 /* NSURL+QAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QAdditions.m"; sourceTree = "<group>"; };
+		385260BC149852AC0028CC61 /* QAsyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAsyncHttp.h; sourceTree = "<group>"; };
+		385260BD149852AC0028CC61 /* QAsyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAsyncHttp.m; sourceTree = "<group>"; };
+		385260BE149852AC0028CC61 /* QMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMutableURLRequest.h; sourceTree = "<group>"; };
+		385260BF149852AC0028CC61 /* QMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMutableURLRequest.m; sourceTree = "<group>"; };
+		385260C0149852AC0028CC61 /* QOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauth.h; sourceTree = "<group>"; };
+		385260C1149852AC0028CC61 /* QOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauth.m; sourceTree = "<group>"; };
+		385260C2149852AC0028CC61 /* QOauthKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauthKey.h; sourceTree = "<group>"; };
+		385260C3149852AC0028CC61 /* QOauthKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauthKey.m; sourceTree = "<group>"; };
+		385260C4149852AC0028CC61 /* QSyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncHttp.h; sourceTree = "<group>"; };
+		385260C5149852AC0028CC61 /* QSyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncHttp.m; sourceTree = "<group>"; };
+		385260C6149852AC0028CC61 /* QWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboRequest.h; sourceTree = "<group>"; };
+		385260C7149852AC0028CC61 /* QWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboRequest.m; sourceTree = "<group>"; };
+		385260D2149852B80028CC61 /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListDocumentView.h; sourceTree = "<group>"; };
+		385260D3149852B80028CC61 /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListDocumentView.m; sourceTree = "<group>"; };
+		385260D4149852B80028CC61 /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
+		385260D5149852B80028CC61 /* PXListView+UserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+UserInteraction.h"; sourceTree = "<group>"; };
+		385260D6149852B80028CC61 /* PXListView+UserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXListView+UserInteraction.m"; sourceTree = "<group>"; };
+		385260D7149852B80028CC61 /* PXListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListView.h; sourceTree = "<group>"; };
+		385260D8149852B80028CC61 /* PXListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListView.m; sourceTree = "<group>"; };
+		385260D9149852B80028CC61 /* PXListViewCell+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListViewCell+Private.h"; sourceTree = "<group>"; };
+		385260DA149852B80028CC61 /* PXListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewCell.h; sourceTree = "<group>"; };
+		385260DB149852B80028CC61 /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListViewCell.m; sourceTree = "<group>"; };
+		385260DC149852B80028CC61 /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
+		385260DD149852B80028CC61 /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDropHighlight.h; sourceTree = "<group>"; };
+		385260E2149852F10028CC61 /* NSImage+TQTMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TQTMask.h"; sourceTree = "<group>"; };
+		385260E3149852F10028CC61 /* NSImage+TQTMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+TQTMask.m"; sourceTree = "<group>"; };
+		385260E4149852F10028CC61 /* TQTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTLoginRequest.h; sourceTree = "<group>"; };
+		385260E5149852F10028CC61 /* TQTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTLoginRequest.m; sourceTree = "<group>"; };
+		385260E6149852F10028CC61 /* TQTUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTUserRequest.h; sourceTree = "<group>"; };
+		385260E7149852F10028CC61 /* TQTUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTUserRequest.m; sourceTree = "<group>"; };
+		385260E8149852F10028CC61 /* TQTWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboRequest.h; sourceTree = "<group>"; };
+		385260E9149852F10028CC61 /* TQTWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboRequest.m; sourceTree = "<group>"; };
 		460F65E7133AE514001F7BF3 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		460F65E8133AE514001F7BF3 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		460F65E9133AE514001F7BF3 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
@@ -82,16 +120,12 @@
 		460F65F7133AE514001F7BF3 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
 		460F65F8133AE514001F7BF3 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		460F65F9133AE514001F7BF3 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTLoginRequest.h; sourceTree = "<group>"; };
-		4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTLoginRequest.m; sourceTree = "<group>"; };
 		461B961713E8F3AF003EB493 /* SideSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideSearch.png; sourceTree = "<group>"; };
 		461B961C13E91E08003EB493 /* TQTHeadImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTHeadImageCell.h; sourceTree = "<group>"; };
 		461B961D13E91E08003EB493 /* TQTHeadImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTHeadImageCell.m; sourceTree = "<group>"; };
 		461B962213E94495003EB493 /* TQTWeiboDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboDetailController.h; sourceTree = "<group>"; };
 		461B962313E94495003EB493 /* TQTWeiboDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboDetailController.m; sourceTree = "<group>"; };
 		461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTWeiboWindowController.xib; sourceTree = "<group>"; };
-		46367A1313CA99B5007C0C69 /* TQTUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTUserRequest.h; sourceTree = "<group>"; };
-		46367A1413CA99B5007C0C69 /* TQTUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTUserRequest.m; sourceTree = "<group>"; };
 		463E523B13E7FFD200BD8D45 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		46955D8F13CB02190016F079 /* TQTRootWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTRootWindowController.xib; sourceTree = "<group>"; };
 		46955D9113CB02810016F079 /* TQTRootWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTRootWindowController.h; sourceTree = "<group>"; };
@@ -101,18 +135,6 @@
 		46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTPostWeiboWindowController.m; path = TQT.xcodeproj/TQTPostWeiboWindowController.m; sourceTree = SOURCE_ROOT; };
 		46A9D3C313E68514008E3FB3 /* headmask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headmask.png; sourceTree = "<group>"; };
 		46A9D3C413E68514008E3FB3 /* headmaskhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headmaskhi.png; sourceTree = "<group>"; };
-		46BE229814023DA200AC93AE /* PXListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListView.h; sourceTree = "<group>"; };
-		46BE229914023DA200AC93AE /* PXListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListView.m; sourceTree = "<group>"; };
-		46BE229A14023DA200AC93AE /* PXListView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+Private.h"; sourceTree = "<group>"; };
-		46BE229B14023DA200AC93AE /* PXListViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDelegate.h; sourceTree = "<group>"; };
-		46BE229C14023DA200AC93AE /* PXListView+UserInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListView+UserInteraction.h"; sourceTree = "<group>"; };
-		46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PXListView+UserInteraction.m"; sourceTree = "<group>"; };
-		46BE22A014023DBA00AC93AE /* PXListViewDropHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewDropHighlight.h; sourceTree = "<group>"; };
-		46BE22A114023DBA00AC93AE /* PXListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListViewCell.h; sourceTree = "<group>"; };
-		46BE22A214023DBA00AC93AE /* PXListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListViewCell.m; sourceTree = "<group>"; };
-		46BE22A314023DBA00AC93AE /* PXListViewCell+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXListViewCell+Private.h"; sourceTree = "<group>"; };
-		46BE22A514023DC300AC93AE /* PXListDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXListDocumentView.h; sourceTree = "<group>"; };
-		46BE22A614023DC300AC93AE /* PXListDocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXListDocumentView.m; sourceTree = "<group>"; };
 		46C11B05133C9C0E00315B6C /* TQTWeiBo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTWeiBo.h; path = TQT/TQTWeiBo.h; sourceTree = "<group>"; };
 		46C11B06133C9C0E00315B6C /* TQTWeiBo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TQTWeiBo.m; path = TQT/TQTWeiBo.m; sourceTree = "<group>"; };
 		46D3B190134EFB150045F492 /* TQTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TQTUser.h; path = TQT/TQTUser.h; sourceTree = "<group>"; };
@@ -124,10 +146,6 @@
 		46DACB4813CD8327004EC2D4 /* TQTWeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboCell.h; sourceTree = "<group>"; };
 		46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboCell.m; sourceTree = "<group>"; };
 		46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TQTWeiboCell.xib; sourceTree = "<group>"; };
-		46DACB4D13CD8701004EC2D4 /* TQTWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTWeiboRequest.h; sourceTree = "<group>"; };
-		46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTWeiboRequest.m; sourceTree = "<group>"; };
-		46DF1DF813E7A07800E9362D /* NSImage+TQTMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+TQTMask.h"; sourceTree = "<group>"; };
-		46DF1DF913E7A07800E9362D /* NSImage+TQTMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+TQTMask.m"; sourceTree = "<group>"; };
 		46DF1DFB13E7A37C00E9362D /* SideTweets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideTweets.png; sourceTree = "<group>"; };
 		46DF1DFD13E7A40300E9362D /* newStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newStatus.png; sourceTree = "<group>"; };
 		46F26FE813FA0CDC009CFB96 /* TQTSliderWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTSliderWindow.h; sourceTree = "<group>"; };
@@ -145,24 +163,6 @@
 		46F610521339BD92005B2D29 /* TQTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQTAppDelegate.h; sourceTree = "<group>"; };
 		46F610531339BD92005B2D29 /* TQTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQTAppDelegate.m; sourceTree = "<group>"; };
 		46F610561339BD93005B2D29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		46F610D71339BE5B005B2D29 /* QOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauth.h; sourceTree = "<group>"; };
-		46F610D81339BE5B005B2D29 /* QOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauth.m; sourceTree = "<group>"; };
-		46F610D91339BE5B005B2D29 /* QOauthKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOauthKey.h; sourceTree = "<group>"; };
-		46F610DA1339BE5B005B2D29 /* QOauthKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOauthKey.m; sourceTree = "<group>"; };
-		46F610DD1339BE77005B2D29 /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
-		46F610DE1339BE77005B2D29 /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
-		46F610DF1339BE77005B2D29 /* NSString+QEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QEncoding.h"; sourceTree = "<group>"; };
-		46F610E01339BE77005B2D29 /* NSString+QEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QEncoding.m"; sourceTree = "<group>"; };
-		46F610E11339BE77005B2D29 /* NSURL+QAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QAdditions.h"; sourceTree = "<group>"; };
-		46F610E21339BE77005B2D29 /* NSURL+QAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QAdditions.m"; sourceTree = "<group>"; };
-		46F610E61339BE82005B2D29 /* QAsyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAsyncHttp.h; sourceTree = "<group>"; };
-		46F610E71339BE82005B2D29 /* QAsyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAsyncHttp.m; sourceTree = "<group>"; };
-		46F610E81339BE82005B2D29 /* QMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMutableURLRequest.h; sourceTree = "<group>"; };
-		46F610E91339BE82005B2D29 /* QMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMutableURLRequest.m; sourceTree = "<group>"; };
-		46F610EA1339BE82005B2D29 /* QSyncHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncHttp.h; sourceTree = "<group>"; };
-		46F610EB1339BE82005B2D29 /* QSyncHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncHttp.m; sourceTree = "<group>"; };
-		46F610EC1339BE82005B2D29 /* QWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWeiboRequest.h; sourceTree = "<group>"; };
-		46F610ED1339BE82005B2D29 /* QWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWeiboRequest.m; sourceTree = "<group>"; };
 		46F610F21339D297005B2D29 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -179,6 +179,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385260B5149852AC0028CC61 /* Oauth */ = {
+			isa = PBXGroup;
+			children = (
+				385260B6149852AC0028CC61 /* NSData+QBase64.h */,
+				385260B7149852AC0028CC61 /* NSData+QBase64.m */,
+				385260B8149852AC0028CC61 /* NSString+QEncoding.h */,
+				385260B9149852AC0028CC61 /* NSString+QEncoding.m */,
+				385260BA149852AC0028CC61 /* NSURL+QAdditions.h */,
+				385260BB149852AC0028CC61 /* NSURL+QAdditions.m */,
+				385260BC149852AC0028CC61 /* QAsyncHttp.h */,
+				385260BD149852AC0028CC61 /* QAsyncHttp.m */,
+				385260BE149852AC0028CC61 /* QMutableURLRequest.h */,
+				385260BF149852AC0028CC61 /* QMutableURLRequest.m */,
+				385260C0149852AC0028CC61 /* QOauth.h */,
+				385260C1149852AC0028CC61 /* QOauth.m */,
+				385260C2149852AC0028CC61 /* QOauthKey.h */,
+				385260C3149852AC0028CC61 /* QOauthKey.m */,
+				385260C4149852AC0028CC61 /* QSyncHttp.h */,
+				385260C5149852AC0028CC61 /* QSyncHttp.m */,
+				385260C6149852AC0028CC61 /* QWeiboRequest.h */,
+				385260C7149852AC0028CC61 /* QWeiboRequest.m */,
+			);
+			path = Oauth;
+			sourceTree = "<group>";
+		};
+		385260D1149852B80028CC61 /* PXListView */ = {
+			isa = PBXGroup;
+			children = (
+				385260D2149852B80028CC61 /* PXListDocumentView.h */,
+				385260D3149852B80028CC61 /* PXListDocumentView.m */,
+				385260D4149852B80028CC61 /* PXListView+Private.h */,
+				385260D5149852B80028CC61 /* PXListView+UserInteraction.h */,
+				385260D6149852B80028CC61 /* PXListView+UserInteraction.m */,
+				385260D7149852B80028CC61 /* PXListView.h */,
+				385260D8149852B80028CC61 /* PXListView.m */,
+				385260D9149852B80028CC61 /* PXListViewCell+Private.h */,
+				385260DA149852B80028CC61 /* PXListViewCell.h */,
+				385260DB149852B80028CC61 /* PXListViewCell.m */,
+				385260DC149852B80028CC61 /* PXListViewDelegate.h */,
+				385260DD149852B80028CC61 /* PXListViewDropHighlight.h */,
+			);
+			path = PXListView;
+			sourceTree = "<group>";
+		};
 		460F65E6133AE514001F7BF3 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,47 +249,6 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
-		4612C2CC13C46D0500F40230 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				4612C2CD13C46D4900F40230 /* TQTLoginRequest.h */,
-				4612C2CE13C46D4900F40230 /* TQTLoginRequest.m */,
-				46367A1313CA99B5007C0C69 /* TQTUserRequest.h */,
-				46367A1413CA99B5007C0C69 /* TQTUserRequest.m */,
-				46DACB4D13CD8701004EC2D4 /* TQTWeiboRequest.h */,
-				46DACB4E13CD8701004EC2D4 /* TQTWeiboRequest.m */,
-			);
-			name = Request;
-			sourceTree = "<group>";
-		};
-		46BE229714023D8300AC93AE /* PXListView */ = {
-			isa = PBXGroup;
-			children = (
-				46BE22A514023DC300AC93AE /* PXListDocumentView.h */,
-				46BE22A614023DC300AC93AE /* PXListDocumentView.m */,
-				46BE22A014023DBA00AC93AE /* PXListViewDropHighlight.h */,
-				46BE22A114023DBA00AC93AE /* PXListViewCell.h */,
-				46BE22A214023DBA00AC93AE /* PXListViewCell.m */,
-				46BE22A314023DBA00AC93AE /* PXListViewCell+Private.h */,
-				46BE229814023DA200AC93AE /* PXListView.h */,
-				46BE229914023DA200AC93AE /* PXListView.m */,
-				46BE229A14023DA200AC93AE /* PXListView+Private.h */,
-				46BE229B14023DA200AC93AE /* PXListViewDelegate.h */,
-				46BE229C14023DA200AC93AE /* PXListView+UserInteraction.h */,
-				46BE229D14023DA200AC93AE /* PXListView+UserInteraction.m */,
-			);
-			name = PXListView;
-			sourceTree = "<group>";
-		};
-		46DF1DF713E7A03000E9362D /* Catogry */ = {
-			isa = PBXGroup;
-			children = (
-				46DF1DF813E7A07800E9362D /* NSImage+TQTMask.h */,
-				46DF1DF913E7A07800E9362D /* NSImage+TQTMask.m */,
-			);
-			name = Catogry;
-			sourceTree = "<group>";
-		};
 		46DF2A1C13C2D7F500EA8736 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,13 +263,12 @@
 		46F610311339BD92005B2D29 = {
 			isa = PBXGroup;
 			children = (
-				46BE229714023D8300AC93AE /* PXListView */,
-				46DF1DF713E7A03000E9362D /* Catogry */,
-				4612C2CC13C46D0500F40230 /* Request */,
+				385260D1149852B80028CC61 /* PXListView */,
+				385260B5149852AC0028CC61 /* Oauth */,
 				46DF2A1C13C2D7F500EA8736 /* Model */,
 				460F65E6133AE514001F7BF3 /* Json */,
-				46F610D61339BE25005B2D29 /* Oauth */,
 				46F610461339BD92005B2D29 /* TQT */,
+				46F610471339BD92005B2D29 /* Supporting Files */,
 				46F6103F1339BD92005B2D29 /* Frameworks */,
 				46F6103D1339BD92005B2D29 /* Products */,
 			);
@@ -303,6 +305,14 @@
 		46F610461339BD92005B2D29 /* TQT */ = {
 			isa = PBXGroup;
 			children = (
+				385260E2149852F10028CC61 /* NSImage+TQTMask.h */,
+				385260E3149852F10028CC61 /* NSImage+TQTMask.m */,
+				385260E4149852F10028CC61 /* TQTLoginRequest.h */,
+				385260E5149852F10028CC61 /* TQTLoginRequest.m */,
+				385260E6149852F10028CC61 /* TQTUserRequest.h */,
+				385260E7149852F10028CC61 /* TQTUserRequest.m */,
+				385260E8149852F10028CC61 /* TQTWeiboRequest.h */,
+				385260E9149852F10028CC61 /* TQTWeiboRequest.m */,
 				46A0D7EC13D7D35100B5E0DA /* TQTPostWeiboWindow.xib */,
 				46A0D7EE13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.h */,
 				46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */,
@@ -319,7 +329,6 @@
 				46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */,
 				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
 				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
-				46F610471339BD92005B2D29 /* Supporting Files */,
 				461B961C13E91E08003EB493 /* TQTHeadImageCell.h */,
 				461B961D13E91E08003EB493 /* TQTHeadImageCell.m */,
 				461B962213E94495003EB493 /* TQTWeiboDetailController.h */,
@@ -347,31 +356,7 @@
 				46F6104F1339BD92005B2D29 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		46F610D61339BE25005B2D29 /* Oauth */ = {
-			isa = PBXGroup;
-			children = (
-				46F610E61339BE82005B2D29 /* QAsyncHttp.h */,
-				46F610E71339BE82005B2D29 /* QAsyncHttp.m */,
-				46F610E81339BE82005B2D29 /* QMutableURLRequest.h */,
-				46F610E91339BE82005B2D29 /* QMutableURLRequest.m */,
-				46F610EA1339BE82005B2D29 /* QSyncHttp.h */,
-				46F610EB1339BE82005B2D29 /* QSyncHttp.m */,
-				46F610EC1339BE82005B2D29 /* QWeiboRequest.h */,
-				46F610ED1339BE82005B2D29 /* QWeiboRequest.m */,
-				46F610DD1339BE77005B2D29 /* NSData+QBase64.h */,
-				46F610DE1339BE77005B2D29 /* NSData+QBase64.m */,
-				46F610DF1339BE77005B2D29 /* NSString+QEncoding.h */,
-				46F610E01339BE77005B2D29 /* NSString+QEncoding.m */,
-				46F610E11339BE77005B2D29 /* NSURL+QAdditions.h */,
-				46F610E21339BE77005B2D29 /* NSURL+QAdditions.m */,
-				46F610D71339BE5B005B2D29 /* QOauth.h */,
-				46F610D81339BE5B005B2D29 /* QOauth.m */,
-				46F610D91339BE5B005B2D29 /* QOauthKey.h */,
-				46F610DA1339BE5B005B2D29 /* QOauthKey.m */,
-			);
-			name = Oauth;
+			path = TQT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +384,9 @@
 /* Begin PBXProject section */
 		46F610331339BD92005B2D29 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 46F610361339BD92005B2D29 /* Build configuration list for PBXProject "TQT" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -448,15 +436,6 @@
 			files = (
 				46F6104E1339BD92005B2D29 /* main.m in Sources */,
 				46F610541339BD92005B2D29 /* TQTAppDelegate.m in Sources */,
-				46F610DB1339BE5B005B2D29 /* QOauth.m in Sources */,
-				46F610DC1339BE5B005B2D29 /* QOauthKey.m in Sources */,
-				46F610E31339BE77005B2D29 /* NSData+QBase64.m in Sources */,
-				46F610E41339BE77005B2D29 /* NSString+QEncoding.m in Sources */,
-				46F610E51339BE77005B2D29 /* NSURL+QAdditions.m in Sources */,
-				46F610EE1339BE82005B2D29 /* QAsyncHttp.m in Sources */,
-				46F610EF1339BE82005B2D29 /* QMutableURLRequest.m in Sources */,
-				46F610F01339BE82005B2D29 /* QSyncHttp.m in Sources */,
-				46F610F11339BE82005B2D29 /* QWeiboRequest.m in Sources */,
 				460F65FA133AE515001F7BF3 /* NSObject+JSON.m in Sources */,
 				460F65FB133AE515001F7BF3 /* SBJsonParser.m in Sources */,
 				460F65FC133AE515001F7BF3 /* SBJsonStreamParser.m in Sources */,
@@ -468,21 +447,30 @@
 				460F6602133AE515001F7BF3 /* SBJsonWriter.m in Sources */,
 				46C11B07133C9C0E00315B6C /* TQTWeiBo.m in Sources */,
 				46D3B192134EFB150045F492 /* TQTUser.m in Sources */,
-				4612C2CF13C46D4900F40230 /* TQTLoginRequest.m in Sources */,
-				46367A1513CA99B5007C0C69 /* TQTUserRequest.m in Sources */,
 				46955D9313CB02820016F079 /* TQTRootWindowController.m in Sources */,
 				46DACB4613CD8208004EC2D4 /* TQTWeiBoTableViewController.m in Sources */,
 				46DACB4A13CD8327004EC2D4 /* TQTWeiboCell.m in Sources */,
-				46DACB4F13CD8701004EC2D4 /* TQTWeiboRequest.m in Sources */,
 				46A0D7F013D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m in Sources */,
-				46DF1DFA13E7A07800E9362D /* NSImage+TQTMask.m in Sources */,
 				461B961E13E91E08003EB493 /* TQTHeadImageCell.m in Sources */,
 				461B962413E94495003EB493 /* TQTWeiboDetailController.m in Sources */,
 				46F26FEA13FA0CDD009CFB96 /* TQTSliderWindow.m in Sources */,
-				46BE229E14023DA200AC93AE /* PXListView.m in Sources */,
-				46BE229F14023DA200AC93AE /* PXListView+UserInteraction.m in Sources */,
-				46BE22A414023DBA00AC93AE /* PXListViewCell.m in Sources */,
-				46BE22A714023DC300AC93AE /* PXListDocumentView.m in Sources */,
+				385260C8149852AC0028CC61 /* NSData+QBase64.m in Sources */,
+				385260C9149852AC0028CC61 /* NSString+QEncoding.m in Sources */,
+				385260CA149852AC0028CC61 /* NSURL+QAdditions.m in Sources */,
+				385260CB149852AC0028CC61 /* QAsyncHttp.m in Sources */,
+				385260CC149852AC0028CC61 /* QMutableURLRequest.m in Sources */,
+				385260CD149852AC0028CC61 /* QOauth.m in Sources */,
+				385260CE149852AC0028CC61 /* QOauthKey.m in Sources */,
+				385260CF149852AC0028CC61 /* QSyncHttp.m in Sources */,
+				385260D0149852AC0028CC61 /* QWeiboRequest.m in Sources */,
+				385260DE149852B80028CC61 /* PXListDocumentView.m in Sources */,
+				385260DF149852B80028CC61 /* PXListView+UserInteraction.m in Sources */,
+				385260E0149852B80028CC61 /* PXListView.m in Sources */,
+				385260E1149852B80028CC61 /* PXListViewCell.m in Sources */,
+				385260EA149852F10028CC61 /* NSImage+TQTMask.m in Sources */,
+				385260EB149852F10028CC61 /* TQTLoginRequest.m in Sources */,
+				385260EC149852F10028CC61 /* TQTUserRequest.m in Sources */,
+				385260ED149852F10028CC61 /* TQTWeiboRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
