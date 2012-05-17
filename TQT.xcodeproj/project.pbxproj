@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380FE015155A70F80069954F /* TQTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FE014155A70F80069954F /* TQTHelper.m */; };
+		380FE01C155A74BA0069954F /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FE01A155A74B90069954F /* NSStringAdditions.m */; };
+		380FE020155A74FE0069954F /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FE01E155A74FE0069954F /* NSDataAdditions.m */; };
+		3813EB58155B64AE003C9D5F /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3813EB57155B64AE003C9D5F /* cover.png */; };
+		3813EB60155B92A3003C9D5F /* TQTViewAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3813EB5F155B92A3003C9D5F /* TQTViewAttachmentCell.m */; };
+		3813EB64155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3813EB63155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m */; };
 		385260C8149852AC0028CC61 /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260B7149852AC0028CC61 /* NSData+QBase64.m */; };
 		385260C9149852AC0028CC61 /* NSString+QEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260B9149852AC0028CC61 /* NSString+QEncoding.m */; };
 		385260CA149852AC0028CC61 /* NSURL+QAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 385260BB149852AC0028CC61 /* NSURL+QAdditions.m */; };
@@ -63,6 +69,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380FE013155A70F80069954F /* TQTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTHelper.h; sourceTree = "<group>"; };
+		380FE014155A70F80069954F /* TQTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTHelper.m; sourceTree = "<group>"; };
+		380FE01A155A74B90069954F /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		380FE01B155A74BA0069954F /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		380FE01D155A74C20069954F /* TTCorePreprocessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCorePreprocessorMacros.h; sourceTree = "<group>"; };
+		380FE01E155A74FE0069954F /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		380FE01F155A74FE0069954F /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		3813EB57155B64AE003C9D5F /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
+		3813EB5E155B92A3003C9D5F /* TQTViewAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTViewAttachmentCell.h; sourceTree = "<group>"; };
+		3813EB5F155B92A3003C9D5F /* TQTViewAttachmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTViewAttachmentCell.m; sourceTree = "<group>"; };
+		3813EB62155B9AC9003C9D5F /* TQTImageViewAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQTImageViewAttachmentCell.h; sourceTree = "<group>"; };
+		3813EB63155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQTImageViewAttachmentCell.m; sourceTree = "<group>"; };
 		385260B6149852AC0028CC61 /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
 		385260B7149852AC0028CC61 /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
 		385260B8149852AC0028CC61 /* NSString+QEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QEncoding.h"; sourceTree = "<group>"; };
@@ -305,6 +323,13 @@
 		46F610461339BD92005B2D29 /* TQT */ = {
 			isa = PBXGroup;
 			children = (
+				3813EB62155B9AC9003C9D5F /* TQTImageViewAttachmentCell.h */,
+				3813EB63155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m */,
+				380FE01E155A74FE0069954F /* NSDataAdditions.m */,
+				380FE01F155A74FE0069954F /* NSDataAdditions.h */,
+				380FE01D155A74C20069954F /* TTCorePreprocessorMacros.h */,
+				380FE01A155A74B90069954F /* NSStringAdditions.m */,
+				380FE01B155A74BA0069954F /* NSStringAdditions.h */,
 				385260E2149852F10028CC61 /* NSImage+TQTMask.h */,
 				385260E3149852F10028CC61 /* NSImage+TQTMask.m */,
 				385260E4149852F10028CC61 /* TQTLoginRequest.h */,
@@ -336,6 +361,10 @@
 				461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */,
 				46F26FE813FA0CDC009CFB96 /* TQTSliderWindow.h */,
 				46F26FE913FA0CDD009CFB96 /* TQTSliderWindow.m */,
+				380FE013155A70F80069954F /* TQTHelper.h */,
+				380FE014155A70F80069954F /* TQTHelper.m */,
+				3813EB5E155B92A3003C9D5F /* TQTViewAttachmentCell.h */,
+				3813EB5F155B92A3003C9D5F /* TQTViewAttachmentCell.m */,
 			);
 			path = TQT;
 			sourceTree = "<group>";
@@ -343,6 +372,7 @@
 		46F610471339BD92005B2D29 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3813EB57155B64AE003C9D5F /* cover.png */,
 				461B961713E8F3AF003EB493 /* SideSearch.png */,
 				463E523B13E7FFD200BD8D45 /* refresh.png */,
 				46DF1DFD13E7A40300E9362D /* newStatus.png */,
@@ -424,6 +454,7 @@
 				463E523C13E7FFD200BD8D45 /* refresh.png in Resources */,
 				461B961813E8F3AF003EB493 /* SideSearch.png in Resources */,
 				461B962613E944ED003EB493 /* TQTWeiboWindowController.xib in Resources */,
+				3813EB58155B64AE003C9D5F /* cover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +502,11 @@
 				385260EB149852F10028CC61 /* TQTLoginRequest.m in Sources */,
 				385260EC149852F10028CC61 /* TQTUserRequest.m in Sources */,
 				385260ED149852F10028CC61 /* TQTWeiboRequest.m in Sources */,
+				380FE015155A70F80069954F /* TQTHelper.m in Sources */,
+				380FE01C155A74BA0069954F /* NSStringAdditions.m in Sources */,
+				380FE020155A74FE0069954F /* NSDataAdditions.m in Sources */,
+				3813EB60155B92A3003C9D5F /* TQTViewAttachmentCell.m in Sources */,
+				3813EB64155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

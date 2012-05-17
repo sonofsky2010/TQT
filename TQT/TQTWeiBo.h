@@ -30,6 +30,8 @@
     int provinceCode_;
     int cityCode_;
     BOOL isVip_;
+    NSTextAttachment *imgAttachment_;
+    NSTextAttachment *srcImgAttachment_;
     NSMutableAttributedString *content_;
 }
 
@@ -53,9 +55,12 @@
 @property (assign) int cityCode;
 @property (assign) BOOL isVip;
 @property (retain) NSMutableAttributedString *content;
+@property (retain) NSTextAttachment *imgAttachment;
+@property (retain) NSTextAttachment *srcImgAttachment;
 - (id)initWithDict:(NSDictionary *)dict;
 + (TQTWeiBo *)weiBoFromDict:(NSDictionary *)dict;
 - (NSDictionary *)dictionary;
 - (NSString *)jsonString;
 - (NSMutableAttributedString *)createContent;
+- (void)showImageInView:(NSView *)view;
 @end

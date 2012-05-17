@@ -11,6 +11,7 @@
 #import "TQTWeiboCell.h"
 #import "NSImage+TQTMask.h"
 #import "TQTWeiboRequest.h"
+#import "NSStringAdditions.h"
 @implementation TQTWeiboDetailController
 @synthesize replyList = replyList_;
 @synthesize rowNumber = rowNumber_;
@@ -68,7 +69,7 @@
     {
         TQTWeiBo *aWeibo = [replyList_ objectAtIndex:row];
         NSImageCell *imgCell = (NSImageCell *)cell;
-        NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%d", [[aWeibo head] hash]]];
+        NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", [[aWeibo head] sha1Hash]]];
         NSImage *img = [[[NSImage alloc] initWithContentsOfFile:headImgPath] autorelease];
         if (!img) {
             dispatch_queue_t network_queue = dispatch_queue_create("TQT", NULL);
