@@ -12,69 +12,6 @@
 #import "NSStringAdditions.h"
 #define kImageInset (4.0f)
 #define kImageCellHeight (120.0f)
-@interface TQTWeiboCell (private)
-- (NSRect)_imageCellFrameForInteriorFrame:(NSRect)frame;
-- (NSRect)_nickCellFrameForInteriorFrame:(NSRect)frame;
-- (NSRect)_timeCellFrameForInteriorFrame:(NSRect)frame;
-@end
-
-@implementation TQTWeiboCell (private)
-
-- (NSRect)_imageCellFrameForInteriorFrame:(NSRect)frame
-{
-    CGRect result = frame;
-    result.origin.y = frame.origin.y + frame.size.height - kImageInset - kImageCellHeight;
-    result.size.height = kImageCellHeight;
-    return result;
-}
-
-- (NSRect)_nickCellFrameForInteriorFrame:(NSRect)frame
-{
-    NSString *nick = weibo_.nick;
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    [attrs setObject:[NSFont boldSystemFontOfSize:12] forKey:NSFontAttributeName];
-    NSSize nickSize = [nick sizeWithAttributes:attrs];
-    NSRect result = frame;
-    result.size = nickSize;
-    result.size.width += 5;
-    return result;
-}
-- (NSRect)_timeCellFrameForInteriorFrame:(NSRect)frame
-{
-    NSDate *sendTime = [NSDate dateWithTimeIntervalSince1970:weibo_.timeStamp];
-    [sendTime dateWithCalendarFormat:@"%Y-%m-%d %H:%M" timeZone:[NSTimeZone localTimeZone]];
-    NSString *dateString = [sendTime descriptionWithCalendarFormat:@"%Y-%m-%d %H:%M"
-                                                          timeZone:nil
-                                                            locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]];
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    [attrs setObject:[NSFont systemFontOfSize:10] forKey:NSFontAttributeName];
-    NSSize stringSize = [dateString sizeWithAttributes:attrs];
-    NSRect result = frame;
-    result.size = stringSize;
-    result.origin.x = frame.size.width - result.size.width + frame.origin.x;
-    return frame;
-}
-
-- (NSRect)_textCellFrameForInteriorFrame:(NSRect)frame
-{
-    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    [attrs setObject:[NSFont systemFontOfSize:12.0f] forKey:NSFontAttributeName];
-    NSString *text = weibo_.origtext;
-    NSSize textSize = [text sizeWithAttributes:attrs];
-    int lineCount = ceil(textSize.width / frame.size.width);
-    if (weibo_.source && (weibo_.type == 2 || weibo_.type == 4)) {
-        textSize = [weibo_.source.origtext sizeWithAttributes:attrs];
-        lineCount += ceil(textSize.width / frame.size.width);
-        lineCount ++;
-    }
-    lineCount ++;
-    NSRect result = frame;
-    result.size.height = textSize.height * lineCount;
-    result.origin.y += 20;
-    return result;
-}
-
-@end
 
 
 @implementation TQTWeiboCell
@@ -90,7 +27,6 @@
     [textView_ setDrawsBackground:NO];
     [textView_ setDelegate:self];
     [headImagView_ setImageScaling:NSScaleToFit];
-//    [textView_ setBackgroundColor:[NSColor redColor]];
 }
 
 - (id)init
@@ -133,9 +69,6 @@
         [self.timeLabel setStringValue:dateString];
     }
     [[textView_ textStorage] setAttributedString:weibo_.content];
-//    if ([weibo_.images count] > 0 || [weibo_.source.images count] > 0) {
-//        [weibo_ showImageInView:textView_];
-//    }
 }
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -144,12 +77,29 @@
 		[[NSColor selectedControlColor] set];
 	}
 	else {
-		[[NSColor whiteColor] set];
+		[[NSColor colorWithDeviceRed:0.97f green:0.97f blue:0.97f alpha:1.0] set];
     }
-    
-    //Draw the border and background
-	NSBezierPath *roundedRect = [NSBezierPath bezierPathWithRoundedRect:[self bounds] xRadius:6.0 yRadius:6.0];
-	[roundedRect fill];
+    NSRectFill([self bounds]);
+
+    [[NSColor colorWithDeviceRed:0.83f green:0.83f blue:0.83f alpha:1.0f] set];
+
+//    NSBezierPath *topPath = [NSBezierPath bezierPath];
+//    [topPath moveToPoint:[self bounds].origin];
+    NSPoint topRightPoint = [self bounds].origin;
+    topRightPoint.x += [self bounds].size.width;
+//    [topPath lineToPoint:topRightPoint];
+//    [topPath setLineWidth:1.0f];
+//    [topPath stroke];
+
+    NSPoint bottomLeftPoint = [self bounds].origin;
+    bottomLeftPoint.y += [self bounds].size.height;
+    NSPoint bottomRightPoint = topRightPoint;
+    bottomRightPoint.y += [self bounds].size.height;
+    NSBezierPath *bottomPath = [NSBezierPath bezierPath];
+    [bottomPath moveToPoint:bottomLeftPoint];
+    [bottomPath lineToPoint:bottomRightPoint];
+    [bottomPath setLineWidth:1.0f];
+    [bottomPath stroke];
 }
 
 - (void)textView:(NSTextView *)textView clickedOnCell:(id<NSTextAttachmentCell>)cell inRect:(NSRect)cellFrame atIndex:(NSUInteger)charIndex

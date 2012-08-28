@@ -30,7 +30,7 @@
 
 - (void)awakeFromNib
 {
-    [tableView_ setCellSpacing:2.0f];
+//    [tableView_ setCellSpacing:2.0f];
     [tableView_ setUsesLiveResize:YES];
 }
 - (void)dealloc
@@ -56,7 +56,7 @@
     }
     TQTWeiBo *aWeibo = [weibos_ objectAtIndex:row];
     [weiboCell setWeibo:aWeibo];
-    NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%d", [[aWeibo head] sha1Hash]]];
+    NSString *headImgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", [[aWeibo head] sha1Hash]]];
     NSImage *img = [[[NSImage alloc] initWithContentsOfFile:headImgPath] autorelease];
     if (!img) {
         dispatch_queue_t network_queue = dispatch_queue_create("TQT", NULL);
@@ -65,11 +65,13 @@
             NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[aWeibo head] stringByAppendingString:@"/100"]]];
             if (imgData) {
                 dispatch_async(dispatch_get_main_queue(), ^(void){
+                    NSImage *tmpImage = [[[NSImage alloc] initWithData:imgData] autorelease];
+                    NSImage *cornerImage = [tmpImage imageWithXRadius:10.0 yRaidus:10.0];
                     if (![[NSFileManager defaultManager] fileExistsAtPath:headImgPath]) {
-                        [imgData writeToFile:headImgPath atomically:YES];
+                        [[cornerImage TIFFRepresentation] writeToFile:headImgPath atomically:YES];
                     }
-                    [[[aListView cellForRowAtIndex:row] headImagView] setImage:[[[NSImage alloc] initWithData:imgData] autorelease]];
-                    [[[aListView cellForRowAtIndex:row] headImagView] setNeedsDisplay:YES];
+                    [[(TQTWeiboCell *)[aListView cellForRowAtIndex:row] headImagView] setImage:cornerImage];
+                    [[(TQTWeiboCell *)[aListView cellForRowAtIndex:row] headImagView] setNeedsDisplay:YES];
                 });
             }
         });

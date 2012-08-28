@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10K549</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1881</string>
-		<string key="IBDocument.AppKitVersion">1038.36</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<int key="IBDocument.SystemTarget">1070</int>
+		<string key="IBDocument.SystemVersion">11E53</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.AppKitVersion">1138.47</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1881</string>
+			<string key="NS.object.0">2182</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSScrollView</string>
@@ -35,7 +35,7 @@
 			</object>
 			<object class="NSScrollView" id="275554244">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
+				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSClipView" id="621035728">
 						<reference key="NSNextResponder" ref="275554244"/>
@@ -44,13 +44,13 @@
 							<object class="NSView" id="197073092">
 								<reference key="NSNextResponder" ref="621035728"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrameSize">{269, 489}</string>
+								<string key="NSFrameSize">{268, 504}</string>
 								<reference key="NSSuperview" ref="621035728"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="866946922"/>
 							</object>
 						</array>
-						<string key="NSFrame">{{1, 1}, {269, 490}}</string>
+						<string key="NSFrame">{{1, 1}, {268, 505}}</string>
 						<reference key="NSSuperview" ref="275554244"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="197073092"/>
@@ -69,7 +69,7 @@
 					<object class="NSScroller" id="866946922">
 						<reference key="NSNextResponder" ref="275554244"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{270, 1}, {15, 490}}</string>
+						<string key="NSFrame">{{254, 1}, {15, 499}}</string>
 						<reference key="NSSuperview" ref="275554244"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="679487240"/>
@@ -81,21 +81,20 @@
 					<object class="NSScroller" id="679487240">
 						<reference key="NSNextResponder" ref="275554244"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{1, 491}, {269, 15}}</string>
+						<string key="NSFrame">{{1, 491}, {262, 15}}</string>
 						<reference key="NSSuperview" ref="275554244"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<int key="NSsFlags">1</int>
 						<reference key="NSTarget" ref="275554244"/>
 						<string key="NSAction">_doScroller:</string>
 						<double key="NSPercent">0.99689440993788825</double>
 					</object>
 				</array>
-				<string key="NSFrameSize">{286, 507}</string>
+				<string key="NSFrameSize">{270, 507}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="621035728"/>
-				<int key="NSsFlags">50</int>
+				<int key="NSsFlags">133170</int>
 				<reference key="NSVScroller" ref="866946922"/>
 				<reference key="NSHScroller" ref="679487240"/>
 				<reference key="NSContentView" ref="621035728"/>

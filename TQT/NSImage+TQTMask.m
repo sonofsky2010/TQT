@@ -27,4 +27,22 @@
     [retImage unlockFocus];
     return retImage;
 }
+
+- (NSImage *)imageWithXRadius:(CGFloat) xradius yRaidus:(CGFloat) yradius
+{
+    NSImage *retImage = [[[NSImage alloc] initWithSize:[self size]] autorelease];
+    [retImage lockFocus];
+    [NSGraphicsContext saveGraphicsState];
+    NSRect imageFrame = (NSRect){{0, 0}, [self size]};
+    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:imageFrame
+                                                         xRadius:xradius
+                                                         yRadius:yradius];
+    [path addClip];
+    
+    [self drawInRect:imageFrame fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+    
+    [NSGraphicsContext restoreGraphicsState];
+    [retImage unlockFocus];
+    return retImage;
+}
 @end

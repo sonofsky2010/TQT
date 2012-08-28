@@ -241,6 +241,51 @@
 			path = PXListView;
 			sourceTree = "<group>";
 		};
+		38A38D9F15D399C200FA0199 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				3813EB62155B9AC9003C9D5F /* TQTImageViewAttachmentCell.h */,
+				3813EB63155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m */,
+				46A0D7EE13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.h */,
+				46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */,
+				46DACB4813CD8327004EC2D4 /* TQTWeiboCell.h */,
+				46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */,
+				46F610551339BD93005B2D29 /* MainMenu.xib */,
+				46955D8F13CB02190016F079 /* TQTRootWindowController.xib */,
+				46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */,
+				46DACB4313CD8208004EC2D4 /* TQTWeiBoTableViewController.h */,
+				46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */,
+				46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */,
+				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
+				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
+				461B961C13E91E08003EB493 /* TQTHeadImageCell.h */,
+				461B961D13E91E08003EB493 /* TQTHeadImageCell.m */,
+				461B962213E94495003EB493 /* TQTWeiboDetailController.h */,
+				461B962313E94495003EB493 /* TQTWeiboDetailController.m */,
+				461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */,
+				46F26FE813FA0CDC009CFB96 /* TQTSliderWindow.h */,
+				46F26FE913FA0CDD009CFB96 /* TQTSliderWindow.m */,
+				3813EB5E155B92A3003C9D5F /* TQTViewAttachmentCell.h */,
+				3813EB5F155B92A3003C9D5F /* TQTViewAttachmentCell.m */,
+				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
+				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		38A38DA115D399F400FA0199 /* additions */ = {
+			isa = PBXGroup;
+			children = (
+				380FE01E155A74FE0069954F /* NSDataAdditions.m */,
+				380FE01F155A74FE0069954F /* NSDataAdditions.h */,
+				380FE01A155A74B90069954F /* NSStringAdditions.m */,
+				380FE01B155A74BA0069954F /* NSStringAdditions.h */,
+				385260E2149852F10028CC61 /* NSImage+TQTMask.h */,
+				385260E3149852F10028CC61 /* NSImage+TQTMask.m */,
+			);
+			name = additions;
+			sourceTree = "<group>";
+		};
 		460F65E6133AE514001F7BF3 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,15 +368,9 @@
 		46F610461339BD92005B2D29 /* TQT */ = {
 			isa = PBXGroup;
 			children = (
-				3813EB62155B9AC9003C9D5F /* TQTImageViewAttachmentCell.h */,
-				3813EB63155B9AC9003C9D5F /* TQTImageViewAttachmentCell.m */,
-				380FE01E155A74FE0069954F /* NSDataAdditions.m */,
-				380FE01F155A74FE0069954F /* NSDataAdditions.h */,
+				38A38DA115D399F400FA0199 /* additions */,
+				38A38D9F15D399C200FA0199 /* ui */,
 				380FE01D155A74C20069954F /* TTCorePreprocessorMacros.h */,
-				380FE01A155A74B90069954F /* NSStringAdditions.m */,
-				380FE01B155A74BA0069954F /* NSStringAdditions.h */,
-				385260E2149852F10028CC61 /* NSImage+TQTMask.h */,
-				385260E3149852F10028CC61 /* NSImage+TQTMask.m */,
 				385260E4149852F10028CC61 /* TQTLoginRequest.h */,
 				385260E5149852F10028CC61 /* TQTLoginRequest.m */,
 				385260E6149852F10028CC61 /* TQTUserRequest.h */,
@@ -339,32 +378,9 @@
 				385260E8149852F10028CC61 /* TQTWeiboRequest.h */,
 				385260E9149852F10028CC61 /* TQTWeiboRequest.m */,
 				46A0D7EC13D7D35100B5E0DA /* TQTPostWeiboWindow.xib */,
-				46A0D7EE13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.h */,
-				46A0D7EF13D7D3CC00B5E0DA /* TQTPostWeiboWindowController.m */,
-				46DACB4813CD8327004EC2D4 /* TQTWeiboCell.h */,
-				46DACB4913CD8327004EC2D4 /* TQTWeiboCell.m */,
 				46D3B193134F0A2E0045F492 /* TQTApiUrl.h */,
-				46F610521339BD92005B2D29 /* TQTAppDelegate.h */,
-				46F610531339BD92005B2D29 /* TQTAppDelegate.m */,
-				46F610551339BD93005B2D29 /* MainMenu.xib */,
-				46955D8F13CB02190016F079 /* TQTRootWindowController.xib */,
-				46DACB4B13CD843E004EC2D4 /* TQTWeiboCell.xib */,
-				46DACB4313CD8208004EC2D4 /* TQTWeiBoTableViewController.h */,
-				46DACB4413CD8208004EC2D4 /* TQTWeiBoTableViewController.m */,
-				46DACB4513CD8208004EC2D4 /* TQTWeiBoTableViewController.xib */,
-				46955D9113CB02810016F079 /* TQTRootWindowController.h */,
-				46955D9213CB02820016F079 /* TQTRootWindowController.m */,
-				461B961C13E91E08003EB493 /* TQTHeadImageCell.h */,
-				461B961D13E91E08003EB493 /* TQTHeadImageCell.m */,
-				461B962213E94495003EB493 /* TQTWeiboDetailController.h */,
-				461B962313E94495003EB493 /* TQTWeiboDetailController.m */,
-				461B962513E944ED003EB493 /* TQTWeiboWindowController.xib */,
-				46F26FE813FA0CDC009CFB96 /* TQTSliderWindow.h */,
-				46F26FE913FA0CDD009CFB96 /* TQTSliderWindow.m */,
 				380FE013155A70F80069954F /* TQTHelper.h */,
 				380FE014155A70F80069954F /* TQTHelper.m */,
-				3813EB5E155B92A3003C9D5F /* TQTViewAttachmentCell.h */,
-				3813EB5F155B92A3003C9D5F /* TQTViewAttachmentCell.m */,
 			);
 			path = TQT;
 			sourceTree = "<group>";

@@ -11,5 +11,5 @@
 @interface NSImage (NSImage_TQTMask)
 
 - (NSImage *)maskWithImage:(NSImage *)image;
-
+- (NSImage *)imageWithXRadius:(CGFloat) xradius yRaidus:(CGFloat) yradius;
 @end
